@@ -4,7 +4,7 @@
 
 * Experimented and debugged tank-drive using callback functions
 
-![20220507_002](images/20220507_002.jpg)
+![20220507_003](images/20220507_003.jpg)
 
 ## 2022-04-23
 
