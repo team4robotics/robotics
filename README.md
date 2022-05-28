@@ -3,6 +3,7 @@
 ## 2022-05-07
 
 * Experimented and debugged tank-drive using callback functions
+* Experimented with event functions
 
 ![20220507_003](images/20220507_003.jpg)
 
