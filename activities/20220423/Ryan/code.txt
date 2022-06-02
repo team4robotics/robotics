@@ -1,0 +1,47 @@
+using namespace vex;
+
+
+void leftmove(){
+  int deadband = 5;
+  int leftMotorSpeed = Controller1.Axis3.position();
+  return leftMotorSpeed;
+
+  if (abs(leftMotorSpeed) < deadband) {
+      // Set the speed to zero.
+      LeftMotor.setVelocity(0, percent);
+    } else {
+      // Set the speed to leftMotorSpeed
+      LeftMotor.setVelocity(leftMotorSpeed, percent);
+    }
+
+    LeftMotor.spin(forward);
+}
+
+int rightmove(){
+  int deadband = 5;
+  int rightMotorSpeed = Controller1.Axis2.position();
+  return rightMotorSpeed;
+
+  if (abs(rightMotorSpeed) < deadband) {
+      // Set the speed to zero
+      RightMotor.setVelocity(0, percent);
+    } else {
+      // Set the speed to rightMotorSpeed
+      RightMotor.setVelocity(rightMotorSpeed, percent);
+    }
+
+    RightMotor.spin(forward)
+}
+
+
+
+
+
+
+int main() {
+  // Initializing Robot Configuration. DO NOT REMOVE!
+  vexcodeInit();
+
+  Controller1.Axis2.changed(rightmove);
+  Controller1.Axis3.changed(leftmove);
+}
