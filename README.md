@@ -1,5 +1,11 @@
 # Activities
 
+## 2022-06-11
+* Learned Rubik's Cube Algorithms(White Cross, White Corners(ULDR), Middle Layer(ULDR), 
+  Yellow Cross(ULDR), Match Edges(ULDLURR), Match Corners(URULDRD), Solve(ULDR))
+* Discussed Model Options
+* Created List of Required Parts
+
 ## 2022-05-07
 
 * Experimented and debugged tank-drive using callback functions
@@ -22,3 +28,4 @@
 
 ![20220402_001](images/20220402_001.jpg)
 
+White 
