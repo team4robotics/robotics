@@ -1,14 +1,10 @@
 # Activities
 
 ## 2022-06-11
-<<<<<<< HEAD
 * Learned Rubik's Cube Algorithms(White Cross, White Corners(ULDR), Middle Layer(ULDR), 
   Yellow Cross(ULDR), Match Edges(ULDLURR), Match Corners(URULDRD), Solve(ULDR))
-  
 * Discussed Model Options
-
 * Created List of Required Parts
-=======
 * Learned Rubik's Cube Algorithms
   * White Cross
   * White Corners(ULDR)
@@ -17,29 +13,22 @@
   * Match Edges(ULDLURR)
   * Match Corners(URULDRD)
   * Solve(ULDR)
-
 * Discussed Model Options
   * [RUBIX - VEX IQ Rubik's Cube Solver](https://www.youtube.com/watch?v=bGxpXlIaIaA)
   * [RUBIX 2.0 - VEX IQ Rubik's Cube Solver](https://www.youtube.com/watch?v=L6gSuM-JHgo)
     * Pros:
-      * Requires less motors
-      * (More stable)
-      * Requires less parts
-      * Simpler
-      * (More reliable)
-
+      * Requires less motor (More stable)
+      * Requires fewer parts
+      * Simpler (More reliable)
     * Cons:
       * Slow (more moves)
-
+      * Logic is quite Complex(with only one rotating face, keeping track of where each face becomes difficult)
   * https://www.youtube.com/watch?v=wLzn1w8vgM4
   * https://www.youtube.com/watch?v=GJKdbGAF9H0
-
 * Tasks:
   * Design
   * Parts
     * Vision Sensor x 1
-    * 
-
   * Build Robot
   * Coding
     * Status Recognition
@@ -47,10 +36,7 @@
       * data structure
       * move functions
       * algorithm
-
   * Optimization
-
->>>>>>> origin/main
 
   ![20220611_001](images/20220611_001.jpg)
 
