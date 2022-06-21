@@ -3,8 +3,12 @@
 ## 2022-06-11
 * Learned Rubik's Cube Algorithms(White Cross, White Corners(ULDR), Middle Layer(ULDR), 
   Yellow Cross(ULDR), Match Edges(ULDLURR), Match Corners(URULDRD), Solve(ULDR))
+  
 * Discussed Model Options
+
 * Created List of Required Parts
+
+  ![20220611_001](images/20220611_001.jpg)
 
 ## 2022-05-07
 
