@@ -1,0 +1,34 @@
+#include "vex.h"
+
+// Allows for easier use of the VEX Library
+using namespace vex;
+
+void moveforward() {
+  Drivetrain.drive(forward);
+}
+
+/void movereverse() {
+  MotorGroup1.setVelocity(25, percent);
+  MotorGroup1.spinFor(reverse, 360, degrees);
+}/
+
+void turnright() {
+  Drivetrain.turnFor(90, degrees);
+}
+void turnleft() {
+  Drivetrain.turnFor(-90, degrees);
+}
+void stopmoving() {
+  Drivetrain.stop();
+}
+
+int main() {
+  vexcodeInit();
+
+  BumperA.pressed(moveforward);
+    BumperA.released(stopmoving);
+  BumperB.pressed(moveforward);
+  BumperB.released(stopmoving);
+
+  return 0;
+}

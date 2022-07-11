@@ -1,0 +1,60 @@
+/----------------------------------------------------------------------------/
+/*                                                                            /
+/    Module:       main.cpp                                                  /
+/    Author:       C:\Users\2025023                                          /
+/    Created:      Sat Apr 23 2022                                           /
+/    Description:  V5 project                                                /
+/                                                                            /
+/----------------------------------------------------------------------------*/
+
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// BumperA              bumper        A
+// BumperB              bumper        B
+// Drivetrain           drivetrain    1, 10
+// Controller1          controller
+// ---- END VEXCODE CONFIGURED DEVICES ----
+
+#include "vex.h"
+
+// Allows for easier use of the VEX Library
+using namespace vex;
+
+void moveforward() {
+  Drivetrain.drive(forward);
+}
+
+void movereverse() {
+  Drivetrain.drive(reverse);
+}
+
+void turnright() {
+  Drivetrain.turnFor(90, degrees);
+}
+void turnleft() {
+  Drivetrain.turnFor(-90, degrees);
+}
+void stopmoving() {
+  Drivetrain.stop();
+}
+
+int main() {
+  vexcodeInit();
+
+  BumperA.pressed(moveforward);
+    BumperA.released(stopmoving);
+  BumperB.pressed(turnright);
+  BumperB.released(stopmoving);
+  Controller1.ButtonUp.pressed(moveforward);
+  Controller1.ButtonUp.released(stopmoving);
+   Controller1.ButtonDown.pressed(movereverse);
+    Controller1.ButtonDown.released(stopmoving);
+    Controller1.ButtonLeft.pressed(turnleft);
+     Controller1.ButtonLeft.released(stopmoving);
+     Controller1.ButtonRight.pressed(turnright);
+      Controller1.ButtonRight.released(stopmoving);
+
+
+  return 0;
+}
