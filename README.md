@@ -1,5 +1,27 @@
 # Activities
 
+## 2022-07-16
+
+* DIscussed options to hold cube and rotate with motor.
+* Discussed new model of build.
+  * Size 
+  * Shape
+  * Motor placement
+* Drew a new model
+* Started to acquire parts
+* Made design to hold rubix cube
+* Discussed formulas to solve cube
+  * Thistlethwaite's 52 move algorithm
+  * CFOP method
+  * https://www.youtube.com/watch?v=MS5jByTX_pk
+* Started to learn CFOP 
+  * Cross
+  * F2L
+  * OLL
+  * PLL
+* Started function list on Visual Studio
+* Reasearched 3D printing for different parts.
+
 ## 2022-06-11
 * Learned Rubik's Cube Algorithms(White Cross, White Corners(ULDR), Middle Layer(ULDR), 
   Yellow Cross(ULDR), Match Edges(ULDLURR), Match Corners(URULDRD), Solve(ULDR))
