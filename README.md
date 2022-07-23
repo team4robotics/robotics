@@ -20,6 +20,10 @@
   * OLL
   * PLL
 * Started function list on Visual Studio
+* Discussed more details on rubix cube code
+* Started to fix old code from last week.
+* Talked about new details on 3D printing software and example. 
+* Reasearched 3D printing for different parts.
 * Reasearched 3D printing for different parts.
 
 ## 2022-06-25
