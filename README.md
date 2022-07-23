@@ -22,6 +22,83 @@
 * Started function list on Visual Studio
 * Reasearched 3D printing for different parts.
 
+## 2022-06-25
+
+* Discussed different methods to build robot
+* Everyone listed pros of their method, and were put on the spot to try and come up with solutions to the cons brought up by peers (specifics listed below)
+* Eventually decided to go with the standard "6-motor" design where frame wraps around cube and individual motors control sides
+ * Agreed that this would be te easiest to program, along with being fast and efficient and relatively simple mechanically without complicated gearing or heavy reliance on 3d-printed, custom parts
+ * Discussed ways to assemble frame for structure
+ * Discussed ways to mount Motor (c-channel, l-channel, or flat metal strip) and ways to mount Vision Sensor at optimal angle (zip ties, brackets, MPL 3D printers and TinkerCad) 
+ * Discussed ways to "hold" the rubiks cube (glue, rubber, frame, or MPL 3D Printers and TinkerCad) 
+ * Currently prefering l/c-channels for motor attatchment and exploring 3D printing options for the rest
+* Created rough sketches (coming soon) of the robot
+* Mapped out a parts list (below) based on design (not final yet, first draft)
+* Specifics of different design's pros and cons:
+  * Rubix "1.0" (https://www.youtube.com/watch?v=bGxpXlIaIaA)
+    * PROS
+      * Simple 
+      * Less motors and sensors and parts compared to other options.
+    * CONS
+      * Slow
+      * Harder to code
+      * Possible mechanical programs
+      * Accuracy 
+   * "Parts List"
+      * Requires 2 colour sensors
+      * Requires 2 motors
+      * Requires Brain
+      * Requires Booster pack
+* Rubix 2.0 (https://www.youtube.com/watch?v=L6gSuM-JHgo)
+  * PROS
+    * Relatively simple
+    * Versatile
+    * Faster than 1.0
+  * CONS
+    * Slow compared to other methods
+    * Complicated programming
+    * Can use function to track sides and convert conventional input into instructions for robot to make programming simpler
+    * Relatively complicated mechanically, may require 3d printed parts for optimal function
+    * Higher chance of failure compared to other designs
+    * complicated gearing and mechanisms
+  * "Parts List"
+    * requires unique parts
+      * large metal bracket
+      * complicated structure
+      * need a part to hold the rubiks cube
+      * may need a weight to keep from moving
+    * Approx6 assorted small metal parts for base frame
+    * 10 small custommetal parts (possibly 3d printed) for rubiks holder
+    * At least 3 motors
+    * Mounting bracket for frame
+    * Mostly small parts, but need many custom shapes 
+    * Cable management may be a problem 
+* Conventional "6-motor" fast-solver design
+  * PROs
+    * Simple idea
+    * Versatile
+    * Very fast
+    * (debatable) Simple code
+  * CONs
+    * Complex design
+    * Hard to hold onto the faces
+  * "Parts List"
+    * 6 motors
+    * 6 metal beams
+    * 2 vision sensors
+    * ~1 Booster Pack
+    * Something to hold onto the faces
+* Parts List Draft
+  Format: (Quantity needed)QTY (Name) (VEX Part #) FOR (purpose)
+    * 14QTY 2*1*2*1*25 Aluminum C-Channel 276-2288 FOR MAIN STURCUTRE FRAME
+    * 8QTY 2*2*25 Aluminum Angle 276-2304 FOR easy remove top
+    * 6QTY 4” Shaft 276-3523 FOR Motor control over rubiks cube 
+    * 2QTY Vision Sensor 276-4850
+    * 2QTY (+4 we have) Smart Motor 276-4840
+    * 6QTY Smart Motor 100RPM Cartridge 276-5840
+    * Custom Parts:
+      * 6QTY 3D Printed Cube Bracket
+      * 2QTY 3D Printed Mounting Bracket for Vision Sensor
 ## 2022-06-11
 * Learned Rubik's Cube Algorithms(White Cross, White Corners(ULDR), Middle Layer(ULDR), 
   Yellow Cross(ULDR), Match Edges(ULDLURR), Match Corners(URULDRD), Solve(ULDR))
