@@ -53,7 +53,54 @@ public:
 			cout << endl;
 		}
 	}
+	void yellowcw() {
+		clockwise90(
+			cube[0][0][0], cube[0][0][1], cube[0][0][2],
+			cube[0][1][0], cube[0][1][2],
+			cube[0][2][0], cube[0][2][1], cube[0][2][2],
 
+			cube[1][0][2], cube[1][0][1], cube[1][0][0],
+			cube[4][0][2], cube[4][0][1], cube[4][0][0],
+			cube[3][0][2], cube[3][0][1], cube[3][0][0],
+			cube[2][0][2], cube[2][0][1], cube[2][0][0]
+		);
+	}
+	void yellowccw() {
+		counterclockwise90(
+			cube[0][0][0], cube[0][0][1], cube[0][0][2],
+			cube[0][1][0], cube[0][1][2],
+			cube[0][2][0], cube[0][2][1], cube[0][2][2],
+
+			cube[1][0][2], cube[1][0][1], cube[1][0][0],
+			cube[4][0][2], cube[4][0][1], cube[4][0][0],
+			cube[3][0][2], cube[3][0][1], cube[3][0][0],
+			cube[2][0][2], cube[2][0][1], cube[2][0][0]
+		);
+	}
+	void redcw() {
+		clockwise90(
+			cube[1][0][0], cube[1][0][1], cube[1][0][2],
+			cube[1][1][0], cube[1][1][2],
+			cube[1][2][0], cube[1][2][1], cube[1][2][2],
+
+			cube[0][0][0], cube[0][1][0], cube[0][2][0],
+			cube[2][0][0], cube[2][1][0], cube[2][2][0],
+			cube[5][0][0], cube[5][1][0], cube[5][2][0],
+			cube[4][2][2], cube[4][1][2], cube[4][0][2]
+		);
+	}
+	void redccw() {
+		counterclockwise90(
+			cube[1][0][0], cube[1][0][1], cube[1][0][2],
+			cube[1][1][0], cube[1][1][2],
+			cube[1][2][0], cube[1][2][1], cube[1][2][2],
+
+			cube[0][0][0], cube[0][1][0], cube[0][2][0],
+			cube[2][0][0], cube[2][1][0], cube[2][2][0],
+			cube[5][0][0], cube[5][1][0], cube[5][2][0],
+			cube[4][2][2], cube[4][1][2], cube[4][0][2]
+		);
+	}
 	void greencw() {
 		clockwise90(
 			cube[2][0][0], cube[2][0][1], cube[2][0][2],
@@ -77,7 +124,80 @@ public:
 			cube[5][0][2], cube[5][0][1], cube[5][0][0],
 			cube[1][2][2], cube[1][1][2], cube[1][0][2]
 		);
+	}// yellow, red, green, orange, blue, white(by row)
+	void orangecw() {
+		clockwise90(
+			cube[3][0][0], cube[3][0][1], cube[3][0][2],
+			cube[3][1][0], cube[3][1][2],
+			cube[3][2][0], cube[3][2][1], cube[3][2][2],
+
+			cube[0][2][2], cube[0][1][2], cube[0][0][2],
+			cube[4][0][0], cube[4][1][0], cube[4][2][0],
+			cube[5][2][2], cube[5][1][2], cube[5][0][2],
+			cube[2][2][2], cube[2][1][2], cube[2][0][2]
+		);
 	}
+	void orangeccw() {
+		counterclockwise90(
+			cube[3][0][0], cube[3][0][1], cube[3][0][2],
+			cube[3][1][0], cube[3][1][2],
+			cube[3][2][0], cube[3][2][1], cube[3][2][2],
+
+			cube[0][2][2], cube[0][1][2], cube[0][0][2],
+			cube[4][0][0], cube[4][1][0], cube[4][2][0],
+			cube[5][2][2], cube[5][1][2], cube[5][0][2],
+			cube[2][2][2], cube[2][1][2], cube[2][0][2]
+		);
+	}
+	void bluecw() {
+		clockwise90(
+			cube[4][0][0], cube[4][0][1], cube[4][0][2],
+			cube[4][1][0], cube[4][1][2],
+			cube[4][2][0], cube[4][2][1], cube[4][2][2],
+
+			cube[0][0][2], cube[0][0][1], cube[0][0][0],
+			cube[1][0][0], cube[1][1][0], cube[1][2][0],
+			cube[5][2][0], cube[5][2][1], cube[5][2][2],
+			cube[3][2][2], cube[3][1][2], cube[3][0][2]
+		);
+	}
+	void blueccw() {
+		counterclockwise90(
+			cube[4][0][0], cube[4][0][1], cube[4][0][2],
+			cube[4][1][0], cube[4][1][2],
+			cube[4][2][0], cube[4][2][1], cube[4][2][2],
+
+			cube[0][0][2], cube[0][0][1], cube[0][0][0],
+			cube[1][0][0], cube[1][1][0], cube[1][2][0],
+			cube[5][2][0], cube[5][2][1], cube[5][2][2],
+			cube[3][2][2], cube[3][1][2], cube[3][0][2]
+		);
+	}
+	void whitecw() {
+		clockwise90(
+			cube[5][0][0], cube[5][0][1], cube[5][0][2],
+			cube[5][1][0], cube[5][1][2],
+			cube[5][2][0], cube[5][2][1], cube[5][2][2],
+
+			cube[1][2][0], cube[1][2][1], cube[1][2][2],
+			cube[2][2][0], cube[2][2][1], cube[2][2][2],
+			cube[3][2][0], cube[3][2][1], cube[3][2][2],
+			cube[4][2][0], cube[4][2][1], cube[4][2][2]
+		);
+	}
+	void whiteccw() {
+		counterclockwise90(
+			cube[5][0][0], cube[5][0][1], cube[5][0][2],
+			cube[5][1][0], cube[5][1][2],
+			cube[5][2][0], cube[5][2][1], cube[5][2][2],
+
+			cube[1][2][0], cube[1][2][1], cube[1][2][2],
+			cube[2][2][0], cube[2][2][1], cube[2][2][2],
+			cube[3][2][0], cube[3][2][1], cube[3][2][2],
+			cube[4][2][0], cube[4][2][1], cube[4][2][2]
+		);
+	}
+
 
 private:
 	void rotate(char& a, char& b, char& c, char& d) {
@@ -140,11 +260,19 @@ int main()
 		{{ 'b', 'b', 'r' }, { 'b', 'b', 'w' }, { 'b', 'b', 'w' }},
 		{{ 'g', 'w', 'w' }, { 'g', 'w', 'w' }, { 'b', 'o', 'o' }}
 	};
-	Rubik rubik(faces);
+	int faces2[6][3][3] = {
+		{{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }},
+		{{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' }},
+		{{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' }},
+		{{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' }},
+		{{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' }},
+		{{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }}
+	};
+	Rubik rubik(faces2);
 	rubik.printCube();
-	rubik.greencw();
+	rubik.whitecw();
 	rubik.printCube();
-	rubik.greenccw();
+	rubik.whiteccw();
 	rubik.printCube();
 
 	return 0;
