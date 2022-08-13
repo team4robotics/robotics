@@ -25,8 +25,6 @@ public:
 
 	void printCube() {
 		cout << "==============================" << endl;
-		//        c c c
-		//c c c   c c c  c c c  c c c
 		for (int i = 0; i < 3; i++) {
 			cout << "        ";
 			for (int j = 0; j < 3; j++)
@@ -268,7 +266,7 @@ int main()
 		{{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' }},
 		{{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }}
 	};
-	Rubik rubik(faces2);
+	Rubik rubik(faces);
 	rubik.printCube();
 	rubik.whitecw();
 	rubik.printCube();

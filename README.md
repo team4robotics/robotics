@@ -1,8 +1,28 @@
 # Activities
 
+## 2022-08-13
+
+* Discussed how to "hold onto" the middle piece of a side
+  * 3D printed model for connector piece (?)
+  * Double-sided tape/Sorbothane for added friction
+	* Stick one on 3D model, one on middle piece of a side
+* Discussed how to mount the vision sensors
+  * 3D printed mount for the vision sensors
+* Discussed a way to code the white cross
+  * Complete the white cross; disregard the side colours
+  * Solve the side colours
+
+## 2022-08-06
+
+* Completed the Rubik's cube turn functions
+* Learned a more efficient way to solve a Rubik's cube
+* Designed a new model to consider the bottom motor (See image below)
+![sketch.v1.0-1](images/sketch.v1.0-1.jpg)
+* Finalized and ordered the Parts List
+
 ## 2022-07-16
 
-* DIscussed options to hold cube and rotate with motor.
+* Discussed options to hold cube and rotate with motor.
 * Discussed new model of build.
   * Size 
   * Shape
@@ -103,7 +123,9 @@
     * Custom Parts:
       * 6QTY 3D Printed Cube Bracket
       * 2QTY 3D Printed Mounting Bracket for Vision Sensor
+
 ## 2022-06-11
+
 * Learned Rubik's Cube Algorithms(White Cross, White Corners(ULDR), Middle Layer(ULDR), 
   Yellow Cross(ULDR), Match Edges(ULDLURR), Match Corners(URULDRD), Solve(ULDR))
 * Discussed Model Options
