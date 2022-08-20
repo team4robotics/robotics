@@ -48,7 +48,7 @@
 
 ## 2022-06-25
 
-* Discussed different methods to build robot
+* Discussed different methods to build robot.
 * Everyone listed pros of their method, and were put on the spot to try and come up with solutions to the cons brought up by peers (specifics listed below)
 * Eventually decided to go with the standard "6-motor" design where frame wraps around cube and individual motors control sides
  * Agreed that this would be te easiest to program, along with being fast and efficient and relatively simple mechanically without complicated gearing or heavy reliance on 3d-printed, custom parts
