@@ -186,5 +186,3 @@
 * Removed arm and claw
 
 ![20220402_001](images/20220402_001.jpg)
-
-White 
