@@ -1,5 +1,14 @@
 # Activities
 
+## 2022-08-20
+
+* Finished white cross algorithm for one of 6 possible scenarios
+  * Algorithm should be easy to duplicate for other possible scenarios
+* Finalized build plans for robot
+* Discussed how to transfer rotational force from motor to cube
+   * Sorbothane pads currently best solution
+   * Glue can also be used
+
 ## 2022-08-13
 
 * Discussed how to "hold onto" the middle piece of a side
