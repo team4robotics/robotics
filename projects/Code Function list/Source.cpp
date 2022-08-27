@@ -51,6 +51,100 @@ public:
 			cout << endl;
 		}
 	}
+	
+	int wSideOnFace() {
+		for (int i = 0; i < 5; i++)
+		{
+			if (cube[i][0][1] == 'w')
+				return i;
+			if (cube[i][1][0] == 'w')
+				return i;
+			if (cube[i][1][2] == 'w')
+				return i;
+			if (cube[i][2][1] == 'w')
+				return i;
+		}
+		return 5;
+	}
+	void wCross1() {
+		while (cube[5][0][1] != 'w' &&
+			cube[5][1][0] != 'w' &&
+			cube[5][1][2] != 'w' &&
+			cube[5][2][0] != 'w')
+		{
+			if (wSideOnFace() == 0) {
+				if (cube[0][0][1] == 'w')
+				{
+					bluecw();
+					bluecw();
+				}
+				if (cube[0][1][0] == 'w')
+				{
+					redcw();
+					redcw();
+				}
+				if (cube[0][1][2] == 'w')
+				{
+					orangecw();
+					orangecw();
+				}
+				if (cube[0][2][1] == 'w')
+				{
+					greencw();
+					greencw();
+				}
+			}
+		}
+	}
+
+private:
+	void rotate(char& a, char& b, char& c, char& d) {
+		char tmp = a;
+		a = b;
+		b = c;
+		c = d;
+		d = tmp;
+	}
+	void clockwise90(
+		char& faceTL, char& faceTC, char& faceTR,
+		char& faceCL, char& faceCR,
+		char& faceBL, char& faceBC, char& faceBR,
+
+		char& sideTL, char& sideTC, char& sideTR,
+		char& sideRT, char& sideRC, char& sideRB,
+		char& sideBR, char& sideBC, char& sideBL,
+		char& sideLB, char& sideLC, char& sideLT
+		)
+	{
+		// face switching
+		rotate(faceTL, faceBL, faceBR, faceTR);
+		rotate(faceTC, faceCL, faceBC, faceCR);
+
+		// side switching
+		rotate(sideTL, sideLB, sideBR, sideRT);
+		rotate(sideTC, sideLC, sideBC, sideRC);
+		rotate(sideTR, sideLT, sideBL, sideRB);
+	}
+	void counterclockwise90(
+		char& faceTL, char& faceTC, char& faceTR,
+		char& faceCL, char& faceCR,
+		char& faceBL, char& faceBC, char& faceBR,
+
+		char& sideTL, char& sideTC, char& sideTR,
+		char& sideRT, char& sideRC, char& sideRB,
+		char& sideBR, char& sideBC, char& sideBL,
+		char& sideLB, char& sideLC, char& sideLT
+		)
+	{
+		// face switching
+		rotate(faceTL, faceTR, faceBR, faceBL);
+		rotate(faceTC, faceCR, faceBC, faceCL);
+
+		// side switching
+		rotate(sideTL, sideRT, sideBR, sideLB);
+		rotate(sideTC, sideRC, sideBC, sideLC);
+		rotate(sideTR, sideRB, sideBL, sideLT);
+	}
 	void yellowcw() {
 		clockwise90(
 			cube[0][0][0], cube[0][0][1], cube[0][0][2],
@@ -195,57 +289,6 @@ public:
 			cube[4][2][0], cube[4][2][1], cube[4][2][2]
 		);
 	}
-
-
-private:
-	void rotate(char& a, char& b, char& c, char& d) {
-		char tmp = a;
-		a = b;
-		b = c;
-		c = d;
-		d = tmp;
-	}
-
-	void clockwise90(
-		char& faceTL, char& faceTC, char& faceTR,
-		char& faceCL, char& faceCR,
-		char& faceBL, char& faceBC, char& faceBR,
-
-		char& sideTL, char& sideTC, char& sideTR,
-		char& sideRT, char& sideRC, char& sideRB,
-		char& sideBR, char& sideBC, char& sideBL,
-		char& sideLB, char& sideLC, char& sideLT
-		)
-	{
-		// face switching
-		rotate(faceTL, faceBL, faceBR, faceTR);
-		rotate(faceTC, faceCL, faceBC, faceCR);
-
-		// side switching
-		rotate(sideTL, sideLB, sideBR, sideRT);
-		rotate(sideTC, sideLC, sideBC, sideRC);
-		rotate(sideTR, sideLT, sideBL, sideRB);
-	}
-	void counterclockwise90(
-		char& faceTL, char& faceTC, char& faceTR,
-		char& faceCL, char& faceCR,
-		char& faceBL, char& faceBC, char& faceBR,
-
-		char& sideTL, char& sideTC, char& sideTR,
-		char& sideRT, char& sideRC, char& sideRB,
-		char& sideBR, char& sideBC, char& sideBL,
-		char& sideLB, char& sideLC, char& sideLT
-		)
-	{
-		// face switching
-		rotate(faceTL, faceTR, faceBR, faceBL);
-		rotate(faceTC, faceCR, faceBC, faceCL);
-
-		// side switching
-		rotate(sideTL, sideRT, sideBR, sideLB);
-		rotate(sideTC, sideRC, sideBC, sideLC);
-		rotate(sideTR, sideRB, sideBL, sideLT);
-	}
 };
 
 int main()
@@ -258,7 +301,7 @@ int main()
 		{{ 'b', 'b', 'r' }, { 'b', 'b', 'w' }, { 'b', 'b', 'w' }},
 		{{ 'g', 'w', 'w' }, { 'g', 'w', 'w' }, { 'b', 'o', 'o' }}
 	};
-	int faces2[6][3][3] = {
+	int debug1[6][3][3] = {
 		{{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }},
 		{{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' }},
 		{{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' }},
@@ -266,12 +309,20 @@ int main()
 		{{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' }},
 		{{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }}
 	};
-	Rubik rubik(faces);
+	int debug2[6][3][3] = {
+		{{ 'y', 'w', 'y' }, { 'w', 'y', 'w' }, { 'y', 'w', 'y' }},
+		{{ 'o', 'r', 'o' }, { 'o', 'r', 'o' }, { 'o', 'r', 'o' }},
+		{{ 'g', 'b', 'g' }, { 'g', 'g', 'g' }, { 'g', 'b', 'g' }},
+		{{ 'r', 'o', 'r' }, { 'o', 'r', 'o' }, { 'r', 'o', 'r' }},
+		{{ 'b', 'g', 'b' }, { 'g', 'b', 'g' }, { 'b', 'g', 'b' }},
+		{{ 'w', 'y', 'w' }, { 'y', 'w', 'y' }, { 'w', 'y', 'w' }}
+	};
+	Rubik rubik(debug2);
 	rubik.printCube();
-	rubik.whitecw();
+	rubik.wCross1();
 	rubik.printCube();
-	rubik.whiteccw();
-	rubik.printCube();
+
+	cout << rubik.wSideOnFace() << endl;
 
 	return 0;
 }
