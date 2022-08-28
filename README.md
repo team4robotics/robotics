@@ -1,5 +1,19 @@
 # Activities
 
+## 2022-08-27
+
+* Debugged last times code
+* Solved problem of white faces on the other side
+  * Figured out a way to move white face to other side
+* Made first design for clasp
+  * Uses a removable piece that slides along the shaft for easy removal of cube
+  * Created animation
+   * IMAGE:
+![BEARRubiksCubeClaspV1byAnthony GeneralView](downloads/BEARRubiksCubeClaspV1byAnthony GeneralView.png)
+   * Animation:
+   * Coming Soon
+   * More detailed views coming soon (computer currently processing renders)
+
 ## 2022-08-20
 
 * Finished white cross algorithm for one of 6 possible scenarios
