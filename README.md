@@ -8,7 +8,7 @@
 * Made first design for clasp
   * Uses a removable piece that slides along the shaft for easy removal of cube
   * Created animation and renders
-* Note: Problem uploading image and video, renders and animation coming soon.
+![BEARRubiksCubeClaspV1byAnthony GeneralView](images/BEARRubiksCubeClaspV1byAnthony GeneralView.png)
 
 ## 2022-08-20
 
