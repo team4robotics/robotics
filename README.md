@@ -8,7 +8,13 @@
 * Made first design for clasp
   * Uses a removable piece that slides along the shaft for easy removal of cube
   * Created animation and renders
+* Renders
 ![claspV1](images/claspV1.png)
+![claspV1Detail](images/claspV1Detail.png)
+![claspV1Detail2](images/claspV1Detail2.png)
+* Animation
+![claspV1Animation](images/claspV1Animation.avi)
+  * Rendered and animated using Fusion 360
 
 ## 2022-08-20
 
