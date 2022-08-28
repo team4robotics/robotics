@@ -13,7 +13,7 @@
 ![claspV1Detail](images/claspV1Detail.png)
 ![claspV1Detail2](images/claspV1Detail2.png)
 * Rough Animation
-![claspV1Animation](images/claspV1Animation.avi)
+![claspV1Animation2](images/claspV1Animation2.avi)
   * Rendered and animated using Fusion 360
 
 ## 2022-08-20
