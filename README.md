@@ -7,12 +7,8 @@
   * Figured out a way to move white face to other side
 * Made first design for clasp
   * Uses a removable piece that slides along the shaft for easy removal of cube
-  * Created animation
-   * IMAGE:
-![BEARRubiksCubeClaspV1byAnthony GeneralView](downloads/BEARRubiksCubeClaspV1byAnthony GeneralView.png)
-   * Animation:
-   * Coming Soon
-   * More detailed views coming soon (computer currently processing renders)
+  * Created animation and renders
+* Note: Problem uploading image and video, renders and animation coming soon.
 
 ## 2022-08-20
 
