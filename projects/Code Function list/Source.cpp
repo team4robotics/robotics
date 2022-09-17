@@ -67,12 +67,14 @@ public:
 		return 5;
 	}
 	void wCross1() {
-		while (cube[5][0][1] != 'w' &&
-			cube[5][1][0] != 'w' &&
-			cube[5][1][2] != 'w' &&
-			cube[5][2][0] != 'w')
+		//cout << "hehe debugging" << endl;
+		while (cube[5][0][1] != 'w' ||
+			cube[5][1][0] != 'w' ||
+			cube[5][1][2] != 'w' ||
+			cube[5][2][1] != 'w')
 		{
-			if (wSideOnFace() == 0) {
+			if (wSideOnFace() == 0)
+			{
 				if (cube[0][0][1] == 'w')
 				{
 					bluecw();
@@ -92,6 +94,52 @@ public:
 				{
 					greencw();
 					greencw();
+				}
+			}
+			else
+			{
+				int face1 = wSideOnFace(), face2;
+				if (face1 == 1)
+				{
+					if (cube[4][0][1] == 'w')
+						face2 = 4;
+					else if (cube[2][0][1] == 'w')
+						face2 = 2;
+					else
+						face2 = -2;
+				}
+				else if (face1 == 2)
+				{
+					if (cube[1][0][1] == 'w')
+						face2 = 1;
+					else if (cube[3][0][1] == 'w')
+						face2 = 3;
+					else
+						face2 = -3;
+				}
+				else if (face1 == 3)
+				{
+					if (cube[2][0][1] == 'w')
+						face2 = 2;
+					else if (cube[4][0][1] == 'w')
+						face2 = 4;
+					else
+						face2 = -4;
+				}
+				else if (face1 == 4)
+				{
+					if (cube[3][0][1] == 'w')
+						face2 = 3;
+					else if (cube[1][0][1] == 'w')
+						face2 = 1;
+					else
+						face2 = -5;
+				}
+
+				if (face2 < 0)
+				{
+					inputcw(face1);
+					inputccw(abs(face2));
 				}
 			}
 		}
@@ -289,6 +337,37 @@ private:
 			cube[4][2][0], cube[4][2][1], cube[4][2][2]
 		);
 	}
+
+	void inputcw(int i)
+	{
+		if (i == 0)
+			yellowcw();
+		else if (i == 1)
+			redcw();
+		else if (i == 2)
+			greencw();
+		else if (i == 3)
+			orangecw();
+		else if (i == 4)
+			bluecw();
+		else if (i == 5)
+			whitecw();
+	}
+	void inputccw(int i)
+	{
+		if (i == 0)
+			yellowccw();
+		else if (i == 1)
+			redccw();
+		else if (i == 2)
+			greenccw();
+		else if (i == 3)
+			orangeccw();
+		else if (i == 4)
+			blueccw();
+		else if (i == 5)
+			whiteccw();
+	}
 };
 
 int main()
@@ -310,19 +389,17 @@ int main()
 		{{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }}
 	};
 	int debug2[6][3][3] = {
-		{{ 'y', 'w', 'y' }, { 'w', 'y', 'w' }, { 'y', 'w', 'y' }},
-		{{ 'o', 'r', 'o' }, { 'o', 'r', 'o' }, { 'o', 'r', 'o' }},
-		{{ 'g', 'b', 'g' }, { 'g', 'g', 'g' }, { 'g', 'b', 'g' }},
-		{{ 'r', 'o', 'r' }, { 'o', 'r', 'o' }, { 'r', 'o', 'r' }},
-		{{ 'b', 'g', 'b' }, { 'g', 'b', 'g' }, { 'b', 'g', 'b' }},
-		{{ 'w', 'y', 'w' }, { 'y', 'w', 'y' }, { 'w', 'y', 'w' }}
+		{{ 'y', 'y', 'g' }, { 'y', 'y', 'g' }, { 'o', 'o', 'o' }},
+		{{ 'r', 'r', 'g' }, { 'r', 'r', 'y' }, { 'r', 'r', 'y' }},
+		{{ 'w', 'w', 'w' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' }},
+		{{ 'b', 'o', 'o' }, { 'w', 'o', 'o' }, { 'w', 'o', 'o' }},
+		{{ 'y', 'b', 'b' }, { 'y', 'b', 'b' }, { 'y', 'b', 'b' }},
+		{{ 'r', 'r', 'r' }, { 'w', 'w', 'b' }, { 'w', 'w', 'b' }}
 	};
 	Rubik rubik(debug2);
 	rubik.printCube();
 	rubik.wCross1();
 	rubik.printCube();
-
-	cout << rubik.wSideOnFace() << endl;
 
 	return 0;
 }
