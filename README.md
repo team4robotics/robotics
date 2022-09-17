@@ -1,6 +1,16 @@
 # Activities
 
-## 2022-09-17
+## 2022-09-17 
+
+* Started work on the F2L aspect of the code
+* Inquired about 3D Printing material as well as pricing and location for pick-up
+* Making CAD models with precision models for 3D printing
+
+## 2022-09-10 
+
+* Received materials and built Robot Framework
+* Constructed 3D Model of the Robot on TinkerCAD
+* Experimented with different gear ratios and decided on the one to use
 
 ## 2022-08-27
 
@@ -15,7 +25,7 @@
 ![claspV1Detail](images/claspV1Detail.png)
 ![claspV1Detail2](images/claspV1Detail2.png)
 * Rough Animation
-![claspV1Animation2](images/claspV1Animation2.avi)
+  ![claspV1Animation2](images/claspV1Animation2.avi)
   * Rendered and animated using Fusion 360
 
 ## 2022-08-20
