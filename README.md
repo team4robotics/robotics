@@ -1,5 +1,21 @@
 # Activities
 
+## 2022-08-27
+
+* Debugged last times code
+* Solved problem of white faces on the other side
+  * Figured out a way to move white face to other side
+* Made first design for clasp
+  * Uses a removable piece that slides along the shaft for easy removal of cube
+  * Created animation and renders
+* Renders
+![claspV1](images/claspV1.png)
+![claspV1Detail](images/claspV1Detail.png)
+![claspV1Detail2](images/claspV1Detail2.png)
+* Rough Animation
+![claspV1Animation2](images/claspV1Animation2.avi)
+  * Rendered and animated using Fusion 360
+
 ## 2022-08-20
 
 * Finished white cross algorithm for one of 6 possible scenarios
