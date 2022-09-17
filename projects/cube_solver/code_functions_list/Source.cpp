@@ -368,6 +368,30 @@ private:
 		else if (i == 5)
 			whiteccw();
 	}
+
+	void f2l_solve(int i, int k) {
+		// U, L, D, R
+		if (i = 2) {
+			bluecw();
+			yellowcw();
+			blueccw();
+			yellowccw();
+		}
+
+	}
+
+	void same_colour(int i) {
+		if (i = 3) {
+			blueccw();
+			yellowcw();
+			yellowcw();
+			bluecw();
+			yellowccw();
+			orangeccw();
+			yellowcw();
+			orangecw();
+		}
+	}
 };
 
 int main()
@@ -396,10 +420,14 @@ int main()
 		{{ 'y', 'b', 'b' }, { 'y', 'b', 'b' }, { 'y', 'b', 'b' }},
 		{{ 'r', 'r', 'r' }, { 'w', 'w', 'b' }, { 'w', 'w', 'b' }}
 	};
+
+
 	Rubik rubik(debug2);
 	rubik.printCube();
 	rubik.wCross1();
 	rubik.printCube();
+
+
 
 	return 0;
 }
