@@ -1,5 +1,10 @@
 # Activities
 
+## 2022-09-24
+
+* Created animation for current rubiks cube clasp design- length problems will be refined in next version
+![hdVideo](images/hdVideo.avi)
+
 ## 2022-09-17 
 
 * Started work on the F2L aspect of the code
