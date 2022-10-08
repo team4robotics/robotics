@@ -1,7 +1,21 @@
 # Activities
 
+* Completed the algorithm for OLL
+* Ordered 3D printer parts
+* Started visions sensor calibration process- lost data due to technical error
+* Corrected error in 3D models where distance of holes from the wall wasn't sufficient by re-modelling and re-slicing
+* Sent 3D model for printing, should get prints soon
+* Fixed errors in OLL code from last week
+* Brainstormed and reasearched on last years UFT hacks
+
+
 ## 2022-09-24
 
+* Worked on OLL algorithms
+* Finished robot main frame
+* Added all motors onto robot frame
+* Measured robot and rubix cube dimensions
+* Finished Rubix cube mount and vision sensor mount final draft
 * Created animation for current rubiks cube clasp design- length problems will be refined in next version
 ![hdVideo](images/hdVideo.avi)
 
