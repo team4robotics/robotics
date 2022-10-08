@@ -402,7 +402,7 @@ private:
 
 	//OLL ALGO
 
-	void oll_pi() {
+	void oll_pi() {//yes
 		greencw();
 		yellowcw();
 		yellowcw();
@@ -420,7 +420,7 @@ private:
 
 	}
 
-	void oll_u() {
+	void oll_u() {//yes
 		greencw();
 		greencw();
 		whitecw();
@@ -436,7 +436,7 @@ private:
 
 	}
 
-	void oll_t() {
+	void oll_t() {//yes
 		bluecw();
 		redcw();
 		greenccw();
@@ -448,7 +448,7 @@ private:
 
 	}
 
-	void oll_Asune() {
+	void oll_Asune() {//yes
 		greenccw();
 		yellowccw();
 		greencw();
@@ -478,11 +478,14 @@ private:
 		redcw();
 		greenccw();
 		redccw();
-		bluecw());
-		redcw
+		bluecw();
+		redcw();
+		greencw();
+		redccw();
+		blueccw();
 	}
 
-	void oll_sune() {
+	void oll_sune() {//yes
 		greencw();
 		yellowcw();
 		greenccw();
