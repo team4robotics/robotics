@@ -364,10 +364,126 @@ private:
 			orangecw();
 		}
 	}
+	//OLL DETERMINE
+
+	void oll_determine() {
+		if (faces[0] == { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }) {
+		}
+	}
+
+	//OLL ALGO
+
+	void oll_pi() {//yes
+		greencw();
+		yellowcw();
+		yellowcw();
+		greencw();
+		greencw();
+		yellowccw();
+		greencw();
+		greencw();
+		yellowccw();
+		greencw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greencw();
+
+	}
+
+	void oll_u() {//yes
+		greencw();
+		greencw();
+		whitecw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+		whiteccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greenccw();
+
+	}
+
+	void oll_t() {//yes
+		bluecw();
+		redcw();
+		greenccw();
+		redccw();
+		blueccw();
+		redcw();
+		greencw();
+		redccw();
+
+	}
+
+	void oll_Asune() {//yes
+		greenccw();
+		yellowccw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+	}
+
+	void oll_h() {
+		greenccw();
+		yellowccw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+	}
+
+	void oll_l() {
+		redcw();
+		greenccw();
+		redccw();
+		bluecw();
+		redcw();
+		greencw();
+		redccw();
+		blueccw();
+	}
+
+	void oll_sune() {//yes
+		greencw();
+		yellowcw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greenccw();
+	}
 };
 
 int main()
 {
+<<<<<<< HEAD
+=======
+	if (faces == 
+		{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
+		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
+		{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' },
+		{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' },
+		{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' },
+		{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }) {
+		rubik.printCube();
+		return 0;
+	}
+
+>>>>>>> origin/main
 	int faces[6][3][3] = {
 		{{ 'g', 'r', 'r' }, { 'g', 'y', 'y' }, { 'g', 'y', 'y' }},
 		{{ 'w', 'w', 'w' }, { 'o', 'r', 'r' }, { 'o', 'r', 'r' }},
