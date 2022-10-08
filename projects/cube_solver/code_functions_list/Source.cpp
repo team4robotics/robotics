@@ -66,7 +66,8 @@ public:
 		}
 		return 5;
 	}
-	void wCross() {
+	void wCross1() {
+		//cout << "hehe debugging" << endl;
 		while (cube[5][0][1] != 'w' ||
 			cube[5][1][0] != 'w' ||
 			cube[5][1][2] != 'w' ||
@@ -74,44 +75,72 @@ public:
 		{
 			if (wSideOnFace() == 0)
 			{
-				if (cube[0][0][1] == 'w' && cube[4][0][1] == 'b')
+				if (cube[0][0][1] == 'w')
 				{
 					bluecw();
 					bluecw();
 				}
-				else yellowccw;
-
-				if (cube[0][1][0] == 'w' && cube[1][0][1] == 'r')
+				if (cube[0][1][0] == 'w')
 				{
 					redcw();
 					redcw();
 				}
-				else yellowccw;
-				
-				if (cube[0][2][1] == 'w' && cube[2][0][1] == 'g')
-				{
-					greencw();
-					greencw();
-				}
-				else yellowccw;
-				
-				if (cube[0][1][2] == 'w' && cube[3][0][1] == 'o')
+				if (cube[0][1][2] == 'w')
 				{
 
 					orangecw();
 					orangecw();
 				}
-				else yellowccw;
+				if (cube[0][2][1] == 'w')
+				{
+					greencw();
+					greencw();
+				}
 			}
 			else
 			{
 				int face1 = wSideOnFace(), face2;
-				if (face == 1)
+				if (face1 == 1)
 				{
-					if (cube[1][0][1] == w)
-					{
-						if (cube[][][])
-					}
+					if (cube[4][0][1] == 'w')
+						face2 = 4;
+					else if (cube[2][0][1] == 'w')
+						face2 = 2;
+					else
+						face2 = -2;
+				}
+				else if (face1 == 2)
+				{
+					if (cube[1][0][1] == 'w')
+						face2 = 1;
+					else if (cube[3][0][1] == 'w')
+						face2 = 3;
+					else
+						face2 = -3;
+				}
+				else if (face1 == 3)
+				{
+					if (cube[2][0][1] == 'w')
+						face2 = 2;
+					else if (cube[4][0][1] == 'w')
+						face2 = 4;
+					else
+						face2 = -4;
+				}
+				else if (face1 == 4)
+				{
+					if (cube[3][0][1] == 'w')
+						face2 = 3;
+					else if (cube[1][0][1] == 'w')
+						face2 = 1;
+					else
+						face2 = -5;
+				}
+
+				if (face2 < 0)
+				{
+					inputcw(face1);
+					inputccw(abs(face2));
 				}
 			}
 		}
@@ -364,15 +393,25 @@ private:
 			orangecw();
 		}
 	}
-	//OLL DETERMINE
 
-	void oll_determine() {
-		if (faces[0] == { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }) {
+	void oll() {
+		if (faces[0] == {'', 'y', ''}, { 'y','y','y' }, { 'y','y','' }) {
+			if (faces[1][1][3] == 'y') {
+
+			}
+			else {
+
+			}
 		}
 	}
+			//OLL DETERMINE
 
-	//OLL ALGO
+			void oll_determine() {
+			if (faces[0] == { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }) {
+			}
+		}
 
+		//OLL ALGO
 	void oll_pi() {//yes
 		greencw();
 		yellowcw();
@@ -470,8 +509,6 @@ private:
 
 int main()
 {
-<<<<<<< HEAD
-=======
 	if (faces == 
 		{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
 		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
@@ -483,7 +520,6 @@ int main()
 		return 0;
 	}
 
->>>>>>> origin/main
 	int faces[6][3][3] = {
 		{{ 'g', 'r', 'r' }, { 'g', 'y', 'y' }, { 'g', 'y', 'y' }},
 		{{ 'w', 'w', 'w' }, { 'o', 'r', 'r' }, { 'o', 'r', 'r' }},
@@ -509,10 +545,13 @@ int main()
 		{{ 'r', 'r', 'r' }, { 'w', 'w', 'b' }, { 'w', 'w', 'b' }}
 	};
 
+
 	Rubik rubik(debug2);
-	Rubik.printCube();
-	Rubik.wCross1();
-	Rubik.printCube();
+	rubik.printCube();
+	rubik.wCross1();
+	rubik.printCube();
+
+
 
 	return 0;
 }
