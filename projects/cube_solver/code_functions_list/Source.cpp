@@ -393,19 +393,119 @@ private:
 			orangecw();
 		}
 	}
+	//OLL DETERMINE
+
+	void oll_determine() {
+		if (faces[0] == { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }) {
+		}
+	}
+
+	//OLL ALGO
+
+	void oll_pi() {
+		greencw();
+		yellowcw();
+		yellowcw();
+		greencw();
+		greencw();
+		yellowccw();
+		greencw();
+		greencw();
+		yellowccw();
+		greencw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greencw();
+
+	}
+
+	void oll_u() {
+		greencw();
+		greencw();
+		whitecw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+		whiteccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greenccw();
+
+	}
+
+	void oll_t() {
+		bluecw();
+		redcw();
+		greenccw();
+		redccw();
+		blueccw();
+		redcw();
+		greencw();
+		redccw();
+
+	}
+
+	void oll_Asune() {
+		greenccw();
+		yellowccw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+	}
+
+	void oll_h() {
+		greenccw();
+		yellowccw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+	}
+
+	void oll_l() {
+		redcw();
+		greenccw();
+		redccw();
+		bluecw());
+		redcw
+	}
+
+	void oll_sune() {
+		greencw();
+		yellowcw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greenccw();
+	}
 };
 
 int main()
 {
-	if (faces == { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }
-},
-		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r } },
-		{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' } },
-		{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' } },
-		{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' } },
+	if (faces == 
+		{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
+		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
+		{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' },
+		{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' },
+		{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' },
 		{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }) {
 		rubik.printCube();
 		return 0;
+	}
 
 	int faces[6][3][3] = {
 		{{ 'g', 'r', 'r' }, { 'g', 'y', 'y' }, { 'g', 'y', 'y' }},
