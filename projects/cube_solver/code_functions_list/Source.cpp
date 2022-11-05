@@ -145,6 +145,129 @@ public:
 			}
 		}
 	}
+	void oll() {
+		oll_facered();
+		if () {
+			oll_pi;
+		}
+		if () {
+			oll_u;
+		}
+		if () {
+			oll_t;
+		}
+		if (cube[0][0][1] = 'y' && cube[0][1][0] = 'y' && cube[0[[1][1] 
+			&& cube[0][1][2] = 'y' && cube[2][2][1] = 'y' && cube[4][0][0] = 'y') {
+
+			oll_Asune;
+		}
+		if () {
+			oll_sune;
+		}
+		if () {
+			oll_t;
+		}
+		if () {
+			oll_l;
+		}
+		if () {
+			oll_h;
+		}
+	}
+	//OLL ALGO
+	void oll_pi() {//yes
+		greencw();
+		yellowcw();
+		yellowcw();
+		greencw();
+		greencw();
+		yellowccw();
+		greencw();
+		greencw();
+		yellowccw();
+		greencw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greencw();
+
+	}
+
+	void oll_u() {//yes
+		greencw();
+		greencw();
+		whitecw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+		whiteccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greenccw();
+
+	}
+
+	void oll_t() {//yes
+		bluecw();
+		redcw();
+		greenccw();
+		redccw();
+		blueccw();
+		redcw();
+		greencw();
+		redccw();
+
+	}
+
+	void oll_Asune() {//yes
+		greenccw();
+		yellowccw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+	}
+
+	void oll_h() {
+		greenccw();
+		yellowccw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowccw();
+		greenccw();
+		yellowcw();
+		yellowcw();
+		greencw();
+	}
+
+	void oll_l() {
+		redcw();
+		greenccw();
+		redccw();
+		bluecw();
+		redcw();
+		greencw();
+		redccw();
+		blueccw();
+	}
+
+	void oll_sune() {//yes
+		greencw();
+		yellowcw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greenccw();
+	}
 
 private:
 	void rotate(char& a, char& b, char& c, char& d) {
@@ -392,118 +515,6 @@ private:
 			yellowcw();
 			orangecw();
 		}
-	}
-
-	void oll() {
-		if (faces[0] == {'', 'y', ''}, { 'y','y','y' }, { 'y','y','' }) {
-			if (faces[1][1][3] == 'y') {
-
-			}
-			else {
-
-			}
-		}
-	}
-			//OLL DETERMINE
-
-			void oll_determine() {
-			if (faces[0] == { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' }) {
-			}
-		}
-
-		//OLL ALGO
-	void oll_pi() {//yes
-		greencw();
-		yellowcw();
-		yellowcw();
-		greencw();
-		greencw();
-		yellowccw();
-		greencw();
-		greencw();
-		yellowccw();
-		greencw();
-		greencw();
-		yellowcw();
-		yellowcw();
-		greencw();
-
-	}
-
-	void oll_u() {//yes
-		greencw();
-		greencw();
-		whitecw();
-		greenccw();
-		yellowcw();
-		yellowcw();
-		greencw();
-		whiteccw();
-		greenccw();
-		yellowcw();
-		yellowcw();
-		greenccw();
-
-	}
-
-	void oll_t() {//yes
-		bluecw();
-		redcw();
-		greenccw();
-		redccw();
-		blueccw();
-		redcw();
-		greencw();
-		redccw();
-
-	}
-
-	void oll_Asune() {//yes
-		greenccw();
-		yellowccw();
-		greencw();
-		yellowccw();
-		greenccw();
-		yellowcw();
-		yellowcw();
-		greencw();
-	}
-
-	void oll_h() {
-		greenccw();
-		yellowccw();
-		greencw();
-		yellowccw();
-		greenccw();
-		yellowcw();
-		greencw();
-		yellowccw();
-		greenccw();
-		yellowcw();
-		yellowcw();
-		greencw();
-	}
-
-	void oll_l() {
-		redcw();
-		greenccw();
-		redccw();
-		bluecw();
-		redcw();
-		greencw();
-		redccw();
-		blueccw();
-	}
-
-	void oll_sune() {//yes
-		greencw();
-		yellowcw();
-		greenccw();
-		yellowcw();
-		greencw();
-		yellowcw();
-		yellowcw();
-		greenccw();
 	}
 };
 
