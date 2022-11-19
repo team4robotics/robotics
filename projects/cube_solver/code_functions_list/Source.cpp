@@ -147,31 +147,36 @@ public:
 	}
 	void oll() {
 		oll_facered();
-		if () {
-			oll_pi;
-		}
-		if () {
-			oll_u;
-		}
-		if () {
-			oll_t;
-		}
-		if (cube[0][0][1] = 'y' && cube[0][1][0] = 'y' && cube[0[[1][1] 
-			&& cube[0][1][2] = 'y' && cube[2][2][1] = 'y' && cube[4][0][0] = 'y') {
+		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y'
+			&& cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[2][0][2] == 'y') {
 
-			oll_Asune;
+			oll_u();
 		}
-		if () {
-			oll_sune;
+		if (cube[0][1][0] == 'y' && cube[0][0][1] == 'y' && cube[0][2][0] == 'y' && cube[0][0][2] == 'y' && cube[0][1][1] == 'y'
+			&& cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[2][0][1] == 'y' && cube[4][0][1] == 'y') {
+
+			oll_pi();
 		}
-		if () {
-			oll_t;
+		if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' 
+			&& cube[0][2][1] == 'y' && cube[2][2][1] == 'y' && cube[4][0][0] == 'y' && cube[3][0][2] == 'y') {
+			// yellow, red, green, orange, blue, white(by row)
+			oll_Asune();
 		}
-		if () {
-			oll_l;
+		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0[1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y'
+			&& cube[0][2][1] == 'y' && cube[2][0][2] == 'y' && cube[3][0][2] == 'y' && cube[4][0][2] == 'y') {
+			oll_sune();
 		}
-		if () {
-			oll_h;
+		if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] = 'y'
+			&& cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y') {
+			oll_t();
+		}
+		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && 
+			cube[0][1][2] == 'y' && cube[2][2][1] == 'y' && cube[2][2][2] == 'y' && cube[3][0][2] == 'y' && cube[2][0][0] == 'y') {
+			oll_l();
+		}
+		if (cube[0][1][0] == 'y' && cube[0][0][1] == 'y' && cube[0][2][0] == 'y' && cube[0][0][2] == 'y' && cube[0][1][1] == 'y'
+			&& cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[3][0][0] == 'y' && cube[3][0][2] ==  'y') {
+			oll_h();
 		}
 	}
 	//OLL ALGO
