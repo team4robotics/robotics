@@ -289,6 +289,39 @@ public:
 		greenccw();
 	}
 
+	void red() {
+		switch () {
+		case sune:
+			while (faces[0][0][0] != 'y') {
+				yellowccw();
+			}
+		case asune:
+			while (faces[0][0][2] != 'y') {
+				yellowccw();
+			}
+		case l:
+			while (faces[1][0][0] != 'y') {
+				yellowccw();
+			}
+		case t:
+			while (faces[1][0][0] != 'y') {
+				yellowccw();
+			}
+		case h:
+			while (faces[2][0][0] != 'y') {
+				yellowccw();
+			}
+		case pi:
+			while (faces[1][0][0] != 'y' && faces[1][0][2] != 'y') {
+				yellowccw();
+			}
+		case u:
+			while (faces[1][0][0] != 'y') {
+				yellowccw();
+			}
+		}
+	}
+
 private:
 	void rotate(char& a, char& b, char& c, char& d) {
 		char tmp = a;
@@ -536,6 +569,9 @@ private:
 			orangecw();
 		}
 	}
+
+
+
 };
 
 int main()
