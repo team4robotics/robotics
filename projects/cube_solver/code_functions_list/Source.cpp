@@ -112,54 +112,173 @@ public:
 					}
 				}
 			}
-			else
+			else if (wSideOnFace() == 1)
 			{
-				int face1 = wSideOnFace(), face2;
-				if (face1 == 1)
+				if (cube[1][2][1] == 'w')
+				{
+					redcw();
+					bluecw();
+				}
+				else if (cube[1][1][0] == 'w')
+				{
+					redcw();
+					yellowcw();
+					redccw();
+				}
+				else if (cube[1][1][2] == 'w')
+				{
+					redccw();
+					yellowcw();
+					redcw();
+				}
+				if (cube[1][0][1] == 'w')
 				{
 					if (cube[4][0][1] == 'w')
-						face2 = 4;
+					{
+						redccw();
+						bluecw();
+						redccw();
+					}
 					else if (cube[2][0][1] == 'w')
-						face2 = 2;
+					{
+						redcw();
+						greenccw();
+						redcw();
+					}
 					else
-						face2 = -2;
+					{
+						redcw();
+						greenccw();
+						redcw();
+					}
 				}
-				else if (face1 == 2)
+			}
+			else if (wSideOnFace() == 2)
+			{
+				if (cube[2][2][1] == 'w')
+				{
+					greencw();
+					redcw();
+				}
+				else if (cube[2][1][0] == 'w')
+				{
+					greencw();
+					yellowcw();
+					greenccw();
+				}
+				else if (cube[2][1][2] == 'w')
+				{
+					greenccw();
+					yellowcw();
+					greencw();
+				}
+				if (cube[2][0][1] == 'w')
 				{
 					if (cube[1][0][1] == 'w')
-						face2 = 1;
+					{
+						greenccw();
+						redcw();
+						greenccw();
+					}
 					else if (cube[3][0][1] == 'w')
-						face2 = 3;
+					{
+						greencw();
+						orangeccw();
+						greencw();
+					}
 					else
-						face2 = -3;
+					{
+						greencw();
+						orangeccw();
+						greencw();
+					}
 				}
-				else if (face1 == 3)
+			}
+			else if (wSideOnFace() == 3)
+			{
+				if (cube[3][2][1] == 'w')
+				{
+					orangecw();
+					greencw();
+				}
+				else if (cube[3][1][0] == 'w')
+				{
+					orangecw();
+					yellowcw();
+					orangeccw();
+				}
+				else if (cube[3][1][2] == 'w')
+				{
+					orangeccw();
+					yellowcw();
+					orangecw();
+				}
+				if (cube[3][0][1] == 'w')
 				{
 					if (cube[2][0][1] == 'w')
-						face2 = 2;
+					{
+						orangeccw();
+						greencw();
+						orangeccw();
+					}
 					else if (cube[4][0][1] == 'w')
-						face2 = 4;
+					{
+						orangecw();
+						blueccw();
+						orangecw();
+					}
 					else
-						face2 = -4;
+					{
+						orangecw();
+						blueccw();
+						orangecw();
+					}
 				}
-				else if (face1 == 4)
+			}
+			else if (wSideOnFace() == 4)
+			{
+				if (cube[4][2][1] == 'w')
+				{
+					bluecw();
+					orangecw();
+				}
+				else if (cube[4][1][0] == 'w')
+				{
+					bluecw();
+					yellowcw();
+					blueccw();
+				}
+				else if (cube[4][1][2] == 'w')
+				{
+					blueccw();
+					yellowcw();
+					bluecw();
+				}
+				if (cube[4][0][1] == 'w')
 				{
 					if (cube[3][0][1] == 'w')
-						face2 = 3;
+					{
+						blueccw();
+						orangecw();
+						blueccw();
+					}
 					else if (cube[1][0][1] == 'w')
-						face2 = 1;
+					{
+						bluecw();
+						redccw();
+						bluecw();
+					}
 					else
-						face2 = -5;
-				}
-
-				if (face2 < 0)
-				{
-					inputcw(face1);
-					inputccw(abs(face2));
+					{
+						bluecw();
+						redccw();
+						bluecw();
+					}
 				}
 			}
 		}
 	}
+
 	void oll() {
 		oll_facered();
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y'
