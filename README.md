@@ -1,5 +1,22 @@
 # Activities
 
+## 2022-11-19
+
+* Completed OLL decision making
+* Completed Red Face algorithm
+* Completed phase 1 of White Cross
+* Finished 2nd round of prototyping
+
+## 2022-11-05
+
+* Fixed some white cross cases
+* Revised and added onto OLL
+* Started 2nd round of prototyping
+	* Worked on new 3D model for Vision Sensor Mount
+![Screenshot 2022-11-19 102628](images/Screenshot 2022-11-19 102628.png)
+
+## 2022-10-08
+
 * Completed the algorithm for OLL
 * Ordered 3D printer parts
 * Started visions sensor calibration process- lost data due to technical error
