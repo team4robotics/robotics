@@ -7,7 +7,8 @@
 * Sent 3D model for printing, should get prints soon
 * Fixed errors in OLL code from last week
 * Brainstormed and reasearched on last years UFT hacks
-
+* Started 2nd round of prototyping
+![Screenshot 2022-11-19 102628](images/Screenshot 2022-11-19 102628.png)
 
 ## 2022-09-24
 
