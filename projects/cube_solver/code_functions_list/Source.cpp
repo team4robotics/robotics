@@ -293,7 +293,7 @@ public:
 		}
 		if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' 
 			&& cube[0][2][1] == 'y' && cube[2][2][1] == 'y' && cube[4][0][0] == 'y' && cube[3][0][2] == 'y') {
-			// yellow, red, green, orange, blue, white(by row)
+
 			oll_Asune();
 		}
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0[1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y'
@@ -677,7 +677,7 @@ private:
 	}
 
 	void same_colour(int i) {
-		if (i = 3) {
+		if (i == 3) {
 			blueccw();
 			yellowcw();
 			yellowcw();
