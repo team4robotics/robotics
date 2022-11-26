@@ -279,8 +279,55 @@ public:
 		}
 	}
 
-	
-	
+	void wCross2() {
+		while (cube[1][2][1] != 'r' ||
+			cube[2][2][1] != 'g' ||
+			cube[3][2][1] != 'o' ||
+			cube[4][2][1] != 'b') {
+			if (cube[1][2][0] == cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
+				== cube[3][2][2 && cube[4][2][0] == cube[4][2][2] && cube[1][2][0] != cube[1][2][1]
+				&& cube[2][2][0] != cube[2][2][1] && cube[3][2][0] != cube[3][2][1] && cube[4][2][0]
+				!= cube[4][2][1]) {
+				if (cube[1][2][1] == cube[4][2][0] || cube[2][2][0] == cube[2][2][1]) {
+					// equivalent to pll_z
+				}
+				else {
+					// equivalent to pll_h
+				}
+			}
+			if (cube[1][2][0] == cube[1][2][1] && cube[1][2][1] == cube[1][2][2]) {
+				// equivalent to pll_ua and/or pll_ub
+			}
+		}
+	}
+
+	void wFace1() { // plugging in corners
+		while (cube[5][0][0] != 'w' ||
+			cube[5][0][2] != 'w' ||
+			cube[5][2][0] != 'w' ||
+			cube[5][2][2] != 'w') {
+			// ...
+		}
+	}
+
+	void wFace2() { // fixing corners
+		while () {
+			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
+				// diagonals
+			}
+			if ((cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
+					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+					== cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+					!= cube[3][2][2] && cube[4][2][0] == cube[4][2][2])) {
+				// headlights
+			}
+		}
+	}
 	
 	void oll() {
 		oll_facered();
@@ -414,92 +461,68 @@ public:
 	void red() {
 		switch () {
 		case sune:
-			while (faces[0][0][0] != 'y') {
+			while (cube[0][0][0] != 'y') {
 				yellowccw();
 			}
 		case asune:
-			while (faces[0][0][2] != 'y') {
+			while (cube[0][0][2] != 'y') {
 				yellowccw();
 			}
 		case l:
-			while (faces[1][0][0] != 'y') {
+			while (cube[1][0][0] != 'y') {
 				yellowccw();
 			}
 		case t:
-			while (faces[1][0][0] != 'y') {
+			while (cube[1][0][0] != 'y') {
 				yellowccw();
 			}
 		case h:
-			while (faces[2][0][0] != 'y') {
+			while (cube[2][0][0] != 'y') {
 				yellowccw();
 			}
 		case pi:
-			while (faces[1][0][0] != 'y' && faces[1][0][2] != 'y') {
+			while (cube[1][0][0] != 'y' && cube[1][0][2] != 'y') {
 				yellowccw();
 			}
 		case u:
-			while (faces[1][0][0] != 'y') {
+			while (cube[1][0][0] != 'y') {
 				yellowccw();
 			}
 		}
 	}
 
 	void pll() {
-		if (faces[1][0][0] != faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
-			!= faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) {
+		if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+			!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
 			pll_diag();
 		}
-		if ((faces[1][0][0] == faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
-			!= faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) ||
-			(faces[1][0][0] != faces[1][0][2] && faces[2][0][0] == faces[2][0][2] && faces[3][0][0]
-				!= faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) ||
-			(faces[1][0][0] != faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
-				== faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) ||
-			(faces[1][0][0] != faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
-				!= faces[3][0][2] && faces[4][0][0] == faces[4][0][2])) {
+		if ((cube[1][0][0] == cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) ||
+			(cube[1][0][0] != cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) ||
+			(cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				== cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) ||
+			(cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] == cube[4][0][2])) {
 			pll_headlights();
 		}
 
-		if (faces[1][0][0] == faces[1][0][2] && faces[2][0][0] == faces[2][0][2] && faces[3][0][0]
-			== faces[3][0][2 && faces[4][0][0] == faces[4][0][2] && faces[1][0][0] != faces[1][0][1]
-			&& faces[2][0][0] != faces[2][0][1] && faces[3][0][0] != faces[3][0][1] && faces[4][0][0]
-			!= faces[4][0][1]) {
-			if (faces[1][0][1] == faces[4][0][0] || f[2][0][0] == f[2][0][1]) {
+		if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+			== cube[3][0][2] && cube[4][0][0] == cube[4][0][2] && cube[1][0][0] != cube[1][0][1]
+			&& cube[2][0][0] != cube[2][0][1] && cube[3][0][0] != cube[3][0][1] && cube[4][0][0]
+			!= cube[4][0][1]) {
+			if (cube[1][0][1] == cube[4][0][0] || cube[2][0][0] == cube[2][0][1]) {
 				pll_z();
 			}
 			else {
 				pll_h();
 			}
 		}
-		if (faces[1][0][0] == faces[1[0][1] == faces[1][0][2]) {
-
+		if (cube[1][0][0] == cube[1][0][1] && cube[1][0][1] == cube[1][0][2]) {
+			pll_ua(); // or pll_ub();
 		}
 	}
 	//  y r g o b w
-
-	void pll_diag() {
-		//F R U' R' U' R U R' F' R U R' U' R' F R F'
-	}
-
-	void pll_headlights() {
-		//R U R' U' R' F R2 U' R' U' R U R' F'
-	}
-
-	void pll_h() {
-		//M2 U M2 U2 M2 U M2
-	}
-
-	void pll_ua() {
-		//R U' R U R U R U' R' U' R2
-	}
-
-	void pll_ub() {
-		//R2 U R U R' U' R' U' R' U R'
-	}
-
-	void pll_z() {
-		//M' U M2 U M2 U M' U2 M2
-	}
 
 private:
 	void rotate(char& a, char& b, char& c, char& d) {
@@ -749,23 +772,33 @@ private:
 		}
 	}
 
+	void pll_diag() {
+		//F R U' R' U' R U R' F' R U R' U' R' F R F'
+	}
 
+	void pll_headlights() {
+		//R U R' U' R' F R2 U' R' U' R U R' F'
+	}
 
+	void pll_h() {
+		//M2 U M2 U2 M2 U M2
+	}
+
+	void pll_ua() {
+		//R U' R U R U R U' R' U' R2
+	}
+
+	void pll_ub() {
+		//R2 U R U R' U' R' U' R' U R'
+	}
+
+	void pll_z() {
+		//M' U M2 U M2 U M' U2 M2
+	}
 };
 
 int main()
 {
-	if (faces == 
-		{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
-		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
-		{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' },
-		{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' },
-		{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' },
-		{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }) {
-		rubik.printCube();
-		return 0;
-	}
-
 	int faces[6][3][3] = {
 		{{ 'g', 'r', 'r' }, { 'g', 'y', 'y' }, { 'g', 'y', 'y' }},
 		{{ 'w', 'w', 'w' }, { 'o', 'r', 'r' }, { 'o', 'r', 'r' }},
