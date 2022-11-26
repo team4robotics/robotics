@@ -279,6 +279,9 @@ public:
 		}
 	}
 
+	
+	
+	
 	void oll() {
 		oll_facered();
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y'
@@ -439,6 +442,63 @@ public:
 				yellowccw();
 			}
 		}
+	}
+
+	void pll() {
+		if (faces[1][0][0] != faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
+			!= faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) {
+			pll_diag();
+		}
+		if ((faces[1][0][0] == faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
+			!= faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) ||
+			(faces[1][0][0] != faces[1][0][2] && faces[2][0][0] == faces[2][0][2] && faces[3][0][0]
+				!= faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) ||
+			(faces[1][0][0] != faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
+				== faces[3][0][2] && faces[4][0][0] != faces[4][0][2]) ||
+			(faces[1][0][0] != faces[1][0][2] && faces[2][0][0] != faces[2][0][2] && faces[3][0][0]
+				!= faces[3][0][2] && faces[4][0][0] == faces[4][0][2])) {
+			pll_headlights();
+		}
+
+		if (faces[1][0][0] == faces[1][0][2] && faces[2][0][0] == faces[2][0][2] && faces[3][0][0]
+			== faces[3][0][2 && faces[4][0][0] == faces[4][0][2] && faces[1][0][0] != faces[1][0][1]
+			&& faces[2][0][0] != faces[2][0][1] && faces[3][0][0] != faces[3][0][1] && faces[4][0][0]
+			!= faces[4][0][1]) {
+			if (faces[1][0][1] == faces[4][0][0] || f[2][0][0] == f[2][0][1]) {
+				pll_z();
+			}
+			else {
+				pll_h();
+			}
+		}
+		if (faces[1][0][0] == faces[1[0][1] == faces[1][0][2]) {
+
+		}
+	}
+	//  y r g o b w
+
+	void pll_diag() {
+		//F R U' R' U' R U R' F' R U R' U' R' F R F'
+	}
+
+	void pll_headlights() {
+		//R U R' U' R' F R2 U' R' U' R U R' F'
+	}
+
+	void pll_h() {
+		//M2 U M2 U2 M2 U M2
+	}
+
+	void pll_ua() {
+		//R U' R U R U R U' R' U' R2
+	}
+
+	void pll_ub() {
+		//R2 U R U R' U' R' U' R' U R'
+	}
+
+	void pll_z() {
+		//M' U M2 U M2 U M' U2 M2
 	}
 
 private:
