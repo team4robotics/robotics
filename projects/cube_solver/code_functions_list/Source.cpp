@@ -161,7 +161,7 @@ public:
 		}
 	}
 	void oll() {
-		oll_facered();
+		red();
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y'
 			&& cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[2][0][2] == 'y') {
 
@@ -320,6 +320,57 @@ public:
 				yellowccw();
 			}
 		}
+	}
+
+	void f2l() {
+		//algorithm
+
+		if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') {
+			yellowccw();
+			redccw();
+			yellowccw();
+			redcw();
+			yellowcw();
+			greencw();
+			yellowcw();
+			greenccw();
+		}
+
+		if (cube[1][0][1] == 'r' && cube[0][1][0] == 'g') {
+			yellowcw();
+			greencw();
+			yellowcw();
+			greenccw();
+			yellowccw();
+			redccw();
+			yellowccw();
+			redcw();
+		}
+
+		if (cube[4][0][1] == 'b' && cube[0][0][1] == 'r') {
+			yellowcw();
+			redcw();
+			yellowcw();
+			redccw();
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+		}
+		if (cube[1][0][1] == 'r' && cube[0][1][0] == 'b') {
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+			yellowcw();
+			redcw();
+			yellowcw();
+			redccw();
+		}
+		if (cube[3][0][1] == 'o' && cube[0][1][2] == 'b') {
+
+		}
+		
 	}
 
 private:
@@ -548,11 +599,17 @@ private:
 
 	void f2l_solve(int i, int k) {
 		// U, L, D, R
-		if (i = 2) {
+		if (i == 2) {
 			bluecw();
 			yellowcw();
 			blueccw();
 			yellowccw();
+		}
+		else {
+			greenccw();
+			yellowccw();
+			greencw();
+			yellowcw();
 		}
 
 	}
