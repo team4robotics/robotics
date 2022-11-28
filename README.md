@@ -1,4 +1,39 @@
 # Activities
+## 2022-11-26
+
+* Formatted and made significant progress on PLL recognition cases, PLL recognition cases should be finished by next class
+	* Diagonal and Headlights completed
+	* Started other cases
+* Made solid progress on White Cross
+* Discussed UofT Hacks 
+* Created logic for F2L
+* Started coding F2L
+* Researched Vision Sensor Issue
+* Sent 2nd batch of 3d models for printing 
+	* Edited dimensions for the rubiks cube clasp
+		* Added holes on corners to optimize design by preventing concentration of force, improving longetivity
+		* Used filet operation to improve ease of use
+	* Finalized Vision Sensor Mount
+![f360 visMountBack2](images/f360 visMountBack2.png)
+![f360 visMountFront2](images/f360 visMountFront2.png)
+![f360 clasp2.1](images/f360 clasp2.1.png)
+
+## 2022-11-19
+
+* Completed OLL decision making
+* Completed Red Face algorithm
+* Completed phase 1 of White Cross
+* Finished 2nd round of prototyping
+
+## 2022-11-05
+
+* Fixed some white cross cases
+* Revised and added onto OLL
+* Started 2nd round of prototyping
+	* Worked on new 3D model for Vision Sensor Mount
+![Screenshot 2022-11-19 102628](images/Screenshot 2022-11-19 102628.png)
+
+## 2022-10-08
 
 * Completed the algorithm for OLL
 * Ordered 3D printer parts
