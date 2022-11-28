@@ -112,54 +112,223 @@ public:
 					}
 				}
 			}
-			else
+			else if (wSideOnFace() == 1)
 			{
-				int face1 = wSideOnFace(), face2;
-				if (face1 == 1)
+				if (cube[1][2][1] == 'w')
+				{
+					redcw();
+					bluecw();
+				}
+				else if (cube[1][1][0] == 'w')
+				{
+					redcw();
+					yellowcw();
+					redccw();
+				}
+				else if (cube[1][1][2] == 'w')
+				{
+					redccw();
+					yellowcw();
+					redcw();
+				}
+				if (cube[1][0][1] == 'w')
 				{
 					if (cube[4][0][1] == 'w')
-						face2 = 4;
+					{
+						redccw();
+						bluecw();
+						redccw();
+					}
 					else if (cube[2][0][1] == 'w')
-						face2 = 2;
+					{
+						redcw();
+						greenccw();
+						redcw();
+					}
 					else
-						face2 = -2;
+					{
+						redcw();
+						greenccw();
+						redcw();
+					}
 				}
-				else if (face1 == 2)
+			}
+			else if (wSideOnFace() == 2)
+			{
+				if (cube[2][2][1] == 'w')
+				{
+					greencw();
+					redcw();
+				}
+				else if (cube[2][1][0] == 'w')
+				{
+					greencw();
+					yellowcw();
+					greenccw();
+				}
+				else if (cube[2][1][2] == 'w')
+				{
+					greenccw();
+					yellowcw();
+					greencw();
+				}
+				if (cube[2][0][1] == 'w')
 				{
 					if (cube[1][0][1] == 'w')
-						face2 = 1;
+					{
+						greenccw();
+						redcw();
+						greenccw();
+					}
 					else if (cube[3][0][1] == 'w')
-						face2 = 3;
+					{
+						greencw();
+						orangeccw();
+						greencw();
+					}
 					else
-						face2 = -3;
+					{
+						greencw();
+						orangeccw();
+						greencw();
+					}
 				}
-				else if (face1 == 3)
+			}
+			else if (wSideOnFace() == 3)
+			{
+				if (cube[3][2][1] == 'w')
+				{
+					orangecw();
+					greencw();
+				}
+				else if (cube[3][1][0] == 'w')
+				{
+					orangecw();
+					yellowcw();
+					orangeccw();
+				}
+				else if (cube[3][1][2] == 'w')
+				{
+					orangeccw();
+					yellowcw();
+					orangecw();
+				}
+				if (cube[3][0][1] == 'w')
 				{
 					if (cube[2][0][1] == 'w')
-						face2 = 2;
+					{
+						orangeccw();
+						greencw();
+						orangeccw();
+					}
 					else if (cube[4][0][1] == 'w')
-						face2 = 4;
+					{
+						orangecw();
+						blueccw();
+						orangecw();
+					}
 					else
-						face2 = -4;
+					{
+						orangecw();
+						blueccw();
+						orangecw();
+					}
 				}
-				else if (face1 == 4)
+			}
+			else if (wSideOnFace() == 4)
+			{
+				if (cube[4][2][1] == 'w')
+				{
+					bluecw();
+					orangecw();
+				}
+				else if (cube[4][1][0] == 'w')
+				{
+					bluecw();
+					yellowcw();
+					blueccw();
+				}
+				else if (cube[4][1][2] == 'w')
+				{
+					blueccw();
+					yellowcw();
+					bluecw();
+				}
+				if (cube[4][0][1] == 'w')
 				{
 					if (cube[3][0][1] == 'w')
-						face2 = 3;
+					{
+						blueccw();
+						orangecw();
+						blueccw();
+					}
 					else if (cube[1][0][1] == 'w')
-						face2 = 1;
+					{
+						bluecw();
+						redccw();
+						bluecw();
+					}
 					else
-						face2 = -5;
-				}
-
-				if (face2 < 0)
-				{
-					inputcw(face1);
-					inputccw(abs(face2));
+					{
+						bluecw();
+						redccw();
+						bluecw();
+					}
 				}
 			}
 		}
 	}
+
+	void wCross2() {
+		while (cube[1][2][1] != 'r' ||
+			cube[2][2][1] != 'g' ||
+			cube[3][2][1] != 'o' ||
+			cube[4][2][1] != 'b') {
+			if (cube[1][2][0] == cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
+				== cube[3][2][2 && cube[4][2][0] == cube[4][2][2] && cube[1][2][0] != cube[1][2][1]
+				&& cube[2][2][0] != cube[2][2][1] && cube[3][2][0] != cube[3][2][1] && cube[4][2][0]
+				!= cube[4][2][1]) {
+				if (cube[1][2][1] == cube[4][2][0] || cube[2][2][0] == cube[2][2][1]) {
+					// equivalent to pll_z
+				}
+				else {
+					// equivalent to pll_h
+				}
+			}
+			if (cube[1][2][0] == cube[1][2][1] && cube[1][2][1] == cube[1][2][2]) {
+				// equivalent to pll_ua and/or pll_ub
+			}
+		}
+	}
+
+	void wFace1() { // plugging in corners
+		while (cube[5][0][0] != 'w' ||
+			cube[5][0][2] != 'w' ||
+			cube[5][2][0] != 'w' ||
+			cube[5][2][2] != 'w') {
+			// ...
+		}
+	}
+
+	void wFace2() { // fixing corners
+		while () {
+			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
+				// diagonals
+			}
+			if ((cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
+					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+					== cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+					!= cube[3][2][2] && cube[4][2][0] == cube[4][2][2])) {
+				// headlights
+			}
+		}
+	}
+	
 	void oll() {
 		red();
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y'
@@ -174,7 +343,7 @@ public:
 		}
 		if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' 
 			&& cube[0][2][1] == 'y' && cube[2][2][1] == 'y' && cube[4][0][0] == 'y' && cube[3][0][2] == 'y') {
-			// yellow, red, green, orange, blue, white(by row)
+
 			oll_Asune();
 		}
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0[1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y'
@@ -292,35 +461,36 @@ public:
 	void red() {
 		switch () {
 		case sune:
-			while (faces[0][0][0] != 'y') {
+			while (cube[0][0][0] != 'y') {
 				yellowccw();
 			}
 		case asune:
-			while (faces[0][0][2] != 'y') {
+			while (cube[0][0][2] != 'y') {
 				yellowccw();
 			}
 		case l:
-			while (faces[1][0][0] != 'y') {
+			while (cube[1][0][0] != 'y') {
 				yellowccw();
 			}
 		case t:
-			while (faces[1][0][0] != 'y') {
+			while (cube[1][0][0] != 'y') {
 				yellowccw();
 			}
 		case h:
-			while (faces[2][0][0] != 'y') {
+			while (cube[2][0][0] != 'y') {
 				yellowccw();
 			}
 		case pi:
-			while (faces[1][0][0] != 'y' && faces[1][0][2] != 'y') {
+			while (cube[1][0][0] != 'y' && cube[1][0][2] != 'y') {
 				yellowccw();
 			}
 		case u:
-			while (faces[1][0][0] != 'y') {
+			while (cube[1][0][0] != 'y') {
 				yellowccw();
 			}
 		}
 	}
+
 
 	void f2l() {
 		//algorithm
@@ -372,6 +542,40 @@ public:
 		}
 		
 	}
+
+	void pll() {
+		if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+			!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+			pll_diag();
+		}
+		if ((cube[1][0][0] == cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) ||
+			(cube[1][0][0] != cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) ||
+			(cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				== cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) ||
+			(cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] == cube[4][0][2])) {
+			pll_headlights();
+		}
+
+		if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+			== cube[3][0][2] && cube[4][0][0] == cube[4][0][2] && cube[1][0][0] != cube[1][0][1]
+			&& cube[2][0][0] != cube[2][0][1] && cube[3][0][0] != cube[3][0][1] && cube[4][0][0]
+			!= cube[4][0][1]) {
+			if (cube[1][0][1] == cube[4][0][0] || cube[2][0][0] == cube[2][0][1]) {
+				pll_z();
+			}
+			else {
+				pll_h();
+			}
+		}
+		if (cube[1][0][0] == cube[1][0][1] && cube[1][0][1] == cube[1][0][2]) {
+			pll_ua(); // or pll_ub();
+		}
+	}
+	//  y r g o b w
+
 
 private:
 	void rotate(char& a, char& b, char& c, char& d) {
@@ -615,7 +819,7 @@ private:
 	}
 
 	void same_colour(int i) {
-		if (i = 3) {
+		if (i == 3) {
 			blueccw();
 			yellowcw();
 			yellowcw();
@@ -627,23 +831,33 @@ private:
 		}
 	}
 
+	void pll_diag() {
+		//F R U' R' U' R U R' F' R U R' U' R' F R F'
+	}
 
+	void pll_headlights() {
+		//R U R' U' R' F R2 U' R' U' R U R' F'
+	}
 
+	void pll_h() {
+		//M2 U M2 U2 M2 U M2
+	}
+
+	void pll_ua() {
+		//R U' R U R U R U' R' U' R2
+	}
+
+	void pll_ub() {
+		//R2 U R U R' U' R' U' R' U R'
+	}
+
+	void pll_z() {
+		//M' U M2 U M2 U M' U2 M2
+	}
 };
 
 int main()
 {
-	if (faces == 
-		{ 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
-		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
-		{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' },
-		{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' },
-		{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' },
-		{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }) {
-		rubik.printCube();
-		return 0;
-	}
-
 	int faces[6][3][3] = {
 		{{ 'g', 'r', 'r' }, { 'g', 'y', 'y' }, { 'g', 'y', 'y' }},
 		{{ 'w', 'w', 'w' }, { 'o', 'r', 'r' }, { 'o', 'r', 'r' }},
