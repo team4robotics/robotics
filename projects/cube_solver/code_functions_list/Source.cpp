@@ -537,9 +537,36 @@ public:
 			yellowcw();
 			redccw();
 		}
-		if (cube[3][0][1] == 'o' && cube[0][1][2] == 'b') {
-
+		if (cube[3][0][1] == 'o' && cube[0][1][0] == 'b') {
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+			orangecw();
+			yellowcw();
+			orangeccw();
 		}
+		if (cube[4][0][1] == 'b' && cube[0][0][1] == 'o') {
+			yellowcw();
+			orangecw();
+			yellowcw();
+			orangeccw();
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+		}
+		if (cube[4][0][1] == 'b' && cube[0][0][1] == 'r') {
+			yellowccw();
+			redccw();
+			yellowccw();
+			redcw();
+			yellowcw();
+			bluecw();
+			yellowcw();
+			blueccw();
+		}
+		if(cube[4][0][1] == 'b' && cube[0][0][1] == 'r')
 		
 	}
 
