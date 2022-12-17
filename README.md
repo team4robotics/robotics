@@ -1,4 +1,17 @@
 # Activities
+
+## 2022-12-17
+
+* 3D Design and Modelling Progress:
+* Tested new rubiks cube clasp
+	* part performs better than expected, design revisions effective
+* Tested new vision sensor mount
+	* part is functional, may revise design for more flexibility
+* Revised rubiks cube clasp to final dimensions
+	* lengthened to fit robot dimensions and rubiks cube
+	* added pattern for better adhesion and traction
+	* sent in for printing
+
 ## 2022-11-26
 
 * "Reflection" Session: summarized current progress into points and into percent figure, and made to-do list
