@@ -1,4 +1,87 @@
 # Activities
+## 2022-11-26
+
+* "Reflection" Session: summarized current progress into points and into percent figure, and made to-do list
+* Summarized Current Progress:
+	* BEN:
+	* F2L and PLL
+	* OLL:
+	* Done, need to debug
+	* PLL:
+	* almost finished, may still have bugs
+	* Overall: Almost finished coding, but need some help. Code waiting for major debug.
+	* RYAN:
+	* F2L
+	* need algorithm, but finished decision making system
+	* Overall: Made significant progress, still working on it
+	* EVAN:
+	* White Face:
+	* White cross done
+	* need to find way to put corners in white face
+	* First Layer:
+	* similar to PLL, so will be "drawing inspiration" from PLL Code
+	* Overall, almost done coding, waiting on major debug
+	* ANTHONY:
+	* Vision Sensor Mount:
+	* Made 3 prototypes (up to V4) and 2nd final draft
+	* Had teacher check over, no significant problems with design or spacing, so sent in for printing
+	* Rubiks Cube Clasp:
+	* Made 2 prototypes (up to V3) and 2nd final draft
+	* Had teacher check over, no signficiant problems so sent in for printing
+
+* Sumarized Total Progress into percent figure to assist with planning and get an overall picture:
+	* Overall CODE: 40%
+	* Coding: 70%
+	* Debugging: 10% 
+	* Overall PHYSICAL Parts: 70%
+	* VSMount: 50%
+	* RubiksCubeMount:50%
+	* Structure: 100%
+	* Overall INTEGRATION: 30%
+	* OVERALL: ~47%
+
+* Made To-Do List with items left until project completion:
+* ToDo:
+* BEN:
+* Assist others with code
+* Start debugging
+* RYAN:
+* Finish F2L
+	* Help with logic
+	* Finish coding 
+* complete OLL RED
+* EVAN:
+* Find way to put corners in white face
+* Assist BEN with PLL
+* ANTHONY:
+* Continue making revisions of rubiks cube mount
+* Continue making revisions of vision sensor mount
+	* Look into using VEX parts to substitude for visions sensor mount
+* Find way to calibrate vision sensor
+* Get robot fully functional
+	* Making sure design works
+	* Integration
+	* Optimization
+OVERALL:
+Debug
+Integrate
+
+* Formatted and made significant progress on PLL recognition cases, PLL recognition cases should be finished by next class
+	* Diagonal and Headlights completed
+	* Started other cases
+* Made solid progress on White Cross
+* Discussed UofT Hacks 
+* Created logic for F2L
+* Started coding F2L
+* Researched Vision Sensor Issue
+* Sent 2nd batch of 3d models for printing 
+	* Edited dimensions for the rubiks cube clasp
+		* Added holes on corners to optimize design by preventing concentration of force, improving longetivity
+		* Used filet operation to improve ease of use
+	* Finalized Vision Sensor Mount
+![f360 visMountBack2](images/f360 visMountBack2.png)
+![f360 visMountFront2](images/f360 visMountFront2.png)
+![f360 clasp2.1](images/f360 clasp2.1.png)
 
 ## 2022-11-19
 
