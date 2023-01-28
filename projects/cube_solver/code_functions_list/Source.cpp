@@ -566,8 +566,37 @@ public:
 			yellowcw();
 			blueccw();
 		}
-		if(cube[4][0][1] == 'b' && cube[0][0][1] == 'r')
-		
+		if (cube[2][0][1] == 'r' && cube[0][1][0] == 'b') {
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+			yellowcw();
+			redcw();
+			yellowcw();
+			redccw();
+		}
+		if (cube[3][0][1] == 'o' && cube[0][1][2] == 'g') {
+			yellowccw();
+			greenccw();
+			yellowccw();
+			greencw();
+			yellowccw();
+			orangecw();
+			yellowcw();
+			orangeccw();
+
+		}
+		if (cube[1][0][1] == 'g' && cube[0][2][1] == 'o') {
+			yellowcw();
+			orangecw();
+			yellowcw();
+			orangeccw();
+			yellowccw();
+			greenccw();
+			yellowcw();
+			greencw();
+		} 
 	}
 
 	void pll() {
@@ -859,6 +888,86 @@ private:
 	}
 
 	void pll_diag() {
+		if () {
+			yellowcw();
+			redcw();
+			greenccw();
+			redccw();
+			greenccw();
+			redcw();
+			greencw();
+			redccw();
+			yellowccw();
+			redcw();
+			greencw();
+			redccw();
+			greenccw();
+			redccw();
+			yellowcw();
+			redcw();
+			yellowccw();
+		}
+
+		if () {
+			yellowcw();
+			greencw();
+			orangeccw();
+			greenccw();
+			orangeccw();
+			greencw();
+			orangecw();
+			greenccw();
+			yellowccw();
+			greencw();
+			orangecw();
+			greenccw();
+			orangeccw();
+			greenccw();
+			yellowcw();
+			greencw();
+			yellowccw();
+		}
+
+		if () {
+			yellowcw();
+			orangecw();
+			blueccw();
+			orangeccw();
+			blueccw();
+			orangecw();
+			bluecw();
+			orangeccw();
+			yellowccw();
+			orangecw();
+			bluecw();
+			orangeccw();
+			blueccw();
+			orangeccw();
+			yellowcw();
+			orangecw();
+			yellowccw();
+		}
+
+		if () {
+			yellowcw();
+			bluecw();
+			redccw();
+			blueccw();
+			redccw();
+			bluecw();
+			redcw();
+			blueccw();
+			yellowccw();
+			bluecw();
+			redcw();
+			blueccw();
+			redccw();
+			blueccw();
+			yellowcw();
+			bluecw();
+			yellowccw();
+		}
+
 		//F R U' R' U' R U R' F' R U R' U' R' F R F'
 	}
 
