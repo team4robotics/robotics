@@ -495,6 +495,52 @@ public:
 	void f2l() {
 		//algorithm
 
+		for (int i = 0; i < 4; i++) {
+			if (i == 0) {
+				if (cube[i][0][1] == 'g' || cube[i][0][1] == 'o' && cube[4][0][1] == 'g' || cube[4][0][1] == 'o') {
+					if (cube[4][0][1] == 'g') {
+						yellowcw();
+						yellowcw();
+						if (cube[1][0][1] == 'g' && cube[0][2][1] == 'o') {
+							yellowcw();
+							orangecw();
+							yellowcw();
+							orangeccw();
+							yellowccw();
+							greenccw();
+							yellowcw();
+							greencw();
+						}
+					}
+					if (cube[4][0][1] == 'o') {
+						yellowcw();
+						yellowcw();
+						if (cube[3][0][1] == 'o' && cube[0][1][2] == 'g') {
+							yellowccw();
+							greenccw();
+							yellowccw();
+							greencw();
+							yellowccw();
+							orangecw();
+							yellowcw();
+							orangeccw();
+						}
+					}
+				}
+			}
+			else {
+				if (cube[i][0][1] == 'g'|| cube[i][0][1] == 'o') {
+
+				}
+				else if (cube[i][1][0] == 'g'|| cube[i][1][0] == 'o') {
+
+				}
+				else if (cube[i][1][2] == 'g' || cube[i][1][2] == 'o') {
+
+				}
+			}
+		}
+
 		if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') {
 			yellowccw();
 			redccw();
@@ -555,26 +601,6 @@ public:
 			blueccw();
 			yellowccw();
 			bluecw();
-		}
-		if (cube[4][0][1] == 'b' && cube[0][0][1] == 'r') {
-			yellowccw();
-			redccw();
-			yellowccw();
-			redcw();
-			yellowcw();
-			bluecw();
-			yellowcw();
-			blueccw();
-		}
-		if (cube[2][0][1] == 'r' && cube[0][1][0] == 'b') {
-			yellowccw();
-			blueccw();
-			yellowccw();
-			bluecw();
-			yellowcw();
-			redcw();
-			yellowcw();
-			redccw();
 		}
 		if (cube[3][0][1] == 'o' && cube[0][1][2] == 'g') {
 			yellowccw();
