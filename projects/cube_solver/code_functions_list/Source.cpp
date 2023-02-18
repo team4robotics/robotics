@@ -700,6 +700,73 @@ public:
 
 	void pll_headlights(int n) {
 		if (n == 1) {
+			orangecw();
+			yellowcw();
+			rightccw();
+			yellowccw();
+			orangeccw();
+			greencw();
+			orangecw();
+			orangecw();
+			yellowccw();
+			orangeccw();
+			yellowccw();
+			orangecw();
+			yellowcw();
+			orangeccw();
+			greenccw();
+		}
+		if (n == 2) {
+			bluecw();
+			yellowcw();
+			blueccw();
+			yellowccw();
+			blueccw();
+			redcw();
+			bluecw();
+			bluecw();
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+			yellowcw();
+			blueccw();
+			redccw();
+		}
+		if (n == 3) {
+			orangecw();
+			yellowcw();
+			orangeccw();
+			yellowccw();
+			orangeccw();
+			bluecw();
+			orangecw();
+			orangecw();
+			yellowccw();
+			orangeccw();
+			yellowccw();
+			orangecw();
+			yellowc
+			orangeccw();
+			blueccw();
+
+		}
+		if (n == 4) {
+			greencw();
+			yellowcw();
+			greenccw();
+			yellowccw();
+			greenccw();
+			orangecw();
+			greencw();
+			greencw();
+			yellowccw();
+			greenccw();
+			yellowcw();
+			greencw();
+			yellowcw();
+			greenccw();
+			orangeccw();
 
 		}
 		//R U R' U' R' F R2 U' R' U' R U R' F'
@@ -729,6 +796,20 @@ public:
 	}
 
 	void pll_ua() {
+		orangecw(); // if facing green
+		yellowccw();
+		orangecw();
+		yellowcw();
+		orangecw();
+		yellowcw();
+		orangecw();
+		yellowccw();
+		orangeccw();
+		yellowccw();
+		orangecw();
+		orangecw():
+
+
 		//R U' R U R U R U' R' U' R2
 	}
 
