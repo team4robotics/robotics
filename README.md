@@ -1,5 +1,29 @@
 # Activities
 
+## 2023-02-18
+* Vision Sensor calibration
+  * Made significant progress
+  * Red has some technical difficulties and sporatic tendancies
+* Completed PLL recognition
+* Completed PLL process
+* Made progress in 3D models
+
+## 2023-02-11
+* Completed certification for Makerspace 3D Printing
+  * Completed Introductory course
+  * Completed Introduction to 3D Printing
+* Made considerable progress in PLL
+  * Headlight determination
+* Had a team building exercise
+  * Discussed team adjectives
+
+## 2023-01-28
+	* Made progress in PLL code
+	* Made progress in F2L
+	* Submit files for 3d printing
+		* Rubix cube clasp
+		* modelling and reviewing
+
 ## 2022-12-17
 
 * 3D Design and Modelling Progress:
@@ -11,13 +35,6 @@
 	* lengthened to fit robot dimensions and rubiks cube
 	* added pattern for better adhesion and traction
 	* sent in for printing
-
-## 2023-01-28
-	* Made progress in PLL code
-	* Made progress in F2L
-	* Submit files for 3d printing
-		* Rubix cube clasp
-		* modelling and reviewing
 
 ## 2022-11-26
 
