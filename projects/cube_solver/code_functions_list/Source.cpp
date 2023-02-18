@@ -280,10 +280,7 @@ public:
 	}
 
 	void wCross2() {
-		while (cube[1][2][1] != 'r' ||
-			cube[2][2][1] != 'g' ||
-			cube[3][2][1] != 'o' ||
-			cube[4][2][1] != 'b') {
+		while (cube[1][2][1] != 'r' ||cube[2][2][1] != 'g' ||cube[3][2][1] != 'o' ||cube[4][2][1] != 'b') {
 			if (cube[1][2][0] == cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
 				== cube[3][2][2 && cube[4][2][0] == cube[4][2][2] && cube[1][2][0] != cube[1][2][1]
 				&& cube[2][2][0] != cube[2][2][1] && cube[3][2][0] != cube[3][2][1] && cube[4][2][0]
@@ -666,14 +663,21 @@ public:
 				if (cube[1][0][1] == cube[4][0][0]) {
 					pll_z();
 				}
-				if (cube[2][0][0] == cube[2][0][1]) {
-				}
 				else {
 					pll_h();
 				}
 			}
-			if (cube[1][0][0] == cube[1][0][1] && cube[1][0][1] == cube[1][0][2]) {
-				pll_ua(); // or pll_ub();
+			if (cube[1][0][0] == cube[1][0][1]) {
+				pll_uaub(1);
+			}
+			if (cube[2][0][0] == cube[2][0][1]) {
+				pll_uaub(2);
+			}
+			if (cube[3][0][0] == cube[3][0][1]) {
+				pll_uaub(3);
+			}
+			if (cube[4][0][0] == cube[4][0][1]) {
+				pll_uaub(4);
 			}
 		}
 	}
@@ -790,30 +794,64 @@ public:
 		redccw();
 		yellowcw();
 		orangeccw();
-		orangeccw();
+		orangeccw();R2 U R U R' U' R' U' R' U R'
 		redccw();
 		redccw();
 	}
 
-	void pll_ua() {
-		orangecw(); // if facing green
-		yellowccw();
-		orangecw();
-		yellowcw();
-		orangecw();
-		yellowcw();
-		orangecw();
-		yellowccw();
-		orangeccw();
-		yellowccw();
-		orangecw();
-		orangecw():
+	void pll_uaub(int n) {
+		//1 = red, 2 = green, 3 = orange, 4 = blue
+		int x,r;
+		if (n == 1) {
+			x = 3;
+			r = 4;
+		}
+		if (n == 2) {
+			x = 4;
+			r = 1;
+		}
+		if (n == 3) {
+			x = 1;
+			r = 2;
+		}
+		if (n == 4) {
+			x = 2;
+			r = 3;
+
+		}
+		if (x == cube[r][0][1]) {
+			inputcw(r);
+			inputcw(r);
+			yellowcw();
+			inputcw(r);
+			yellowcw();
+			inputccw(r);
+			yellowccw();
+			inputccw(r);
+			yellowccw();
+			inputccw(r);
+			yellowcw();
+			inputccw(r);
+			//R2 U R U R' U' R' U' R' U R'
+		}
+		else {
+			inputcw(r);
+			yellowccw();
+			inputcw(r);
+			yellowcw();
+			inputcw(r);
+			yellowcw();
+			inputcw();
+			yellowccw();
+			inputccw(r);
+			yellowccw();
+			inputcw(r);
+			inputcw(r);
+			//R U' R U R U R U' R' U' R2
+		}
 
 
 		//R U' R U R U R U' R' U' R2
-	}
-
-	void pll_ub() {
 		//R2 U R U R' U' R' U' R' U R'
 	}
 
