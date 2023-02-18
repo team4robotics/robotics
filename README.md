@@ -1,12 +1,23 @@
 # Activities
 
-## 2023-01-28
-	*Made progress in PLL code
-	*Made progress in F2L
-	*Submit files for 3d printing
-		*Rubix cube clasp
-		*modelling and reviewing
+## 2022-12-17
 
+* 3D Design and Modelling Progress:
+* Tested new rubiks cube clasp
+	* part performs better than expected, design revisions effective
+* Tested new vision sensor mount
+	* part is functional, may revise design for more flexibility
+* Revised rubiks cube clasp to final dimensions
+	* lengthened to fit robot dimensions and rubiks cube
+	* added pattern for better adhesion and traction
+	* sent in for printing
+
+## 2023-01-28
+	* Made progress in PLL code
+	* Made progress in F2L
+	* Submit files for 3d printing
+		* Rubix cube clasp
+		* modelling and reviewing
 
 ## 2022-11-26
 
