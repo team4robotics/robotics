@@ -856,6 +856,32 @@ public:
 	}
 
 	void pll_z() {
+                                                                 yellowccw();
+                                                                 whiteccw();
+                                                                 yellowcw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 yellowcw();
+                                                                 yellowccw();
+                                                                 whiteccw();
+                                                                 yellowcw();
+                                                                 yellowcw();
+                                                                 yellowcw();
+                                                                 whitecw();
+                                                                 yellowcw();
+                                                                 whitecw();
 		//M' U M2 U M2 U M' U2 M2
 	}
 
