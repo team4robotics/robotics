@@ -12,6 +12,13 @@
 	* added pattern for better adhesion and traction
 	* sent in for printing
 
+## 2023-01-28
+	* Made progress in PLL code
+	* Made progress in F2L
+	* Submit files for 3d printing
+		* Rubix cube clasp
+		* modelling and reviewing
+
 ## 2022-11-26
 
 * "Reflection" Session: summarized current progress into points and into percent figure, and made to-do list
