@@ -1,9 +1,24 @@
 # Activities
 
+
+
+## 2023-03-11
+
+* Tested Prototype
+  * Working Model (Rotations)
+  * Notes on Improving
+    * Shorten Cube Clasp to 9cm
+    * Change Clasp Color
+    * Minor Changes to Shaft Mount
+  * Adapted new Lock-on Method
+* Adjustments and Revisions to Function List
+* Notes on Next Time: Vision Sensor Adaptation to new cube
+
 ## 2023-02-18
+
 * Vision Sensor calibration
   * Made significant progress
-  * Red has some technical difficulties and sporatic tendancies
+  * Ryan has some technical difficulties and sporatic tendancies
 * Completed PLL recognition
 * Completed PLL process
 * Made progress in 3D models
@@ -99,9 +114,9 @@
 	* Making sure design works
 	* Integration
 	* Optimization
-OVERALL:
-Debug
-Integrate
+	OVERALL:
+	Debug
+	Integrate
 
 * Formatted and made significant progress on PLL recognition cases, PLL recognition cases should be finished by next class
 	* Diagonal and Headlights completed
@@ -116,9 +131,9 @@ Integrate
 		* Added holes on corners to optimize design by preventing concentration of force, improving longetivity
 		* Used filet operation to improve ease of use
 	* Finalized Vision Sensor Mount
-![f360 visMountBack2](images/f360 visMountBack2.png)
-![f360 visMountFront2](images/f360 visMountFront2.png)
-![f360 clasp2.1](images/f360 clasp2.1.png)
+	![f360 visMountBack2](images/f360 visMountBack2.png)
+	![f360 visMountFront2](images/f360 visMountFront2.png)
+	![f360 clasp2.1](images/f360 clasp2.1.png)
 
 ## 2022-11-19
 
@@ -133,7 +148,7 @@ Integrate
 * Revised and added onto OLL
 * Started 2nd round of prototyping
 	* Worked on new 3D model for Vision Sensor Mount
-![Screenshot 2022-11-19 102628](images/Screenshot 2022-11-19 102628.png)
+	![Screenshot 2022-11-19 102628](images/Screenshot 2022-11-19 102628.png)
 
 ## 2022-10-08
 
