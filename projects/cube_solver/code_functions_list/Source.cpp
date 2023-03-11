@@ -819,7 +819,7 @@ public:
 			r = 3;
 
 		}
-		if (x == cube[r][0][1]) {
+		if (cube[x][1][1] == cube[r][0][1]) {
 			inputcw(r);
 			inputcw(r);
 			yellowcw();
@@ -849,12 +849,7 @@ public:
 			inputcw(r);
 			//R U' R U R U R U' R' U' R2
 		}
-
-
-		//R U' R U R U R U' R' U' R2
-		//R2 U R U R' U' R' U' R' U R'
 	}
-
 	void pll_z() {
 		//M' U M2 U M2 U M' U2 M2
 	}
