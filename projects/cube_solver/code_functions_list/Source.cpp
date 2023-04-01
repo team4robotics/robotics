@@ -489,8 +489,125 @@ public:
 	}
 
 
+                                                                 void f2l_find(int x, char y, char t, int s) { // finds position of y side on edge
+                                                                 switch(x);
+                                                                 case 0:
+                                                                     
+                                                                 if (cube[0][0][1] == y || cube[0][0][1] == t) {
+                                                                 if (cube[3][0][1] == y || cube[3][0][1] == t) {
+                                                                    if (cube[0][0][1] == y) {
+                                                                        s = cube[0][0][1];
+                                                                    }
+                                                                    else {
+                                                                 s = cube[3][0][1];
+                                                                    }
+                                                                 }
+                                                                 }
+                                        
+                                                                 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
+                                                                 if (cube[2][0][1] == y || cube[2][0][1] == t) {
+                                                                 if (cube[0][1][0] == y) {
+                                                                 s = cube[0][1][0];
+                                                                 }
+                                                                 else {
+                                                                 s = cube[2][0][1];
+                                                                 }
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
+                                                                 if (cube[4][0][1] == y || cube[4][0][1] == t) {
+                                                                 if (cube[0][1][2] == y) {
+                                                                 s = cube[0][1][2];
+                                                                 }
+                                                                 else {
+                                                                 s = cube[4][0][1];
+                                                                 }
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
+                                                                 if (cube[1][0][1] == y || cube[1][0][1] == t) {
+                                                                 if (cube[0][2][1] == y) {
+                                                                 s = cube[0][2][1];
+                                                                 }
+                                                                 else {
+                                                                 s = cube[1][0][1];
+                                                                 }
+                                                                 }
+                                                                 }
+                                                                 
+                                                                     case 1:
+                                                                                                                
+                                                                     else if (cube[1][1][0] == y || cube[1][1][0] == t) {
+                                                                     if (cube[2][1][2] == y || cube[2][1][2] == t) {
+                                                                     if (cube[1][1][0] == y) {
+                                                                     s = cube[1][1][0];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[2][1][2];
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                     else if (cube[1][1][2] == y || cube[1][1][2] == t) {
+                                                                     if (cube[4][1][0] == y || cube[4][1][0] == t) {
+                                                                     if (cube[1][1][2] == y) {
+                                                                     s = cube[1][1][2];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[4][1][0];
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                                                                                          
+                                                                     case 2:
+                                                                    
+                                            
+                                                                     else if (cube[3][1][0] == y || cube[3][1][0] == t) {
+                                                                     if (cube[4][1][2] == y || cube[4][1][2] == t) {
+                                                                     if (cube[3][1][0] == y) {
+                                                                     s = cube[3][1][0];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[4][1][2];
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                     else if (cube[3][1][2] == y || cube[3][1][2] == t) {
+                                                                     if (cube[2][1][0] == y || cube[2][1][0] == t) {
+                                                                     if (cube[3][1][2] == y) {
+                                                                     s = cube[3][1][2];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[2][1][0];
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                 default:
+                                                                     break;
+                                                                    /*for (int i = 0; i < 4; i++) {
+                                                                        for(int k = 0; k < 2; k++) {
+                                                                 if (cube[i][k][1] == y || cube[i][k][1] == t){
+                                                                 if (k == 0 && cube[0][k][1]) {
+                                                                 
+                                                                 x = cube[i][k][1]];
+            }
+                                                                 }
+            if (cube[i][k][2] == y || cube[i][k][1] == t){
+                x = cube[i][k][2];
+            }
+            if (cube[i][k][0] == y || cube[i][k][1] == t){
+                x = cube[i][k][0]];
+            }
+                                                                        }
+                                                                    }*/
+                                                                 }
 	void f2l() {
 		//algorithm
+                                                                
 
 		for (int i = 0; i < 4; i++) {
 			if (i == 0) {
