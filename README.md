@@ -2,6 +2,14 @@
 
 
 
+## 2023-04-01
+
+* Tested visual sensor
+  * Calibrated vision sensor to the new cube and colours
+  * Ordered final designs with final adjustments and revisions
+* Started debugging the functions
+* Work done on the final step software-wise(F2L)
+
 ## 2023-03-11
 
 * Tested Prototype
