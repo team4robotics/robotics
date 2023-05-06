@@ -286,14 +286,23 @@ public:
 				&& cube[2][2][0] != cube[2][2][1] && cube[3][2][0] != cube[3][2][1] && cube[4][2][0]
 				!= cube[4][2][1]) {
 				if (cube[1][2][1] == cube[4][2][0] || cube[2][2][0] == cube[2][2][1]) {
-					// equivalent to pll_z
+					white_pll_z();
 				}
 				else {
-					// equivalent to pll_h
+					white_pll_h();
 				}
 			}
-			if (cube[1][2][0] == cube[1][2][1] && cube[1][2][1] == cube[1][2][2]) {
-				// equivalent to pll_ua and/or pll_ub
+			if (cube[1][2][0] == cube[1][2][1]) {
+				white_pll_uaub(1);
+			}
+			if (cube[2][2][0] == cube[2][2][1]) {
+				white_pll_uaub(2);
+			}
+			if (cube[3][2][0] == cube[3][2][1]) {
+				white_pll_uaub(3);
+			}
+			if (cube[4][2][0] == cube[4][2][1]) {
+				white_pll_uaub(4);
 			}
 		}
 	}
@@ -311,19 +320,222 @@ public:
 		while (true) {
 			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
 				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
-				// diagonals
+				white_pll_diag();
 			}
-			if ((cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
-				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
-					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
-				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-					== cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
-				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-					!= cube[3][2][2] && cube[4][2][0] == cube[4][2][2])) {
-				// headlights
+			if (cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
+				white_pll_headlights(1); // face green
+			}
+			if ((cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) && cube[1][2][0] == cube[3][2][2]) {
+				white_pll_headlights(2); //green is same face red
+			}
+			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				== cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
+				white_pll_headlights(3); // face blue
+			}
+			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] == cube[4][2][2]) {
+				white_pll_headlights(4); // orange
 			}
 		}
+	}
+
+	void white_pll_diag() {
+		greencw();
+		orangecw();
+		whiteccw();
+		orangeccw();
+		whiteccw();
+		orangeccw();
+		whitecw();
+		orangeccw();
+		greenccw();
+		orangecw();
+		whitecw();
+		rightccw();
+		whiteccw();
+		orangeccw();
+		greencw();
+		orangecw();
+		greenccw();
+	}
+
+	void white_pll_headlights(int n) {
+		if (n == 1) {
+			orangecw();
+			whitecw();
+			rightccw();
+			whiteccw();
+			orangeccw();
+			greencw();
+			orangecw();
+			orangecw();
+			whiteccw();
+			orangeccw();
+			whiteccw();
+			orangecw();
+			whitecw();
+			orangeccw();
+			greenccw();
+		}
+		if (n == 2) {
+			bluecw();
+			whitecw();
+			blueccw();
+			whiteccw();
+			blueccw();
+			redcw();
+			bluecw();
+			bluecw();
+			whiteccw();
+			blueccw();
+			whiteccw();
+			bluecw();
+			whitecw();
+			blueccw();
+			redccw();
+		}
+		if (n == 3) {
+			orangecw();
+			whitecw();
+			orangeccw();
+			whiteccw();
+			orangeccw();
+			bluecw();
+			orangecw();
+			orangecw();
+			whiteccw();
+			orangeccw();
+			whiteccw();
+			orangecw();
+			whitecw();
+			orangeccw();
+			blueccw();
+
+		}
+		if (n == 4) {
+			greencw();
+			whitecw();
+			greenccw();
+			whiteccw();
+			greenccw();
+			orangecw();
+			greencw();
+			greencw();
+			whiteccw();
+			greenccw();
+			whitecw();
+			greencw();
+			whitecw();
+			greenccw();
+			orangeccw();
+
+		}
+		//R U R' U' R' F R2 U' R' U' R U R' F'
+	}
+
+	void white_pll_h() {
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		whitecw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		whitecw();
+		whitecw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		whitecw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+	}
+
+	void white_pll_uaub(int n) {
+		//1 = red, 2 = green, 3 = orange, 4 = blue
+		int x, r;
+		if (n == 1) {
+			x = 3;
+			r = 4;
+		}
+		if (n == 2) {
+			x = 4;
+			r = 1;
+		}
+		if (n == 3) {
+			x = 1;
+			r = 2;
+		}
+		if (n == 4) {
+			x = 2;
+			r = 3;
+
+		}
+		if (cube[x][1][1] == cube[r][0][1]) {
+			inputcw(r);
+			inputcw(r);
+			whitecw();
+			inputcw(r);
+			whitecw();
+			inputccw(r);
+			whiteccw();
+			inputccw(r);
+			whiteccw();
+			inputccw(r);
+			whitecw();
+			inputccw(r);
+			//R2 U R U R' U' R' U' R' U R'
+		}
+		else {
+			inputcw(r);
+			whiteccw();
+			inputcw(r);
+			whitecw();
+			inputcw(r);
+			whitecw();
+			inputcw(r);
+			whiteccw();
+			inputccw(r);
+			whiteccw();
+			inputcw(r);
+			inputcw(r);
+			//R U' R U R U R U' R' U' R2
+		}
+	}
+	void white_pll_z() {
+		whiteccw();
+		whiteccw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whiteccw();
+		whiteccw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
 	}
 
 	void oll() {
