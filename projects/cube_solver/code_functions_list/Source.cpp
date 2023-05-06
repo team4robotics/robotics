@@ -685,7 +685,6 @@ public:
 		greenccw();
 	}
 
-<<<<<<< HEAD
 	void f2l_find(int x, char y, char t, int s) { // finds position of y side on edge
 		switch (x);
                                                                  case 0:
@@ -805,168 +804,8 @@ public:
 	void f2l() {
 		//algorithm
 
-=======
 
-                                                                 void f2l_find(int x, char y, char t, int s, bool tf = false) { // finds position of y side on edge
-                                                                 switch(x);
-                                                                 case 0: //checks the yellow face
-                                                                     
-                                                                 if (cube[0][0][1] == y || cube[0][0][1] == t) {
-                                                                 if (cube[3][0][1] == y || cube[3][0][1] == t) {
-                                                                    if (cube[0][0][1] == y) {
-                                                                        s = cube[0][0][1];
-                                                                    }
-                                                                    else {
-                                                                 s = cube[3][0][1];
-                                                                 tf = true;
-                                                                    }
-                                                                 }
-                                                                 }
-                                        
-                                                                 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
-                                                                 if (cube[2][0][1] == y || cube[2][0][1] == t) {
-                                                                 if (cube[0][1][0] == y) {
-                                                                 s = cube[0][1][0];
-                                                                 }
-                                                                 else {
-                                                                 s = cube[2][0][1];
-                                                                 tf = true;
-                                                                 }
-                                                                 }
-                                                                 }
-                                                                 
-                                                                 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
-                                                                 if (cube[4][0][1] == y || cube[4][0][1] == t) {
-                                                                 if (cube[0][1][2] == y) {
-                                                                 s = cube[0][1][2];
-                                                                 }
-                                                                 else {
-                                                                 s = cube[4][0][1];
-                                                                 tf = true;
-                                                                 }
-                                                                 }
-                                                                 }
-                                                                 
-                                                                 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
-                                                                 if (cube[1][0][1] == y || cube[1][0][1] == t) {
-                                                                 if (cube[0][2][1] == y) {
-                                                                 s = cube[0][2][1];
-                                                                 }
-                                                                 else {
-                                                                 s = cube[1][0][1];
-                                                                 tf = true;
-                                                                 }
-                                                                 }
-                                                                 }
-                                                                 
-                                                                     case 1: // checks the green face and half of red and orange
-                                                                                                                
-                                                                     else if (cube[1][1][0] == y || cube[1][1][0] == t) {
-                                                                     if (cube[2][1][2] == y || cube[2][1][2] == t) {
-                                                                     if (cube[1][1][0] == y) {
-                                                                     s = cube[1][1][0];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[2][1][2];
-                                                                 tf = true;
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                     
-                                                                     else if (cube[1][1][2] == y || cube[1][1][2] == t) {
-                                                                     if (cube[4][1][0] == y || cube[4][1][0] == t) {
-                                                                     if (cube[1][1][2] == y) {
-                                                                     s = cube[1][1][2];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[4][1][0];
-                                                                 tf = true;
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                                                                                          
-                                                                     case 2: // checks blue face and other half of red and yellow
-                                                                    
-                                            
-                                                                     else if (cube[3][1][0] == y || cube[3][1][0] == t) {
-                                                                     if (cube[4][1][2] == y || cube[4][1][2] == t) {
-                                                                     if (cube[3][1][0] == y) {
-                                                                     s = cube[3][1][0];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[4][1][2];
-                                                                 tf = true;
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                     
-                                                                     else if (cube[3][1][2] == y || cube[3][1][2] == t) {
-                                                                     if (cube[2][1][0] == y || cube[2][1][0] == t) {
-                                                                     if (cube[3][1][2] == y) {
-                                                                     s = cube[3][1][2];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[2][1][0];
-                                                                 tf = true;
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                     
-                                                                 default:
-                                                                     break;
-                                                                    /*for (int i = 0; i < 4; i++) {
-                                                                        for(int k = 0; k < 2; k++) {
-                                                                 if (cube[i][k][1] == y || cube[i][k][1] == t){
-                                                                 if (k == 0 && cube[0][k][1]) {
-                                                                 
-                                                                 x = cube[i][k][1]];
-            }
-                                                                 }
-            if (cube[i][k][2] == y || cube[i][k][1] == t){
-                x = cube[i][k][2];
-            }
-            if (cube[i][k][0] == y || cube[i][k][1] == t){
-                x = cube[i][k][0]];
-            }
-                                                                        }
-                                                                    }*/
-                                                                 }
-	void f2l() {
-		//algorithm
-                                                                 int s;
-                                                                 bool g = false;
-                                                                 if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') {
-                                                                     yellowccw();
-                                                                     redccw();
-                                                                     yellowccw();
-                                                                     redcw();
-                                                                     yellowcw();
-                                                                     greencw();
-                                                                     yellowcw();
-                                                                     greenccw();
-                                                                 }
-
-                                                                 else if (cube[1][0][1] == 'r' && cube[0][1][0] == 'g') {
-                                                                     yellowcw();
-                                                                     greencw();
-                                                                     yellowcw();
-                                                                     greenccw();
-                                                                     yellowccw();
-                                                                     redccw();
-                                                                     yellowccw();
-                                                                     redcw();
-                                                                 }
-                                                                 
-                                                                 else {
-                                                                 f2lfind(0, 'g', 'r', s, g);
-                                                                 if (g == true) {
-                                                                 
-                                                                 }
-                                                                 }
-                                                                
->>>>>>> origin/main
-
-		/*for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 4; i++) {
 			if (i == 0) {
 				if (cube[i][0][1] == 'g' || cube[i][0][1] == 'o' && cube[4][0][1] == 'g' || cube[4][0][1] == 'o') {
 					if (cube[4][0][1] == 'g') {
@@ -1010,9 +849,9 @@ public:
 
 				}
 			}
-		}*/
+		}
 
-		/*if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') {
+		if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') {
 			yellowccw();
 			redccw();
 			yellowccw();
@@ -1032,7 +871,7 @@ public:
 			redccw();
 			yellowccw();
 			redcw();
-		}*/
+		}
 
 		if (cube[4][0][1] == 'b' && cube[0][0][1] == 'r') {
 			yellowcw();
@@ -1156,7 +995,7 @@ public:
 		greenccw();
 		orangecw();
 		yellowcw();
-		rightccw();
+		orangeccw();
 		yellowccw();
 		orangeccw();
 		greencw();
@@ -1168,7 +1007,7 @@ public:
 		if (n == 1) {
 			orangecw();
 			yellowcw();
-			rightccw();
+			orangeccw();
 			yellowccw();
 			orangeccw();
 			greencw();
