@@ -51,7 +51,7 @@ public:
 			cout << endl;
 		}
 	}
-	
+
 	int wSideOnFace() {
 		for (int i = 0; i < 5; i++)
 		{
@@ -280,9 +280,9 @@ public:
 	}
 
 	void wCross2() {
-		while (cube[1][2][1] != 'r' ||cube[2][2][1] != 'g' ||cube[3][2][1] != 'o' ||cube[4][2][1] != 'b') {
+		while (cube[1][2][1] != 'r' || cube[2][2][1] != 'g' || cube[3][2][1] != 'o' || cube[4][2][1] != 'b') {
 			if (cube[1][2][0] == cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
-				== cube[3][2][2 && cube[4][2][0] == cube[4][2][2] && cube[1][2][0] != cube[1][2][1]
+				== cube[3][2][2] && cube[4][2][0] == cube[4][2][2] && cube[1][2][0] != cube[1][2][1]
 				&& cube[2][2][0] != cube[2][2][1] && cube[3][2][0] != cube[3][2][1] && cube[4][2][0]
 				!= cube[4][2][1]) {
 				if (cube[1][2][1] == cube[4][2][0] || cube[2][2][0] == cube[2][2][1]) {
@@ -308,13 +308,13 @@ public:
 	}
 
 	void wFace2() { // fixing corners
-		while () {
+		while (true) {
 			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
 				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
 				// diagonals
 			}
 			if ((cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
 				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
 					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
 				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
@@ -325,20 +325,17 @@ public:
 			}
 		}
 	}
-	
+
 	void oll() {
-		red();
 		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y'
 			&& cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[2][0][2] == 'y') {
-
 			oll_u();
 		}
 		if (cube[0][1][0] == 'y' && cube[0][0][1] == 'y' && cube[0][2][0] == 'y' && cube[0][0][2] == 'y' && cube[0][1][1] == 'y'
 			&& cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[2][0][1] == 'y' && cube[4][0][1] == 'y') {
-
 			oll_pi();
 		}
-		if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' 
+		if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y'
 			&& cube[0][2][1] == 'y' && cube[2][2][1] == 'y' && cube[4][0][0] == 'y' && cube[3][0][2] == 'y') {
 
 			oll_Asune();
@@ -351,17 +348,20 @@ public:
 			&& cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y') {
 			oll_t();
 		}
-		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && 
+		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' &&
 			cube[0][1][2] == 'y' && cube[2][2][1] == 'y' && cube[2][2][2] == 'y' && cube[3][0][2] == 'y' && cube[2][0][0] == 'y') {
 			oll_l();
 		}
 		if (cube[0][1][0] == 'y' && cube[0][0][1] == 'y' && cube[0][2][0] == 'y' && cube[0][0][2] == 'y' && cube[0][1][1] == 'y'
-			&& cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[3][0][0] == 'y' && cube[3][0][2] ==  'y') {
+			&& cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[3][0][0] == 'y' && cube[3][0][2] == 'y') {
 			oll_h();
 		}
 	}
 	//OLL ALGO
-	void oll_pi() {//yes
+	void oll_pi() {
+		while (cube[1][0][0] != 'y' && cube[1][0][2] != 'y') {
+			yellowccw();
+		}
 		greencw();
 		yellowcw();
 		yellowcw();
@@ -380,6 +380,9 @@ public:
 	}
 
 	void oll_u() {//yes
+		while (cube[1][0][0] != 'y') {
+			yellowccw();
+		}
 		greencw();
 		greencw();
 		whitecw();
@@ -396,6 +399,9 @@ public:
 	}
 
 	void oll_t() {//yes
+		while (cube[1][0][0] != 'y') {
+			yellowccw();
+		}
 		bluecw();
 		redcw();
 		greenccw();
@@ -408,6 +414,9 @@ public:
 	}
 
 	void oll_Asune() {//yes
+		while (cube[0][0][2] != 'y') {
+			yellowccw();
+		}
 		greenccw();
 		yellowccw();
 		greencw();
@@ -419,6 +428,9 @@ public:
 	}
 
 	void oll_h() {
+		while (cube[2][0][0] != 'y') {
+			yellowccw();
+		}
 		greenccw();
 		yellowccw();
 		greencw();
@@ -434,6 +446,9 @@ public:
 	}
 
 	void oll_l() {
+		while (cube[1][0][0] != 'y') {
+			yellowccw();
+		}
 		redcw();
 		greenccw();
 		redccw();
@@ -444,170 +459,139 @@ public:
 		blueccw();
 	}
 
-	void oll_sune() {//yes
-		greencw();
-		yellowcw();
-		greenccw();
-		yellowcw();
-		greencw();
-		yellowcw();
-		yellowcw();
-		greenccw();
-	}
-
-	void red() {
-		switch () {
-		case sune:
-			while (cube[0][0][0] != 'y') {
-				yellowccw();
-			}
-		case asune:
-			while (cube[0][0][2] != 'y') {
-				yellowccw();
-			}
-		case l:
-			while (cube[1][0][0] != 'y') {
-				yellowccw();
-			}
-		case t:
-			while (cube[1][0][0] != 'y') {
-				yellowccw();
-			}
-		case h:
-			while (cube[2][0][0] != 'y') {
-				yellowccw();
-			}
-		case pi:
-			while (cube[1][0][0] != 'y' && cube[1][0][2] != 'y') {
-				yellowccw();
-			}
-		case u:
-			while (cube[1][0][0] != 'y') {
-				yellowccw();
-			}
+	void oll_sune() {
+		while (cube[0][0][0] != 'y') {
+			yellowccw();
 		}
+		greencw();
+		yellowcw();
+		greenccw();
+		yellowcw();
+		greencw();
+		yellowcw();
+		yellowcw();
+		greenccw();
 	}
 
-
-                                                                 void f2l_find(int x, char y, char t, int s) { // finds position of y side on edge
-                                                                 switch(x);
+	void f2l_find(int x, char y, char t, int s) { // finds position of y side on edge
+		switch (x);
                                                                  case 0:
-                                                                     
-                                                                 if (cube[0][0][1] == y || cube[0][0][1] == t) {
-                                                                 if (cube[3][0][1] == y || cube[3][0][1] == t) {
-                                                                    if (cube[0][0][1] == y) {
-                                                                        s = cube[0][0][1];
-                                                                    }
-                                                                    else {
-                                                                 s = cube[3][0][1];
-                                                                    }
-                                                                 }
-                                                                 }
-                                        
-                                                                 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
-                                                                 if (cube[2][0][1] == y || cube[2][0][1] == t) {
-                                                                 if (cube[0][1][0] == y) {
-                                                                 s = cube[0][1][0];
-                                                                 }
-                                                                 else {
-                                                                 s = cube[2][0][1];
-                                                                 }
-                                                                 }
-                                                                 }
-                                                                 
-                                                                 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
-                                                                 if (cube[4][0][1] == y || cube[4][0][1] == t) {
-                                                                 if (cube[0][1][2] == y) {
-                                                                 s = cube[0][1][2];
-                                                                 }
-                                                                 else {
-                                                                 s = cube[4][0][1];
-                                                                 }
-                                                                 }
-                                                                 }
-                                                                 
-                                                                 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
-                                                                 if (cube[1][0][1] == y || cube[1][0][1] == t) {
-                                                                 if (cube[0][2][1] == y) {
-                                                                 s = cube[0][2][1];
-                                                                 }
-                                                                 else {
-                                                                 s = cube[1][0][1];
-                                                                 }
-                                                                 }
-                                                                 }
-                                                                 
-                                                                     case 1:
-                                                                                                                
-                                                                     else if (cube[1][1][0] == y || cube[1][1][0] == t) {
-                                                                     if (cube[2][1][2] == y || cube[2][1][2] == t) {
-                                                                     if (cube[1][1][0] == y) {
-                                                                     s = cube[1][1][0];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[2][1][2];
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                     
-                                                                     else if (cube[1][1][2] == y || cube[1][1][2] == t) {
-                                                                     if (cube[4][1][0] == y || cube[4][1][0] == t) {
-                                                                     if (cube[1][1][2] == y) {
-                                                                     s = cube[1][1][2];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[4][1][0];
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                                                                                          
-                                                                     case 2:
-                                                                    
-                                            
-                                                                     else if (cube[3][1][0] == y || cube[3][1][0] == t) {
-                                                                     if (cube[4][1][2] == y || cube[4][1][2] == t) {
-                                                                     if (cube[3][1][0] == y) {
-                                                                     s = cube[3][1][0];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[4][1][2];
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                     
-                                                                     else if (cube[3][1][2] == y || cube[3][1][2] == t) {
-                                                                     if (cube[2][1][0] == y || cube[2][1][0] == t) {
-                                                                     if (cube[3][1][2] == y) {
-                                                                     s = cube[3][1][2];
-                                                                     }
-                                                                     else {
-                                                                     s = cube[2][1][0];
-                                                                     }
-                                                                     }
-                                                                     }
-                                                                     
-                                                                 default:
-                                                                     break;
-                                                                    /*for (int i = 0; i < 4; i++) {
-                                                                        for(int k = 0; k < 2; k++) {
-                                                                 if (cube[i][k][1] == y || cube[i][k][1] == t){
-                                                                 if (k == 0 && cube[0][k][1]) {
-                                                                 
-                                                                 x = cube[i][k][1]];
-            }
-                                                                 }
-            if (cube[i][k][2] == y || cube[i][k][1] == t){
-                x = cube[i][k][2];
-            }
-            if (cube[i][k][0] == y || cube[i][k][1] == t){
-                x = cube[i][k][0]];
-            }
-                                                                        }
-                                                                    }*/
-                                                                 }
+
+																	 if (cube[0][0][1] == y || cube[0][0][1] == t) {
+																		 if (cube[3][0][1] == y || cube[3][0][1] == t) {
+																			 if (cube[0][0][1] == y) {
+																				 s = cube[0][0][1];
+																			 }
+																			 else {
+																				 s = cube[3][0][1];
+																			 }
+																		 }
+																	 }
+
+																	 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
+																		 if (cube[2][0][1] == y || cube[2][0][1] == t) {
+																			 if (cube[0][1][0] == y) {
+																				 s = cube[0][1][0];
+																			 }
+																			 else {
+																				 s = cube[2][0][1];
+																			 }
+																		 }
+																	 }
+
+																	 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
+																		 if (cube[4][0][1] == y || cube[4][0][1] == t) {
+																			 if (cube[0][1][2] == y) {
+																				 s = cube[0][1][2];
+																			 }
+																			 else {
+																				 s = cube[4][0][1];
+																			 }
+																		 }
+																	 }
+
+																	 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
+																		 if (cube[1][0][1] == y || cube[1][0][1] == t) {
+																			 if (cube[0][2][1] == y) {
+																				 s = cube[0][2][1];
+																			 }
+																			 else {
+																				 s = cube[1][0][1];
+																			 }
+																		 }
+																	 }
+
+																 case 1:
+
+																	 else if (cube[1][1][0] == y || cube[1][1][0] == t) {
+																		 if (cube[2][1][2] == y || cube[2][1][2] == t) {
+																			 if (cube[1][1][0] == y) {
+																				 s = cube[1][1][0];
+																			 }
+																			 else {
+																				 s = cube[2][1][2];
+																			 }
+																		 }
+																	 }
+
+																	 else if (cube[1][1][2] == y || cube[1][1][2] == t) {
+																		 if (cube[4][1][0] == y || cube[4][1][0] == t) {
+																			 if (cube[1][1][2] == y) {
+																				 s = cube[1][1][2];
+																			 }
+																			 else {
+																				 s = cube[4][1][0];
+																			 }
+																		 }
+																	 }
+
+																 case 2:
+
+
+																	 else if (cube[3][1][0] == y || cube[3][1][0] == t) {
+																		 if (cube[4][1][2] == y || cube[4][1][2] == t) {
+																			 if (cube[3][1][0] == y) {
+																				 s = cube[3][1][0];
+																			 }
+																			 else {
+																				 s = cube[4][1][2];
+																			 }
+																		 }
+																	 }
+
+																	 else if (cube[3][1][2] == y || cube[3][1][2] == t) {
+																		 if (cube[2][1][0] == y || cube[2][1][0] == t) {
+																			 if (cube[3][1][2] == y) {
+																				 s = cube[3][1][2];
+																			 }
+																			 else {
+																				 s = cube[2][1][0];
+																			 }
+																		 }
+																	 }
+
+																 default:
+																	 break;
+																	 /*for (int i = 0; i < 4; i++) {
+																		 for(int k = 0; k < 2; k++) {
+																  if (cube[i][k][1] == y || cube[i][k][1] == t){
+																  if (k == 0 && cube[0][k][1]) {
+
+																  x = cube[i][k][1]];
+			 }
+																  }
+			 if (cube[i][k][2] == y || cube[i][k][1] == t){
+				 x = cube[i][k][2];
+			 }
+			 if (cube[i][k][0] == y || cube[i][k][1] == t){
+				 x = cube[i][k][0]];
+			 }
+																		 }
+																	 }*/
+	}
 	void f2l() {
 		//algorithm
-                                                                
+
 
 		for (int i = 0; i < 4; i++) {
 			if (i == 0) {
@@ -643,10 +627,10 @@ public:
 				}
 			}
 			else {
-				if (cube[i][0][1] == 'g'|| cube[i][0][1] == 'o') {
+				if (cube[i][0][1] == 'g' || cube[i][0][1] == 'o') {
 
 				}
-				else if (cube[i][1][0] == 'g'|| cube[i][1][0] == 'o') {
+				else if (cube[i][1][0] == 'g' || cube[i][1][0] == 'o') {
 
 				}
 				else if (cube[i][1][2] == 'g' || cube[i][1][2] == 'o') {
@@ -736,66 +720,54 @@ public:
 			greenccw();
 			yellowcw();
 			greencw();
-		} 
-	}
-	bool issolved() {
-		if (faces ==
-		{ { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
-			{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
-			{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' },
-			{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' },
-			{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' },
-			{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }}) {
-			return true;
 		}
 	}
-	void pll() {
-		while (!issolved()) {
-			if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
-				pll_diag();
-			} // diag
-			if ((cube[1][0][0] == cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
-				pll_headlights(1); // face green
-			}
-			if ((cube[1][0][0] != cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
-				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) && cube[1][0][0] == cube[3][0][2]) {
-				pll_headlights(2); //green is same face red
-			}
-			if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-				== cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
-				pll_headlights(3); // face blue
-			}
-			if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-				!= cube[3][0][2] && cube[4][0][0] == cube[4][0][2])) {
-				pll_headlights(4); // orange
-			}
-				// headlights
 
-			if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
-				== cube[3][0][2] && cube[4][0][0] == cube[4][0][2] && cube[1][0][0] != cube[1][0][1]
-				&& cube[2][0][0] != cube[2][0][1] && cube[3][0][0] != cube[3][0][1] && cube[4][0][0]
-				!= cube[4][0][1]) {
-				if (cube[1][0][1] == cube[4][0][0]) {
-					pll_z();
-				}
-				else {
-					pll_h();
-				}
+	void pll() {
+		if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+			!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+			pll_diag();
+		} // diag
+		if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+			!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+			pll_headlights(1); // face green
+		}
+		if ((cube[1][0][0] != cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+			!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) && cube[1][0][0] == cube[3][0][2]) {
+			pll_headlights(2); //green is same face red
+		}
+		if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+			== cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+			pll_headlights(3); // face blue
+		}
+		if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+			!= cube[3][0][2] && cube[4][0][0] == cube[4][0][2]) {
+			pll_headlights(4); // orange
+		}
+		// headlights
+
+		if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+			== cube[3][0][2] && cube[4][0][0] == cube[4][0][2] && cube[1][0][0] != cube[1][0][1]
+			&& cube[2][0][0] != cube[2][0][1] && cube[3][0][0] != cube[3][0][1] && cube[4][0][0]
+			!= cube[4][0][1]) {
+			if (cube[1][0][1] == cube[4][0][0]) {
+				pll_z();
 			}
-			if (cube[1][0][0] == cube[1][0][1]) {
-				pll_uaub(1);
+			else {
+				pll_h();
 			}
-			if (cube[2][0][0] == cube[2][0][1]) {
-				pll_uaub(2);
-			}
-			if (cube[3][0][0] == cube[3][0][1]) {
-				pll_uaub(3);
-			}
-			if (cube[4][0][0] == cube[4][0][1]) {
-				pll_uaub(4);
-			}
+		}
+		if (cube[1][0][0] == cube[1][0][1]) {
+			pll_uaub(1);
+		}
+		if (cube[2][0][0] == cube[2][0][1]) {
+			pll_uaub(2);
+		}
+		if (cube[3][0][0] == cube[3][0][1]) {
+			pll_uaub(3);
+		}
+		if (cube[4][0][0] == cube[4][0][1]) {
+			pll_uaub(4);
 		}
 	}
 	//  y r g o b w
@@ -816,7 +788,7 @@ public:
 		orangeccw();
 		greencw();
 		orangecw();
-		greenccw():
+		greenccw();
 	}
 
 	void pll_headlights(int n) {
@@ -867,7 +839,7 @@ public:
 			orangeccw();
 			yellowccw();
 			orangecw();
-			yellowc
+			yellowcw();
 			orangeccw();
 			blueccw();
 
@@ -905,20 +877,20 @@ public:
 		redccw();
 		yellowcw();
 		yellowcw();
-		orangweccw();
+		orangeccw();
 		orangeccw();
 		redccw();
 		redccw();
 		yellowcw();
 		orangeccw();
-		orangeccw();R2 U R U R' U' R' U' R' U R'
+		orangeccw();
 		redccw();
 		redccw();
 	}
 
 	void pll_uaub(int n) {
 		//1 = red, 2 = green, 3 = orange, 4 = blue
-		int x,r;
+		int x, r;
 		if (n == 1) {
 			x = 3;
 			r = 4;
@@ -958,7 +930,7 @@ public:
 			yellowcw();
 			inputcw(r);
 			yellowcw();
-			inputcw();
+			inputcw(r);
 			yellowccw();
 			inputccw(r);
 			yellowccw();
@@ -968,33 +940,32 @@ public:
 		}
 	}
 	void pll_z() {
-                                                                 yellowccw();
-                                                                 whiteccw();
-                                                                 yellowcw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 yellowcw();
-                                                                 yellowccw();
-                                                                 whiteccw();
-                                                                 yellowcw();
-                                                                 yellowcw();
-                                                                 yellowcw();
-                                                                 whitecw();
-                                                                 yellowcw();
-                                                                 whitecw();
-		//M' U M2 U M2 U M' U2 M2
+		yellowccw();
+		whiteccw();
+		yellowcw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		yellowcw();
+		yellowccw();
+		whiteccw();
+		yellowcw();
+		yellowcw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
 	}
 
 private:
@@ -1014,7 +985,7 @@ private:
 		char& sideRT, char& sideRC, char& sideRB,
 		char& sideBR, char& sideBC, char& sideBL,
 		char& sideLB, char& sideLC, char& sideLT
-		)
+	)
 	{
 		// face switching
 		rotate(faceTL, faceBL, faceBR, faceTR);
@@ -1034,7 +1005,7 @@ private:
 		char& sideRT, char& sideRC, char& sideRB,
 		char& sideBR, char& sideBC, char& sideBL,
 		char& sideLB, char& sideLC, char& sideLT
-		)
+	)
 	{
 		// face switching
 		rotate(faceTL, faceTR, faceBR, faceBL);
@@ -1256,8 +1227,8 @@ private:
 };
 
 int main()
-{	
-	int faces[6][3][3] = {
+{
+	int cube[6][3][3] = {
 		{{ 'g', 'r', 'r' }, { 'g', 'y', 'y' }, { 'g', 'y', 'y' }},
 		{{ 'w', 'w', 'w' }, { 'o', 'r', 'r' }, { 'o', 'r', 'r' }},
 		{{ 'o', 'g', 'g' }, { 'y', 'g', 'g' }, { 'y', 'b', 'b' }},
@@ -1282,20 +1253,13 @@ int main()
 		{{ 'r', 'r', 'r' }, { 'w', 'w', 'b' }, { 'w', 'w', 'b' }}
 	};
 
-	if (faces == 
-	{ { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' },
-		{ 'r', 'r', 'r' }, { 'r', 'r', 'r' }, { 'r', 'r', 'r' },
-		{ 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' },
-		{ 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' },
-		{ 'b', 'b', 'b' }, { 'b', 'b', 'b' }, { 'b', 'b', 'b' },
-		{ 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' }}) {
-		rubik.printCube();
-		return 0;
-	}
-
 	Rubik rubik(debug2);
 	rubik.printCube();
 	rubik.wCross1();
+	rubik.wCross2();
+	rubik.f2l();
+	rubik.oll();
+	rubik.pll();
 	rubik.printCube();
 
 
