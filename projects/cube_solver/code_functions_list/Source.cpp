@@ -689,7 +689,6 @@ public:
 		switch (x);
                                                                  case 0:
 
-<<<<<<< HEAD
                                                                  void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
                                                                  switch(x);
                                                                  case 0: //checks the yellow face
