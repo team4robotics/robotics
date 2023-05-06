@@ -1,6 +1,18 @@
 # Activities
 
+## 2023-04-22
 
+* Clean-sheet vision sensor mount design POC completed (see VsMount_Cleansheet.png)
+  * Reduced uneccesary surfaces: previous model was unnecesarily bulky and more structrually sound than needed
+  * Revised mounting mechanism based on new position preferences: accomodated for additional screw in corner by mounting/supporting to other points 
+  * Center of gravity revisions
+  * Planned testing next week
+* Finished one test case
+* Other team member working on separate mount design/POC
+  * Design revisions made
+  * Testing scheduled for next week
+* Finished up some code and improved formatting
+* Started initial brainstorming for lighting and light containment structure to assist in Vision Sensor color recognition
 
 ## 2023-04-01
 
