@@ -133,18 +133,18 @@ public:
 				}
 				if (cube[1][0][1] == 'w')
 				{
-					if (cube[4][0][1] == 'w')
+					if (mbcube[4][0][1] == 'w')
 					{
 						redccw();
 						bluecw();
 						redccw();
 					}
-					else if (cube[2][0][1] == 'w')
+					/*else if (cube[2][0][1] == 'w')
 					{
 						redcw();
 						greenccw();
 						redcw();
-					}
+					}*/
 					else
 					{
 						redcw();
@@ -689,7 +689,6 @@ public:
 		switch (x);
                                                                  case 0:
 
-<<<<<<< HEAD
                                                                  void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
                                                                  switch(x);
                                                                  case 0: //checks the yellow face

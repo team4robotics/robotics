@@ -1,5 +1,24 @@
 # Activities
 
+## 2023-05-06
+
+* Project Planning session (see TimelineMay6 and ProjListMay6 in images)
+* Project Planning
+  * August 26 scheduled completion
+  * Completion Definition: Robot is able to solve a 3*3 rubiks cube completely with no human intervention once started, within a reasonable timespan (baseline: 30min)
+* Next Steps and Milestones:
+  * CODE1: Finished All Algorithms ||| PRIORITY: TOP | RELIANCE: NONE | TYPE: Paralell | DELEGATION: 
+  * CODE2: Finished Debugging ||| PRIORITY: TOP | RELIANCE: CODE1 | TYPE: Paralell 
+  * CODE3: Converted to Appropriate format (VEX V5-compatiable) ||| PRIORITY: TOP | RELIANCE: CODE2 | TYPE: Paralell 
+  * CODE4: Final Debugging and Testing Completed ||| PRIORITY: TOP | RELIANCE: CODE3 | TYPE: Paralell 
+  * MECH1: Rubiks and Vision Mount V2 POC testing completed ||| PRIORITY: TOP | RELIANCE: NONE | TYPE: Paralell 
+  * MECH2: Rubiks and Vision Mount V3 POC testing completed ||| PRIORITY: LOW (optional) | RELIANCE: MECH2 | TYPE: Paralell 
+  * MECH3: Final draft of design completed (mechanical components are able to sustain structural integrity and sufficient accuracy to solve rubiks cube) ||| PRIORITY: TOP, Long-term | RELIANCE: MECH1/MECH2 | TYPE: Paralell 
+  * MECH4: Integration with code and troubleshooting completed ||| PRIORITY: TOP | RELIANCE: MECH3, CODE4 | TYPE: Series
+  * ALL1: Robot Final Draft Completed ||| PRIORITY: TOP | RELIANCE: MECH4 | TYPE: Series
+  * ALL2: Robot Testing, integration, and final troubleshooting completed ||| PRIORITY: TOP | RELIANCE: ALL1 | TYPE: Series
+
+
 ## 2023-04-22
 
 * Clean-sheet vision sensor mount design POC completed (see VsMount_Cleansheet.png)
