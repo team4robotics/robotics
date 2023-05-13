@@ -286,14 +286,23 @@ public:
 				&& cube[2][2][0] != cube[2][2][1] && cube[3][2][0] != cube[3][2][1] && cube[4][2][0]
 				!= cube[4][2][1]) {
 				if (cube[1][2][1] == cube[4][2][0] || cube[2][2][0] == cube[2][2][1]) {
-					// equivalent to pll_z
+					white_pll_z();
 				}
 				else {
-					// equivalent to pll_h
+					white_pll_h();
 				}
 			}
-			if (cube[1][2][0] == cube[1][2][1] && cube[1][2][1] == cube[1][2][2]) {
-				// equivalent to pll_ua and/or pll_ub
+			if (cube[1][2][0] == cube[1][2][1]) {
+				white_pll_uaub(1);
+			}
+			if (cube[2][2][0] == cube[2][2][1]) {
+				white_pll_uaub(2);
+			}
+			if (cube[3][2][0] == cube[3][2][1]) {
+				white_pll_uaub(3);
+			}
+			if (cube[4][2][0] == cube[4][2][1]) {
+				white_pll_uaub(4);
 			}
 		}
 	}
@@ -311,19 +320,222 @@ public:
 		while (true) {
 			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
 				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
-				// diagonals
+				white_pll_diag();
 			}
-			if ((cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
-				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
-					!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
-				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-					== cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) ||
-				(cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
-					!= cube[3][2][2] && cube[4][2][0] == cube[4][2][2])) {
-				// headlights
+			if (cube[1][2][0] == cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
+				white_pll_headlights(1); // face green
+			}
+			if ((cube[1][2][0] != cube[1][2][2] && cube[2][2][0] == cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) && cube[1][2][0] == cube[3][2][2]) {
+				white_pll_headlights(2); //green is same face red
+			}
+			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				== cube[3][2][2] && cube[4][2][0] != cube[4][2][2]) {
+				white_pll_headlights(3); // face blue
+			}
+			if (cube[1][2][0] != cube[1][2][2] && cube[2][2][0] != cube[2][2][2] && cube[3][2][0]
+				!= cube[3][2][2] && cube[4][2][0] == cube[4][2][2]) {
+				white_pll_headlights(4); // orange
 			}
 		}
+	}
+
+	void white_pll_diag() {
+		greencw();
+		orangecw();
+		whiteccw();
+		orangeccw();
+		whiteccw();
+		orangeccw();
+		whitecw();
+		orangeccw();
+		greenccw();
+		orangecw();
+		whitecw();
+		rightccw();
+		whiteccw();
+		orangeccw();
+		greencw();
+		orangecw();
+		greenccw();
+	}
+
+	void white_pll_headlights(int n) {
+		if (n == 1) {
+			orangecw();
+			whitecw();
+			rightccw();
+			whiteccw();
+			orangeccw();
+			greencw();
+			orangecw();
+			orangecw();
+			whiteccw();
+			orangeccw();
+			whiteccw();
+			orangecw();
+			whitecw();
+			orangeccw();
+			greenccw();
+		}
+		if (n == 2) {
+			bluecw();
+			whitecw();
+			blueccw();
+			whiteccw();
+			blueccw();
+			redcw();
+			bluecw();
+			bluecw();
+			whiteccw();
+			blueccw();
+			whiteccw();
+			bluecw();
+			whitecw();
+			blueccw();
+			redccw();
+		}
+		if (n == 3) {
+			orangecw();
+			whitecw();
+			orangeccw();
+			whiteccw();
+			orangeccw();
+			bluecw();
+			orangecw();
+			orangecw();
+			whiteccw();
+			orangeccw();
+			whiteccw();
+			orangecw();
+			whitecw();
+			orangeccw();
+			blueccw();
+
+		}
+		if (n == 4) {
+			greencw();
+			whitecw();
+			greenccw();
+			whiteccw();
+			greenccw();
+			orangecw();
+			greencw();
+			greencw();
+			whiteccw();
+			greenccw();
+			whitecw();
+			greencw();
+			whitecw();
+			greenccw();
+			orangeccw();
+
+		}
+		//R U R' U' R' F R2 U' R' U' R U R' F'
+	}
+
+	void white_pll_h() {
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		whitecw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		whitecw();
+		whitecw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		whitecw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+	}
+
+	void white_pll_uaub(int n) {
+		//1 = red, 2 = green, 3 = orange, 4 = blue
+		int x, r;
+		if (n == 1) {
+			x = 3;
+			r = 4;
+		}
+		if (n == 2) {
+			x = 4;
+			r = 1;
+		}
+		if (n == 3) {
+			x = 1;
+			r = 2;
+		}
+		if (n == 4) {
+			x = 2;
+			r = 3;
+
+		}
+		if (cube[x][1][1] == cube[r][0][1]) {
+			inputcw(r);
+			inputcw(r);
+			whitecw();
+			inputcw(r);
+			whitecw();
+			inputccw(r);
+			whiteccw();
+			inputccw(r);
+			whiteccw();
+			inputccw(r);
+			whitecw();
+			inputccw(r);
+			//R2 U R U R' U' R' U' R' U R'
+		}
+		else {
+			inputcw(r);
+			whiteccw();
+			inputcw(r);
+			whitecw();
+			inputcw(r);
+			whitecw();
+			inputcw(r);
+			whiteccw();
+			inputccw(r);
+			whiteccw();
+			inputcw(r);
+			inputcw(r);
+			//R U' R U R U R U' R' U' R2
+		}
+	}
+	void white_pll_z() {
+		whiteccw();
+		whiteccw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whiteccw();
+		whiteccw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
+		whitecw();
 	}
 
 	void oll() {
@@ -477,121 +689,359 @@ public:
 		switch (x);
                                                                  case 0:
 
-																	 if (cube[0][0][1] == y || cube[0][0][1] == t) {
-																		 if (cube[3][0][1] == y || cube[3][0][1] == t) {
-																			 if (cube[0][0][1] == y) {
-																				 s = cube[0][0][1];
-																			 }
-																			 else {
-																				 s = cube[3][0][1];
-																			 }
-																		 }
-																	 }
+                                                                 void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
+                                                                 switch(x);
+                                                                 case 0: //checks the yellow face
+                                                                     
+                                                                 if (cube[0][0][1] == y || cube[0][0][1] == t) {
+                                                                 if (cube[3][0][1] == y || cube[3][0][1] == t) {
+                                                                    if (cube[0][0][1] == y) {
+                                                                        s = cube[0][0][1];
+                                                                 o = cube[3][0][1];
+                                                                    }
+                                                                    else {
+                                                                 s = cube[3][0][1];
+                                                                 o = cube[0][0][1];
+                                                                 tf = true;
+                                                                    }
+                                                                 }
+                                                                 }
+                                        
+                                                                 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
+                                                                 if (cube[2][0][1] == y || cube[2][0][1] == t) {
+                                                                 if (cube[0][1][0] == y) {
+                                                                 s = cube[0][1][0];
+                                                                 o = cube[2][0][1];
+                                                                 }
+                                                                 else {
+                                                                 s = cube[2][0][1];
+                                                                 o = cube[0][1][0];
+                                                                 tf = true;
+                                                                 }
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
+                                                                 if (cube[4][0][1] == y || cube[4][0][1] == t) {
+                                                                 if (cube[0][1][2] == y) {
+                                                                 s = cube[0][1][2];
+                                                                 o = cube[4][0][1];
+                                                                 }
+                                                                 else {
+                                                                 s = cube[4][0][1];
+                                                                 o = cube[0][1][2];
+                                                                 tf = true;
+                                                                 }
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
+                                                                 if (cube[1][0][1] == y || cube[1][0][1] == t) {
+                                                                 if (cube[0][2][1] == y) {
+                                                                 o = cube[1][0][1];
 
-																	 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
-																		 if (cube[2][0][1] == y || cube[2][0][1] == t) {
-																			 if (cube[0][1][0] == y) {
-																				 s = cube[0][1][0];
-																			 }
-																			 else {
-																				 s = cube[2][0][1];
-																			 }
-																		 }
-																	 }
+                                                                 s = cube[0][2][1];
+                                                                 }
+                                                                 else {
+                                                                 s = cube[1][0][1];
+                                                                 o = cube[0][2][1];
+                                                                 tf = true;
+                                                                 }
+                                                                 }
+                                                                 }
+                                                                 
+                                                                     case 1: // checks the green face and half of red and orange
+                                                                                                                
+                                                                     else if (cube[1][1][0] == y || cube[1][1][0] == t) {
+                                                                     if (cube[2][1][2] == y || cube[2][1][2] == t) {
+                                                                     if (cube[1][1][0] == y) {
+                                                                     s = cube[1][1][0];
+                                                                 o = cube[2][1][2];
 
-																	 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
-																		 if (cube[4][0][1] == y || cube[4][0][1] == t) {
-																			 if (cube[0][1][2] == y) {
-																				 s = cube[0][1][2];
-																			 }
-																			 else {
-																				 s = cube[4][0][1];
-																			 }
-																		 }
-																	 }
-
-																	 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
-																		 if (cube[1][0][1] == y || cube[1][0][1] == t) {
-																			 if (cube[0][2][1] == y) {
-																				 s = cube[0][2][1];
-																			 }
-																			 else {
-																				 s = cube[1][0][1];
-																			 }
-																		 }
-																	 }
-
-																 case 1:
-
-																	 else if (cube[1][1][0] == y || cube[1][1][0] == t) {
-																		 if (cube[2][1][2] == y || cube[2][1][2] == t) {
-																			 if (cube[1][1][0] == y) {
-																				 s = cube[1][1][0];
-																			 }
-																			 else {
-																				 s = cube[2][1][2];
-																			 }
-																		 }
-																	 }
-
-																	 else if (cube[1][1][2] == y || cube[1][1][2] == t) {
-																		 if (cube[4][1][0] == y || cube[4][1][0] == t) {
-																			 if (cube[1][1][2] == y) {
-																				 s = cube[1][1][2];
-																			 }
-																			 else {
-																				 s = cube[4][1][0];
-																			 }
-																		 }
-																	 }
-
-																 case 2:
-
-
-																	 else if (cube[3][1][0] == y || cube[3][1][0] == t) {
-																		 if (cube[4][1][2] == y || cube[4][1][2] == t) {
-																			 if (cube[3][1][0] == y) {
-																				 s = cube[3][1][0];
-																			 }
-																			 else {
-																				 s = cube[4][1][2];
-																			 }
-																		 }
-																	 }
-
-																	 else if (cube[3][1][2] == y || cube[3][1][2] == t) {
-																		 if (cube[2][1][0] == y || cube[2][1][0] == t) {
-																			 if (cube[3][1][2] == y) {
-																				 s = cube[3][1][2];
-																			 }
-																			 else {
-																				 s = cube[2][1][0];
-																			 }
-																		 }
-																	 }
-
-																 default:
-																	 break;
-																	 /*for (int i = 0; i < 4; i++) {
-																		 for(int k = 0; k < 2; k++) {
-																  if (cube[i][k][1] == y || cube[i][k][1] == t){
-																  if (k == 0 && cube[0][k][1]) {
-
-																  x = cube[i][k][1]];
-			 }
-																  }
-			 if (cube[i][k][2] == y || cube[i][k][1] == t){
-				 x = cube[i][k][2];
-			 }
-			 if (cube[i][k][0] == y || cube[i][k][1] == t){
-				 x = cube[i][k][0]];
-			 }
-																		 }
-																	 }*/
-	}
+                                                                     }
+                                                                     else {
+                                                                     s = cube[2][1][2];
+                                                                 o = cube[1][1][0];
+                                                                 tf = true;
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                     else if (cube[1][1][2] == y || cube[1][1][2] == t) {
+                                                                     if (cube[4][1][0] == y || cube[4][1][0] == t) {
+                                                                     if (cube[1][1][2] == y) {
+                                                                     s = cube[1][1][2];
+                                                                 o = cube[4][1][0];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[4][1][0];
+                                                                 o = cube[1][1][2];
+                                                                 tf = true;
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                                                                                          
+                                                                     case 2: // checks blue face and other half of red and yellow
+                                                                    
+                                            
+                                                                     else if (cube[3][1][0] == y || cube[3][1][0] == t) {
+                                                                     if (cube[4][1][2] == y || cube[4][1][2] == t) {
+                                                                     if (cube[3][1][0] == y) {
+                                                                     s = cube[3][1][0];
+                                                                 o = cube[4][1][2];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[4][1][2];
+                                                                 o = cube[3][1][0];
+                                                                 tf = true;
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                     else if (cube[3][1][2] == y || cube[3][1][2] == t) {
+                                                                     if (cube[2][1][0] == y || cube[2][1][0] == t) {
+                                                                     if (cube[3][1][2] == y) {
+                                                                     s = cube[3][1][2];
+                                                                 o = cube[2][1][0];
+                                                                     }
+                                                                     else {
+                                                                     s = cube[2][1][0];
+                                                                 o = cube[3][1][2];
+                                                                 tf = true;
+                                                                     }
+                                                                     }
+                                                                     }
+                                                                     
+                                                                 default:
+                                                                     break;
+                                                                    /*for (int i = 0; i < 4; i++) {
+                                                                        for(int k = 0; k < 2; k++) {
+                                                                 if (cube[i][k][1] == y || cube[i][k][1] == t){
+                                                                 if (k == 0 && cube[0][k][1]) {
+                                                                 
+                                                                 x = cube[i][k][1]];
+            }
+                                                                 }
+            if (cube[i][k][2] == y || cube[i][k][1] == t){
+                x = cube[i][k][2];
+            }
+            if (cube[i][k][0] == y || cube[i][k][1] == t){
+                x = cube[i][k][0]];
+            }
+                                                                        }
+                                                                    }*/
+                                                                 }
 	void f2l() {
 		//algorithm
+                                                                 int s[0][0][0];
+                                                                 int o[0][0][0];
+                                                                 bool g = false;
+                                                                 if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') { // if already in correct position, solves
+                                                                     yellowccw();
+                                                                     redccw();
+                                                                     yellowccw();
+                                                                     redcw();
+                                                                     yellowcw();
+                                                                     greencw();
+                                                                     yellowcw();
+                                                                     greenccw();
+                                                                 }
 
+                                                                 else if (cube[1][0][1] == 'r' && cube[0][1][0] == 'g') {
+                                                                     yellowcw();
+                                                                     greencw();
+                                                                     yellowcw();
+                                                                     greenccw();
+                                                                     yellowccw();
+                                                                     redccw();
+                                                                     yellowccw();
+                                                                     redcw();
+                                                                 }
+                                                                 
+                                                                 else {
+                                                                 f2lfind(0, 'g', 'r', s, o, g);
+                                                                 if(s[1] == 'g' && o[1] == 'r') {
+                                                                 break;
+                                                                 }
+                                                                 if (g == true) { //if the edge is on yellow face, solves
+                                                                 back: if(o[1] == '0') {
+                                                                 while (cube[1][0][1] != 'r' && cube[0][1][0] != 'g') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 
+                                                                 }
+                                                                 yellowccw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 greenccw();
+                                                                 }
+                                                                 else if(s[1] == '0') {
+                                                                 while (cube[2][0][1] != 'g' && cube[0][2][1] != 'r') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 }
+                                                                 yellowcw();
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 redcw();
+                                                                 }
+                                                                 break;
+                                                                 }
+                                                                                                                             
+                                                                 if(o[1] == 'g' && s[1] == 'r') {
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 redcw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'r' && s[1] == 'b' || o[1] == 'b' && s[1] == 'r') {
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'b' && s[1] == 'o' || o[1] == 'o' && s[1] == 'b') {
+                                                                 bluecw();
+                                                                 yellowcw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 orangecw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'o' && s[1] == 'g' || o[1] == 'g' && s[1] == 'o') {
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 greencw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 } //next case
+                                                                 
+                                                                 if (cube[4][0][1] == 'b' && cube[0][0][1] == 'r') {
+                                                                     yellowcw();
+                                                                     redcw();
+                                                                     yellowcw();
+                                                                     redccw();
+                                                                     yellowccw();
+                                                                     blueccw();
+                                                                     yellowccw();
+                                                                     bluecw();
+                                                                 }
+                                                                 if (cube[1][0][1] == 'r' && cube[0][1][0] == 'b') {
+                                                                     yellowccw();
+                                                                     blueccw();
+                                                                     yellowccw();
+                                                                     bluecw();
+                                                                     yellowcw();
+                                                                     redcw();
+                                                                     yellowcw();
+                                                                     redccw();
+                                                                 }
+                                                                 
+                                                                 else {
+                                                                 f2lfind(0, 'b', 'r', s, o, g);
+                                                                 if (g == true) { //if the edge is on yellow face, solves
+                                                                 if(o[1] == '0') {
+                                                                 while (cube[4][0][1] != 'b' && cube[0][0][1] != 'r') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 
+                                                                 }
+                                                                 yellowcw();
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 }
+                                                                 else if(s[1] == '0') {
+                                                                 while (cube[1][0][1] != 'r' && cube[0][1][0] != 'b') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 }
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 yellowcw();
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 redccw();
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'g' && s[1] == 'r' || o[1] == 'r' && s[1] == 'g') {
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 redcw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'b' && s[1] == 'r') {
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'b' && s[1] == 'o' || o[1] == 'o' && s[1] == 'b') {
+                                                                 bluecw();
+                                                                 yellowcw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 orangecw();
+                                                                 goto back;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 'o' && s[1] == 'g' || o[1] == 'g' && s[1] == 'o') {
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 greencw();
+                                                                 goto back;
+                                                                 }
+                                                                 }
+                                                                
+
+	
+
+>>>>>>> ee3a3aaee8c9075cc4ed5bd9e9b10132edc030c4
 
 		for (int i = 0; i < 4; i++) {
 			if (i == 0) {
