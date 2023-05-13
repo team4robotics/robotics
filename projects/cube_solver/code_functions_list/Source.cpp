@@ -133,18 +133,18 @@ public:
 				}
 				if (cube[1][0][1] == 'w')
 				{
-					if (cube[4][0][1] == 'w')
+					if (mbcube[4][0][1] == 'w')
 					{
 						redccw();
 						bluecw();
 						redccw();
 					}
-					else if (cube[2][0][1] == 'w')
+					/*else if (cube[2][0][1] == 'w')
 					{
 						redcw();
 						greenccw();
 						redcw();
-					}
+					}*/
 					else
 					{
 						redcw();
