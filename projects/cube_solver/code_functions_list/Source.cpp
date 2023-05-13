@@ -837,27 +837,6 @@ public:
                                                                  int s[0][0][0];
                                                                  int o[0][0][0];
                                                                  bool g = false;
-                                                                 if (cube[2][0][1] == 'g' && cube[0][2][1] == 'r') { // if already in correct position, solves
-                                                                     yellowccw();
-                                                                     redccw();
-                                                                     yellowccw();
-                                                                     redcw();
-                                                                     yellowcw();
-                                                                     greencw();
-                                                                     yellowcw();
-                                                                     greenccw();
-                                                                 }
-
-                                                                 else if (cube[1][0][1] == 'r' && cube[0][1][0] == 'g') {
-                                                                     yellowcw();
-                                                                     greencw();
-                                                                     yellowcw();
-                                                                     greenccw();
-                                                                     yellowccw();
-                                                                     redccw();
-                                                                     yellowccw();
-                                                                     redcw();
-                                                                 }
                                                                  
                                                                  else {
                                                                  f2lfind(0, 'g', 'r', s, o, g);
@@ -893,9 +872,9 @@ public:
                                                                  redcw();
                                                                  }
                                                                  break;
-                                                                 }
+                                                                 }// yellow = 0 green = 1 red = 2 blue = 3 orange = 4 white = 5
                                                                                                                              
-                                                                 if(o[1] == 'g' && s[1] == 'r') {
+                                                                 if(o[1] == 1 && s[1] == 2) {
                                                                  greencw();
                                                                  yellowcw();
                                                                  greenccw();
@@ -906,7 +885,7 @@ public:
                                                                  goto back;
                                                                  }
                                                                  
-                                                                 if(o[1] == 'r' && s[1] == 'b' || o[1] == 'b' && s[1] == 'r') {
+                                                                 if(o[1] == 2 && s[1] == 3 || o[1] == 3 && s[1] == 2) {
                                                                  redcw();
                                                                  yellowcw();
                                                                  redccw();
@@ -917,7 +896,7 @@ public:
                                                                  goto back;
                                                                  }
                                                                  
-                                                                 if(o[1] == 'b' && s[1] == 'o' || o[1] == 'o' && s[1] == 'b') {
+                                                                 if(o[1] == 3 && s[1] == 4 || o[1] == 4 && s[1] == 3) {
                                                                  bluecw();
                                                                  yellowcw();
                                                                  blueccw();
@@ -928,7 +907,7 @@ public:
                                                                  goto back;
                                                                  }
                                                                  
-                                                                 if(o[1] == 'o' && s[1] == 'g' || o[1] == 'g' && s[1] == 'o') {
+                                                                 if(o[1] == 4 && s[1] == 1 || o[1] == 1 && s[1] == 4) {
                                                                  orangecw();
                                                                  yellowcw();
                                                                  orangeccw();
@@ -941,31 +920,11 @@ public:
                                                                  
                                                                  } //next case
                                                                  
-                                                                 if (cube[4][0][1] == 'b' && cube[0][0][1] == 'r') {
-                                                                     yellowcw();
-                                                                     redcw();
-                                                                     yellowcw();
-                                                                     redccw();
-                                                                     yellowccw();
-                                                                     blueccw();
-                                                                     yellowccw();
-                                                                     bluecw();
-                                                                 }
-                                                                 if (cube[1][0][1] == 'r' && cube[0][1][0] == 'b') {
-                                                                     yellowccw();
-                                                                     blueccw();
-                                                                     yellowccw();
-                                                                     bluecw();
-                                                                     yellowcw();
-                                                                     redcw();
-                                                                     yellowcw();
-                                                                     redccw();
-                                                                 }
-                                                                 
+                                                                
                                                                  else {
                                                                  f2lfind(0, 'b', 'r', s, o, g);
                                                                  if (g == true) { //if the edge is on yellow face, solves
-                                                                 if(o[1] == '0') {
+                                                                 back1: if(o[1] == '0') {
                                                                  while (cube[4][0][1] != 'b' && cube[0][0][1] != 'r') { //rotates until the case is true
                                                                  yellowcw();
                                                                  
@@ -994,7 +953,7 @@ public:
                                                                  }
                                                                  }
                                                                  
-                                                                 if(o[1] == 'g' && s[1] == 'r' || o[1] == 'r' && s[1] == 'g') {
+                                                                 if(o[1] == 1 && s[1] == 2 || o[1] == 2 && s[1] == 1) {
                                                                  greencw();
                                                                  yellowcw();
                                                                  greenccw();
@@ -1002,10 +961,10 @@ public:
                                                                  redccw();
                                                                  yellowccw();
                                                                  redcw();
-                                                                 goto back;
+                                                                 goto back1;
                                                                  }
                                                                  
-                                                                 if(o[1] == 'b' && s[1] == 'r') {
+                                                                 if(o[1] == 3 && s[1] == 2) {
                                                                  redcw();
                                                                  yellowcw();
                                                                  redccw();
@@ -1013,10 +972,10 @@ public:
                                                                  blueccw();
                                                                  yellowccw();
                                                                  bluecw();
-                                                                 goto back;
+                                                                 goto back1;
                                                                  }
                                                                  
-                                                                 if(o[1] == 'b' && s[1] == 'o' || o[1] == 'o' && s[1] == 'b') {
+                                                                 if(o[1] == 3 && s[1] == 4 || o[1] == 4 && s[1] == 3) {
                                                                  bluecw();
                                                                  yellowcw();
                                                                  blueccw();
@@ -1024,10 +983,10 @@ public:
                                                                  orangeccw();
                                                                  yellowccw();
                                                                  orangecw();
-                                                                 goto back;
+                                                                 goto back1;
                                                                  }
                                                                  
-                                                                 if(o[1] == 'o' && s[1] == 'g' || o[1] == 'g' && s[1] == 'o') {
+                                                                 if(o[1] == 4 && s[1] == 1 || o[1] == 1 && s[1] == 4) {
                                                                  orangecw();
                                                                  yellowcw();
                                                                  orangeccw();
@@ -1035,7 +994,161 @@ public:
                                                                  greenccw();
                                                                  yellowccw();
                                                                  greencw();
-                                                                 goto back;
+                                                                 goto back1;
+                                                                 }
+                                                                 }//next case
+                                                                 
+                                                                 else {
+                                                                 f2lfind(0, 'b', 'o', s, o, g);
+                                                                 if (g == true) { //if the edge is on yellow face, solves
+                                                                 back2: if(o[1] == '0') {
+                                                                 while (cube[3][0][1] != 'b' && cube[0][0][1] != 'o') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 
+                                                                 }
+                                                      
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 }
+                                                                 else if(s[1] == '0') {
+                                                                 while (cube[1][0][1] != 'o' && cube[0][2][1] != 'b') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 }
+                                                          
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 yellowcw();
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 1 && s[1] == 2 || o[1] == 2 && s[1] == 1) {
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 redcw();
+                                                                 goto back2;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 3 && s[1] == 2 || s[1] == 3 && o[1] == 2) {
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 goto back2;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 3 && s[1] == 4) {
+                                                                 bluecw();
+                                                                 yellowcw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 orangecw();
+                                                                 goto back2;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 4 && s[1] == 1 || o[1] == 1 && s[1] == 4) {
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 greencw();
+                                                                 goto back2;
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 else {
+                                                                 f2lfind(0, 'g', 'o', s, o, g);
+                                                                 if (g == true) { //if the edge is on yellow face, solves
+                                                                 back3: if(o[1] == '0') {
+                                                                 while (cube[2][0][1] != 'g' && cube[0][1][0] != 'o') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 
+                                                                 }
+                            
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 greencw();
+                                                                 }
+                                                                 else if(s[1] == '0') {
+                                                                 while (cube[3][0][1] != 'o' && cube[0][0][1] != 'g') { //rotates until the case is true
+                                                                 yellowcw();
+                                                                 }
+          
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 }
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 1 && s[1] == 2 || o[1] == 2 && s[1] == 1) {
+                                                                 greencw();
+                                                                 yellowcw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 redcw();
+                                                                 goto back3;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 3 && s[1] == 2 || s[1] == 3 && o[1] == 2) {
+                                                                 redcw();
+                                                                 yellowcw();
+                                                                 redccw();
+                                                                 yellowccw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 bluecw();
+                                                                 goto back3;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 3 && s[1] == 4 || o[1] == 4 && s[1] == 3) {
+                                                                 bluecw();
+                                                                 yellowcw();
+                                                                 blueccw();
+                                                                 yellowccw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 orangecw();
+                                                                 goto back3;
+                                                                 }
+                                                                 
+                                                                 if(o[1] == 1 && s[1] == 4) {
+                                                                 orangecw();
+                                                                 yellowcw();
+                                                                 orangeccw();
+                                                                 yellowccw();
+                                                                 greenccw();
+                                                                 yellowccw();
+                                                                 greencw();
+                                                                 goto back3;
                                                                  }
                                                                  }
                                                                 
