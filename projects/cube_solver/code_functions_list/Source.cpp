@@ -687,56 +687,54 @@ public:
 
 	void f2l_find(int x, char y, char t, int s) { // finds position of y side on edge
 		switch (x);
-                                                                 case 0:
+        case 0:
+			void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
+			switch (x);
+		case 0: //checks the yellow face
+			if (cube[0][0][1] == y || cube[0][0][1] == t) {
+				if (cube[3][0][1] == y || cube[3][0][1] == t) {
+					if (cube[0][0][1] == y) {
+						s = cube[0][0][1];
+						o = cube[3][0][1];
+					}
+					else {
+						s = cube[3][0][1];
+						o = cube[0][0][1];
+						tf = true;
+						}
+					}
+				}
 
-																	 void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
-																		 switch (x);
-																 case 0: //checks the yellow face
+				else if (cube[0][1][0] == y || cube[0][1][0] == t) {
+					if (cube[2][0][1] == y || cube[2][0][1] == t) {
+						if (cube[0][1][0] == y) {
+								s = cube[0][1][0];
+								o = cube[2][0][1];
+						}
+						else {
+							s = cube[2][0][1];
+							o = cube[0][1][0];
+							tf = true;
+						}
+					}
+				}
 
-																	 if (cube[0][0][1] == y || cube[0][0][1] == t) {
-																		 if (cube[3][0][1] == y || cube[3][0][1] == t) {
-																			 if (cube[0][0][1] == y) {
-																				 s = cube[0][0][1];
-																				 o = cube[3][0][1];
-																			 }
-																			 else {
-																				 s = cube[3][0][1];
-																				 o = cube[0][0][1];
-																				 tf = true;
-																			 }
-																		 }
-																	 }
+				else if (cube[0][1][2] == y || cube[0][1][2] == t) {
+					if (cube[4][0][1] == y || cube[4][0][1] == t) {
+						if (cube[0][1][2] == y) {
+							s = cube[0][1][2];
+							o = cube[4][0][1];
+						}
+						else {
+							s = cube[4][0][1];
+							o = cube[0][1][2];
+							tf = true;
+						}
+					}
+				}
 
-																	 else if (cube[0][1][0] == y || cube[0][1][0] == t) {
-																		 if (cube[2][0][1] == y || cube[2][0][1] == t) {
-																			 if (cube[0][1][0] == y) {
-																				 s = cube[0][1][0];
-																				 o = cube[2][0][1];
-																			 }
-																			 else {
-																				 s = cube[2][0][1];
-																				 o = cube[0][1][0];
-																				 tf = true;
-																			 }
-																		 }
-																	 }
-
-																	 else if (cube[0][1][2] == y || cube[0][1][2] == t) {
-																		 if (cube[4][0][1] == y || cube[4][0][1] == t) {
-																			 if (cube[0][1][2] == y) {
-																				 s = cube[0][1][2];
-																				 o = cube[4][0][1];
-																			 }
-																			 else {
-																				 s = cube[4][0][1];
-																				 o = cube[0][1][2];
-																				 tf = true;
-																			 }
-																		 }
-																	 }
-
-																	 else if (cube[0][2][1] == y || cube[0][2][1] == t) {
-																		 if (cube[1][0][1] == y || cube[1][0][1] == t) {
+				else if (cube[0][2][1] == y || cube[0][2][1] == t) {
+					if (cube[1][0][1] == y || cube[1][0][1] == t) {
 																			 if (cube[0][2][1] == y) {
 																				 o = cube[1][0][1];
 
@@ -1037,11 +1035,6 @@ public:
 																				 goto back;
 																			 }
 																		 }
-
-
-
-
-																		 >>>>>> > ee3a3aaee8c9075cc4ed5bd9e9b10132edc030c4
 
 																			 for (int i = 0; i < 4; i++) {
 																				 if (i == 0) {
