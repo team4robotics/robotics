@@ -552,11 +552,10 @@ public:
 
 			oll_Asune();
 		}
-		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0[1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y'
-			&& cube[0][2][1] == 'y' && cube[2][0][2] == 'y' && cube[3][0][2] == 'y' && cube[4][0][2] == 'y') {
+		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' && cube[0][2][1] == 'y' && cube[2][0][2] == 'y' && cube[3][0][2] == 'y' && cube[4][0][2] == 'y') {
 			oll_sune();
 		}
-		if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] = 'y'
+		if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] == 'y'
 			&& cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y') {
 			oll_t();
 		}
@@ -687,7 +686,6 @@ public:
 
 	void f2l_find(int x, char y, char t, int s) { // finds position of y side on edge
 		switch (x);
-<<<<<<< HEAD
         case 0:
 			void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
 			switch (x);
@@ -697,7 +695,6 @@ public:
 					if (cube[0][0][1] == y) {
 						s = cube[0][0][1];
 						o = cube[3][0][1];
-=======
                                                                  case 0:
 
                                                                  void f2l_find(int x, char y, char t, int s[0][0][0], int o[0][0][0], bool tf = false) { // finds position of y side on edge
@@ -1163,9 +1160,6 @@ public:
                                                                  }
                                                                 
 
-	
-
->>>>>>> ee3a3aaee8c9075cc4ed5bd9e9b10132edc030c4
 
 		for (int i = 0; i < 4; i++) {
 			if (i == 0) {
@@ -1183,7 +1177,6 @@ public:
 							yellowcw();
 							greencw();
 						}
->>>>>>> origin/main
 					}
 					else {
 						s = cube[3][0][1];
