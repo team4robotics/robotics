@@ -1647,250 +1647,250 @@ public:
 																		 }
 																	 }
 
-																	 void pll() {
-																		 if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-																			 != cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
-																			 pll_diag();
-																		 } // diag
-																		 if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-																			 != cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
-																			 pll_headlights(1); // face green
-																		 }
-																		 if ((cube[1][0][0] != cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
-																			 != cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) && cube[1][0][0] == cube[3][0][2]) {
-																			 pll_headlights(2); //green is same face red
-																		 }
-																		 if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-																			 == cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
-																			 pll_headlights(3); // face blue
-																		 }
-																		 if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
-																			 != cube[3][0][2] && cube[4][0][0] == cube[4][0][2]) {
-																			 pll_headlights(4); // orange
-																		 }
-																		 // headlights
+	void pll() {
+			if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+				pll_diag();
+			} // diag
+			if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+				pll_headlights(1); // face green
+			}
+			if ((cube[1][0][0] != cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) && cube[1][0][0] == cube[3][0][2]) {
+				pll_headlights(2); //green is same face red
+			}
+			if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				== cube[3][0][2] && cube[4][0][0] != cube[4][0][2]) {
+				pll_headlights(3); // face blue
+			}
+			if (cube[1][0][0] != cube[1][0][2] && cube[2][0][0] != cube[2][0][2] && cube[3][0][0]
+				!= cube[3][0][2] && cube[4][0][0] == cube[4][0][2]) {
+				pll_headlights(4); // orange
+			}
+			// headlights
 
-																		 if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
-																			 == cube[3][0][2] && cube[4][0][0] == cube[4][0][2] && cube[1][0][0] != cube[1][0][1]
-																			 && cube[2][0][0] != cube[2][0][1] && cube[3][0][0] != cube[3][0][1] && cube[4][0][0]
-																			 != cube[4][0][1]) {
-																			 if (cube[1][0][1] == cube[4][0][0]) {
-																				 pll_z();
-																			 }
-																			 else {
-																				 pll_h();
-																			 }
-																		 }
-																		 if (cube[1][0][0] == cube[1][0][1]) {
-																			 pll_uaub(1);
-																		 }
-																		 if (cube[2][0][0] == cube[2][0][1]) {
-																			 pll_uaub(2);
-																		 }
-																		 if (cube[3][0][0] == cube[3][0][1]) {
-																			 pll_uaub(3);
-																		 }
-																		 if (cube[4][0][0] == cube[4][0][1]) {
-																			 pll_uaub(4);
-																		 }
-																	 }
-																	 //  y r g o b w
-																	 void pll_diag() {
-																		 greencw();
-																		 orangecw();
-																		 yellowccw();
-																		 orangeccw();
-																		 yellowccw();
-																		 orangeccw();
-																		 yellowcw();
-																		 orangeccw();
-																		 greenccw();
-																		 orangecw();
-																		 yellowcw();
-																		 orangeccw();
-																		 yellowccw();
-																		 orangeccw();
-																		 greencw();
-																		 orangecw();
-																		 greenccw();
-																	 }
+			if (cube[1][0][0] == cube[1][0][2] && cube[2][0][0] == cube[2][0][2] && cube[3][0][0]
+				== cube[3][0][2] && cube[4][0][0] == cube[4][0][2] && cube[1][0][0] != cube[1][0][1]
+				&& cube[2][0][0] != cube[2][0][1] && cube[3][0][0] != cube[3][0][1] && cube[4][0][0]
+				!= cube[4][0][1]) {
+				if (cube[1][0][1] == cube[4][0][0]) {
+					pll_z();
+				}
+				else {
+					pll_h();
+				}
+			}
+			if (cube[1][0][0] == cube[1][0][1]) {
+				pll_uaub(1);
+			}
+			if (cube[2][0][0] == cube[2][0][1]) {
+				pll_uaub(2);
+			}
+			if (cube[3][0][0] == cube[3][0][1]) {
+				pll_uaub(3);
+			}
+			if (cube[4][0][0] == cube[4][0][1]) {
+				pll_uaub(4);
+			}
+	}
+	//  y r g o b w
+	void pll_diag() {
+		greencw();
+		orangecw();
+		yellowccw();
+		orangeccw();
+		yellowccw();
+		orangeccw();
+		yellowcw();
+		orangeccw();
+		greenccw();
+		orangecw();
+		yellowcw();
+		rightccw();
+		yellowccw();
+		orangeccw();
+		greencw();
+		orangecw();
+		greenccw();
+	}
 
-																	 void pll_headlights(int n) {
-																		 if (n == 1) {
-																			 orangecw();
-																			 yellowcw();
-																			 orangeccw();
-																			 yellowccw();
-																			 orangeccw();
-																			 greencw();
-																			 orangecw();
-																			 orangecw();
-																			 yellowccw();
-																			 orangeccw();
-																			 yellowccw();
-																			 orangecw();
-																			 yellowcw();
-																			 orangeccw();
-																			 greenccw();
-																		 }
-																		 if (n == 2) {
-																			 bluecw();
-																			 yellowcw();
-																			 blueccw();
-																			 yellowccw();
-																			 blueccw();
-																			 redcw();
-																			 bluecw();
-																			 bluecw();
-																			 yellowccw();
-																			 blueccw();
-																			 yellowccw();
-																			 bluecw();
-																			 yellowcw();
-																			 blueccw();
-																			 redccw();
-																		 }
-																		 if (n == 3) {
-																			 orangecw();
-																			 yellowcw();
-																			 orangeccw();
-																			 yellowccw();
-																			 orangeccw();
-																			 bluecw();
-																			 orangecw();
-																			 orangecw();
-																			 yellowccw();
-																			 orangeccw();
-																			 yellowccw();
-																			 orangecw();
-																			 yellowcw();
-																			 orangeccw();
-																			 blueccw();
+	void pll_headlights(int n) {
+		if (n == 1) {
+			orangecw();
+			yellowcw();
+			rightccw();
+			yellowccw();
+			orangeccw();
+			greencw();
+			orangecw();
+			orangecw();
+			yellowccw();
+			orangeccw();
+			yellowccw();
+			orangecw();
+			yellowcw();
+			orangeccw();
+			greenccw();
+		}
+		if (n == 2) {
+			bluecw();
+			yellowcw();
+			blueccw();
+			yellowccw();
+			blueccw();
+			redcw();
+			bluecw();
+			bluecw();
+			yellowccw();
+			blueccw();
+			yellowccw();
+			bluecw();
+			yellowcw();
+			blueccw();
+			redccw();
+		}
+		if (n == 3) {
+			orangecw();
+			yellowcw();
+			orangeccw();
+			yellowccw();
+			orangeccw();
+			bluecw();
+			orangecw();
+			orangecw();
+			yellowccw();
+			orangeccw();
+			yellowccw();
+			orangecw();
+			yellowcw();
+			orangeccw();
+			blueccw();
 
-																		 }
-																		 if (n == 4) {
-																			 greencw();
-																			 yellowcw();
-																			 greenccw();
-																			 yellowccw();
-																			 greenccw();
-																			 orangecw();
-																			 greencw();
-																			 greencw();
-																			 yellowccw();
-																			 greenccw();
-																			 yellowcw();
-																			 greencw();
-																			 yellowcw();
-																			 greenccw();
-																			 orangeccw();
+		}
+		if (n == 4) {
+			greencw();
+			yellowcw();
+			greenccw();
+			yellowccw();
+			greenccw();
+			orangecw();
+			greencw();
+			greencw();
+			yellowccw();
+			greenccw();
+			yellowcw();
+			greencw();
+			yellowcw();
+			greenccw();
+			orangeccw();
 
-																		 }
-																		 //R U R' U' R' F R2 U' R' U' R U R' F'
-																	 }
+		}
+		//R U R' U' R' F R2 U' R' U' R U R' F'
+	}
 
-																	 void pll_h() {
-																		 orangeccw();
-																		 orangeccw();
-																		 redccw();
-																		 redccw();
-																		 yellowcw();
-																		 orangeccw();
-																		 orangeccw();
-																		 redccw();
-																		 redccw();
-																		 yellowcw();
-																		 yellowcw();
-																		 orangeccw();
-																		 orangeccw();
-																		 redccw();
-																		 redccw();
-																		 yellowcw();
-																		 orangeccw();
-																		 orangeccw();
-																		 redccw();
-																		 redccw();
-																	 }
+	void pll_h() {
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		yellowcw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		yellowcw();
+		yellowcw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+		yellowcw();
+		orangeccw();
+		orangeccw();
+		redccw();
+		redccw();
+	}
 
-																	 void pll_uaub(int n) {
-																		 //1 = red, 2 = green, 3 = orange, 4 = blue
-																		 int x, r;
-																		 if (n == 1) {
-																			 x = 3;
-																			 r = 4;
-																		 }
-																		 if (n == 2) {
-																			 x = 4;
-																			 r = 1;
-																		 }
-																		 if (n == 3) {
-																			 x = 1;
-																			 r = 2;
-																		 }
-																		 if (n == 4) {
-																			 x = 2;
-																			 r = 3;
+	void pll_uaub(int n) {
+		//1 = red, 2 = green, 3 = orange, 4 = blue
+		int x, r;
+		if (n == 1) {
+			x = 3;
+			r = 4;
+		}
+		if (n == 2) {
+			x = 4;
+			r = 1;
+		}
+		if (n == 3) {
+			x = 1;
+			r = 2;
+		}
+		if (n == 4) {
+			x = 2;
+			r = 3;
 
-																		 }
-																		 if (cube[x][1][1] == cube[r][0][1]) {
-																			 inputcw(r);
-																			 inputcw(r);
-																			 yellowcw();
-																			 inputcw(r);
-																			 yellowcw();
-																			 inputccw(r);
-																			 yellowccw();
-																			 inputccw(r);
-																			 yellowccw();
-																			 inputccw(r);
-																			 yellowcw();
-																			 inputccw(r);
-																			 //R2 U R U R' U' R' U' R' U R'
-																		 }
-																		 else {
-																			 inputcw(r);
-																			 yellowccw();
-																			 inputcw(r);
-																			 yellowcw();
-																			 inputcw(r);
-																			 yellowcw();
-																			 inputcw(r);
-																			 yellowccw();
-																			 inputccw(r);
-																			 yellowccw();
-																			 inputcw(r);
-																			 inputcw(r);
-																			 //R U' R U R U R U' R' U' R2
-																		 }
-																	 }
-																	 void pll_z() {
-																		 yellowccw();
-																		 whiteccw();
-																		 yellowcw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 yellowcw();
-																		 yellowccw();
-																		 whiteccw();
-																		 yellowcw();
-																		 yellowcw();
-																		 yellowcw();
-																		 whitecw();
-																		 yellowcw();
-																		 whitecw();
-																	 }
+		}
+		if (cube[x][1][1] == cube[r][0][1]) {
+			inputcw(r);
+			inputcw(r);
+			yellowcw();
+			inputcw(r);
+			yellowcw();
+			inputccw(r);
+			yellowccw();
+			inputccw(r);
+			yellowccw();
+			inputccw(r);
+			yellowcw();
+			inputccw(r);
+			//R2 U R U R' U' R' U' R' U R'
+		}
+		else {
+			inputcw(r);
+			yellowccw();
+			inputcw(r);
+			yellowcw();
+			inputcw(r);
+			yellowcw();
+			inputcw(r);
+			yellowccw();
+			inputccw(r);
+			yellowccw();
+			inputcw(r);
+			inputcw(r);
+			//R U' R U R U R U' R' U' R2
+		}
+	}
+	void pll_z() {
+		yellowccw();
+		whiteccw();
+		yellowcw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		yellowcw();
+		yellowccw();
+		whiteccw();
+		yellowcw();
+		yellowcw();
+		yellowcw();
+		whitecw();
+		yellowcw();
+		whitecw();
+	}
 
 private:
 	void rotate(char& a, char& b, char& c, char& d) {
