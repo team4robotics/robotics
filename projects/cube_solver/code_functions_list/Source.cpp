@@ -2188,32 +2188,34 @@ x = cube[i][k][0]];
 		}
 		void pll_z()
 		{
-			yellowccw();
+			orangeccw();
+			orangeccw();
+			redccw();
+			redccw();
 			whiteccw();
-			yellowcw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			yellowcw();
+
+			orangeccw();
+			orangeccw();
+			redcw();
+			redcw();
 			yellowccw();
-			whiteccw();
-			yellowcw();
-			yellowcw();
-			yellowcw();
-			whitecw();
-			yellowcw();
-			whitecw();
+
+			orangecw();
+			redcw();
+
+			greencw();
+			greencw();
+
+			redccw();
+			redccw();
+			orangeccw();
+			orangeccw();
+
+			bluecw();
+			bluecw();
+
+			redccw();
+			orangeccw();
 		}
 
 	private:
