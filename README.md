@@ -1,5 +1,12 @@
 # Activities
 
+## 2023-06-10
+* Made considerable debugging progress
+  * White face is complete
+  * F2L is complete
+  * Most of PLL is complete
+    * PLL_Z is not working --> need further debugging
+
 ## 2023-05-20
 * Familiarized vision sensor functions
 * Began debugging process in code and syntax
@@ -14,6 +21,7 @@
   * Tested rubiks cube mount 
   * Modified vision sensor mount 
 * Ordered new 3D parts
+
 ## 2023-05-06
 
 * Project Planning session (see TimelineMay6 and ProjListMay6 in images)
