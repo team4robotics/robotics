@@ -782,12 +782,12 @@ public:
 		yellowccw();
 		greenccw();
 		yellowccw();
-		//idk what lower case  means
+		blueccw();
 		redcw();
 		yellowcw();
 		redccw();
 		yellowccw();
-		//f but counterclockwise
+		bluecw();
 	}
 	void oll_i() {
 		//F R U R' U' F'
@@ -807,12 +807,12 @@ public:
 			yellowccw();
 		}
 		//f R U R' U' f'
-		//lower f
+		blueccw();
 		redcw();
 		yellowcw();
 		redccw();
 		yellowccw();
-		//f but counterclockwise
+		bluecw();
 	}
 	void oll_pi()
 	{
