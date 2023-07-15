@@ -736,9 +736,9 @@ public:
 				oll_Asune(); //yes
 				break;
 			}
-			if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[3][0][0] == 'y' && cube[4][0][0] == 'y')
+			if (cube[0][0][1] == 'y' && cube[0][1][0] /*"row 1" */ == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' && cube[0][2][1] == 'y' && cube[2][0][2] == 'y' && cube[3][0][2] == 'y' && cube[4][0][2] == 'y')
 			{
-				oll_sune(); //debugged :thumbsup:
+				oll_sune(); //broken
 				break;
 			}
 			if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] == 'y' && cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y')
