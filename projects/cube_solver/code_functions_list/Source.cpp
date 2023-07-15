@@ -720,35 +720,44 @@ public:
 
 	void oll()
 	{
-		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[2][0][2] == 'y')
-		{
-			oll_u();
-		}
-		if (cube[0][1][0] == 'y' && cube[0][0][1] == 'y' && cube[0][2][0] == 'y' && cube[0][0][2] == 'y' && cube[0][1][1] == 'y' && cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[2][0][1] == 'y' && cube[4][0][1] == 'y')
-		{
-			oll_pi();
-		}
-		if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' && cube[0][2][1] == 'y' && cube[2][2][1] == 'y' && cube[4][0][0] == 'y' && cube[3][0][2] == 'y')
-		{
-
-			oll_Asune();
-		}
-		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' && cube[0][2][1] == 'y' && cube[2][0][2] == 'y' && cube[3][0][2] == 'y' && cube[4][0][2] == 'y')
-		{
-			oll_sune();
-		}
-		if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] == 'y' && cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y')
-		{
-			oll_t();
-		}
-		if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' &&
-			cube[0][1][2] == 'y' && cube[2][2][1] == 'y' && cube[2][2][2] == 'y' && cube[3][0][2] == 'y' && cube[2][0][0] == 'y')
-		{
-			oll_l();
-		}
-		if (cube[0][1][0] == 'y' && cube[0][0][1] == 'y' && cube[0][2][0] == 'y' && cube[0][0][2] == 'y' && cube[0][1][1] == 'y' && cube[1][0][0] == 'y' && cube[1][0][2] == 'y' && cube[3][0][0] == 'y' && cube[3][0][2] == 'y')
-		{
-			oll_h();
+		for (int i = 0; i < 4; i++) {
+			if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][0][2] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[2][0][2] == 'y')
+			{
+				oll_u(); //yes
+				break;
+			}
+			if (cube[0][0][1] == 'y' && cube[0][2][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][2] == 'y' && cube[0][1][1] == 'y' && cube[2][0][0] == 'y' && cube[2][0][2] == 'y' && cube[1][0][2] == 'y' && cube[4][0][0] == 'y')
+			{
+				oll_pi(); // yes
+				break;
+			}
+			if (cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][1][0] == 'y' && cube[0][2][0] == 'y' && cube[1][0][0] == 'y' && cube[4][0][0] == 'y' && cube[3][0][0] == 'y')
+			{
+				oll_Asune(); //yes
+				break;
+			}
+			if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][0] == 'y' && cube[0][2][1] == 'y' && cube[2][0][0] == 'y' && cube[3][0][0] == 'y' && cube[4][0][0] == 'y')
+			{
+				oll_sune(); //debugged :thumbsup:
+				break;
+			}
+			if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] == 'y' && cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y')
+			{
+				oll_t(); // debugged
+				break;
+			}
+			if (cube[0][0][0] == 'y' && cube[0][0][1] == 'y' && cube[0][1][0] == 'y' && cube[0][1][1] == 'y' &&
+				cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] == 'y' && cube[3][0][2] == 'y' && cube[1][0][0] == 'y')
+			{
+				oll_l();
+				break;
+			}
+			if (cube[0][1][0] == 'y' && cube[2][0][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][1][1] == 'y' && cube[0][2][1] == 'y' && cube[2][0][2] == 'y' && cube[3][0][0] == 'y' && cube[3][0][2] == 'y')
+			{
+				oll_h();
+				break;
+			}
+			yellowccw():
 		}
 	}
 	// OLL ALGO
@@ -800,14 +809,14 @@ public:
 		{
 			yellowccw();
 		}
-		bluecw();
-		redcw();
-		greenccw();
-		redccw();
-		blueccw();
-		redcw();
 		greencw();
-		redccw();
+		orangecw();
+		blueccw();
+		orangeccw();
+		greenccw();
+		orangecw();
+		bluecw();
+		orangeccw();
 	}
 
 	void oll_Asune()
