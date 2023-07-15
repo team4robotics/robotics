@@ -757,10 +757,63 @@ public:
 				oll_h();
 				break;
 			}
+			if (cube[0][1][1] == 'y' && cube[1][0][1] == 'y' && cube[2][0][1] == 'y' && cube[3][0][1] == 'y' && cube[4][0][1] == 'y') {
+				oll_dot();
+				break;
+			}
+			if (cube[0][1][0] == 'y' && cube[0][1][1] == 'y' && cube[0][1][2] == 'y' &&cube[1][0][1] == 'y' && cube[3][0][1] == 'y') {
+				oll_i();
+				break;
+			}
+			if (cube[0][1][1] == 'y' && cube[0][1][2] == 'y' && cube[0][2][1] == 'y' && cube[2][0][1] == 'y' && cube[3][0][1] == 'y') {
+				oll_LS();
+				break;
+			}
 			yellowccw():
 		}
 	}
 	// OLL ALGO
+	void oll_dot()
+	{//F R U R' U' F' f R U R' U' f'
+		greencw();
+		redcw();
+		yellowcw();
+		redccw();
+		yellowccw();
+		greenccw();
+		yellowccw();
+		//idk what lower case  means
+		redcw();
+		yellowcw();
+		redccw();
+		yellowccw();
+		//f but counterclockwise
+	}
+	void oll_i() {
+		//F R U R' U' F'
+		while (cube[0][0][1] != 'y')
+		{
+			yellowccw();
+		}
+		greencw();
+		redcw();
+		yellowcw();
+		redccw();
+		yellowccw();
+		greenccw();
+	}
+	void oll_LS() {
+		while (cube[0][1][2] != 'y' && cube[0][2][1] != 'y') {
+			yellowccw();
+		}
+		//f R U R' U' f'
+		//lower f
+		redcw();
+		yellowcw();
+		redccw();
+		yellowccw();
+		//f but counterclockwise
+	}
 	void oll_pi()
 	{
 		while (cube[1][0][0] != 'y' && cube[1][0][2] != 'y')
@@ -873,7 +926,7 @@ public:
 
 	void oll_sune()
 	{
-		while (cube[0][0][0] != 'y')
+		while (cube[0][0][1] != 'y')
 		{
 			yellowccw();
 		}
@@ -2663,34 +2716,35 @@ x = cube[i][k][0]];
 			}
 		}
 		void pll_z()
-		{
-			orangeccw();
-			orangeccw();
-			redccw();
-			redccw();
-			whiteccw();
+		{//M' U M2 U M2 U M' U2 M2
+			orangecw();
+			redcw();
+
+			yellowcw();
 
 			orangeccw();
 			orangeccw();
-			redcw();
-			redcw();
-			yellowccw();
+			redccw();
+			redccw();
+
+			yellowcw();
+
+			orangeccw();
+			redccw();
+			orangeccw();
+			redccw();
+
+			yellowcw();
 
 			orangecw();
 			redcw();
 
-			greencw();
-			greencw();
+			yellowcw();
+			yellowcw();
 
 			redccw();
 			redccw();
 			orangeccw();
-			orangeccw();
-
-			bluecw();
-			bluecw();
-
-			redccw();
 			orangeccw();
 		}
 
