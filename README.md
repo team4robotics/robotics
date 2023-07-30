@@ -1,5 +1,19 @@
 # Activities
 
+## 2023-07-15
+* tested Version 3 of Rubiks Cube Mount
+  * Test successful, prototype had adequate fit and could sucessfully rotate cube
+* prototype did not work reliably
+ * prototype kept detaching from the cube
+ * cube tension issues
+* additional glue was used and cube tension was adjusted to try and resolve problems
+ * hot glue was not strong enough despite a grip-enchancing pattern at bottom of the cube mount
+ * cube tension adjustment was ineffective and inconsistent
+* overall, prototype worked well, but reliability needs to be improved
+* new cube w/ tension adjustment being ordered 
+* redesign and modifications to rubiks cube mount pending
+ * will be redesigned to fit the unique design of the cube ordered
+
 ## 2023-06-10
 * Made considerable debugging progress
   * White face is complete
