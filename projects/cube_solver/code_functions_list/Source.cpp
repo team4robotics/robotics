@@ -2794,6 +2794,7 @@ x = cube[i][k][0]];
 		}
 		void yellowcw()
 		{
+			cout << "yellowcw\n";
 			clockwise90(
 				cube[0][0][0], cube[0][0][1], cube[0][0][2],
 				cube[0][1][0], cube[0][1][2],
@@ -2806,6 +2807,7 @@ x = cube[i][k][0]];
 		}
 		void yellowccw()
 		{
+			cout << "yellowccw\n";
 			counterclockwise90(
 				cube[0][0][0], cube[0][0][1], cube[0][0][2],
 				cube[0][1][0], cube[0][1][2],
@@ -2818,6 +2820,7 @@ x = cube[i][k][0]];
 		}
 		void redcw()
 		{
+			cout << "redcw\n";
 			clockwise90(
 				cube[1][0][0], cube[1][0][1], cube[1][0][2],
 				cube[1][1][0], cube[1][1][2],
@@ -2830,6 +2833,7 @@ x = cube[i][k][0]];
 		}
 		void redccw()
 		{
+			cout << "redccw\n";
 			counterclockwise90(
 				cube[1][0][0], cube[1][0][1], cube[1][0][2],
 				cube[1][1][0], cube[1][1][2],
@@ -2842,6 +2846,7 @@ x = cube[i][k][0]];
 		}
 		void greencw()
 		{
+			cout << "greencw\n";
 			clockwise90(
 				cube[2][0][0], cube[2][0][1], cube[2][0][2],
 				cube[2][1][0], cube[2][1][2],
@@ -2854,6 +2859,7 @@ x = cube[i][k][0]];
 		}
 		void greenccw()
 		{
+			cout << "greenccw\n";
 			counterclockwise90(
 				cube[2][0][0], cube[2][0][1], cube[2][0][2],
 				cube[2][1][0], cube[2][1][2],
@@ -2866,6 +2872,7 @@ x = cube[i][k][0]];
 		} // yellow, red, green, orange, blue, white(by row)
 		void orangecw()
 		{
+			cout << "orangecw\n";
 			clockwise90(
 				cube[3][0][0], cube[3][0][1], cube[3][0][2],
 				cube[3][1][0], cube[3][1][2],
@@ -2878,6 +2885,7 @@ x = cube[i][k][0]];
 		}
 		void orangeccw()
 		{
+			cout << "orangeccw\n";
 			counterclockwise90(
 				cube[3][0][0], cube[3][0][1], cube[3][0][2],
 				cube[3][1][0], cube[3][1][2],
@@ -2890,6 +2898,7 @@ x = cube[i][k][0]];
 		}
 		void bluecw()
 		{
+			cout << "bluecw\n";
 			clockwise90(
 				cube[4][0][0], cube[4][0][1], cube[4][0][2],
 				cube[4][1][0], cube[4][1][2],
@@ -2902,6 +2911,7 @@ x = cube[i][k][0]];
 		}
 		void blueccw()
 		{
+			cout << "blueccw\n";
 			counterclockwise90(
 				cube[4][0][0], cube[4][0][1], cube[4][0][2],
 				cube[4][1][0], cube[4][1][2],
@@ -2914,6 +2924,7 @@ x = cube[i][k][0]];
 		}
 		void whitecw()
 		{
+			cout << "whitecw\n";
 			clockwise90(
 				cube[5][0][0], cube[5][0][1], cube[5][0][2],
 				cube[5][1][0], cube[5][1][2],
@@ -2926,6 +2937,7 @@ x = cube[i][k][0]];
 		}
 		void whiteccw()
 		{
+			cout << "whiteccw\n";
 			counterclockwise90(
 				cube[5][0][0], cube[5][0][1], cube[5][0][2],
 				cube[5][1][0], cube[5][1][2],
