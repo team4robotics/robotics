@@ -727,7 +727,7 @@ public:
 		greenccw();
 		orangecw();
 		whitecw();
-		rightccw();
+		orangeccw();
 		whiteccw();
 		orangeccw();
 		greencw();
@@ -740,7 +740,7 @@ public:
 		{
 			orangecw();
 			whitecw();
-			rightccw();
+			orangeccw();
 			whiteccw();
 			orangeccw();
 			greencw();
@@ -976,7 +976,7 @@ public:
 				oll_sune(); //broken
 				break;
 			}
-			if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] == 'y' && cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] = 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y')
+			if (cube[0][0][1] == 'y' && cube[0][0][2] == 'y' == cube[0][1][1] && 'y' && cube[0][1][2] == 'y' && cube[0][1][0] == 'y' && cube[0][2][1] == 'y' && cube[0][2][2] == 'y' && cube[2][0][0] == 'y' && cube[4][0][2] == 'y')
 			{
 				oll_t(); // debugged
 				break;
@@ -2779,7 +2779,7 @@ x = cube[i][k][0]];
 			greenccw();
 			orangecw();
 			yellowcw();
-			rightccw();
+			orangeccw();
 			yellowccw();
 			orangeccw();
 			greencw();
@@ -2793,7 +2793,7 @@ x = cube[i][k][0]];
 			{
 				orangecw();
 				yellowcw();
-				rightccw();
+				orangeccw();
 				yellowccw();
 				orangeccw();
 				greencw();
