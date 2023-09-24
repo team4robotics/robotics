@@ -1,5 +1,22 @@
 # Activities
 
+## 2023-09-24
+* MAJOR MILESTONE COMPLETED: Successful seqential rotation of all 6 motors
+* Mechanical component done
+ * Final design incorporated different grip mechanism that embedded into rubik's cube
+* Hot glue used to enchance strength of mechanical connections to reduce turning angle tolerances
+ * Hot glue was previously determined to be removable, so machine is still modular and cube is still recoverable
+* Cube is still useable after being removed from machine thanks to new "embed"-style clasp mechanism
+* videos coming soon
+
+## 2023-08-19
+* Breakthrough: Mechanical elements working
+* New design used with "embedded" mechanism that embeds into rubiks cube structure but requires removal of one plastic plate
+ * Old design used long, semi-permanatly attatched part to mount the rubik's cube, newer part is less obstructive after removal
+* Fine-tuned motor rotation based on margin of error in different 3d printed parts
+* Motor rotation may still need to be fine-tuned
+* More cables needed to turn all 6 motors
+
 ## 2023-07-15
 * tested Version 3 of Rubiks Cube Mount
   * Test successful, prototype had adequate fit and could sucessfully rotate cube
