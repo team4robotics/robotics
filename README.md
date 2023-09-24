@@ -8,6 +8,7 @@
  * Hot glue was previously determined to be removable, so machine is still modular and cube is still recoverable
 * Cube is still useable after being removed from machine thanks to new "embed"-style clasp mechanism
 * videos coming soon
+![RSMechMlStn](images/RSMechMlStn.mp4)
 
 ## 2023-08-19
 * Breakthrough: Mechanical elements working
