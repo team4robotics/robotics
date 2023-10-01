@@ -1,6 +1,18 @@
 # Activities
 
+## 2023-10-01
+
+* Successful consecutive 90 degree motions through calibration and debugging
+* Calibration files written and developed
+* Continued work on F2L
+* Continued work on white face (Cross-Alignment complete)
+* OLL completed with more rigorous debugging 
+* Next Steps:
+  * Finish F2L and white face
+  * Vision Sensors
+
 ## 2023-09-24
+
 * MAJOR MILESTONE COMPLETED: Successful seqential rotation of all 6 motors
 * Mechanical component done
  * Final design incorporated different grip mechanism that embedded into rubik's cube
